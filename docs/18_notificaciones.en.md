@@ -1,4 +1,4 @@
-# 18. Notifications
+# Notifications
 
 ## Notifications
 

@@ -1,6 +1,6 @@
-# 18. NOTIFICACIONES
+# Notificaciones
 
-## NOTIFICACIONES
+## Notificaciones
 
 GENis cuenta con un inbox de notificaciones. Es un sobre ubicado en la parte derecha que indica la cantidad de notificaciones pendientes.
 
@@ -18,7 +18,7 @@ Se tiene la posibilidad de marcar con un flag las notificaciones que son importa
 
 Para eliminar las notificaciones, seleccionar las notificaciones que se desa eliminar y hacer click en el botón **Borrar seleccionados**.
 
-## BÚSQUEDA AVANZADA Y FILTROS
+## Búsqueda avanzada y filtros
 
 Se pueden aplicar varios filtros sobre las notificaciones.
 
