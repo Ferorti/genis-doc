@@ -1,6 +1,6 @@
-# 15. EXPORTADOR DE PERFILES
+# Exportador de perfiles
 
-## EXPORTADOR DE PERFILES
+## Exportador de perfiles
 
 El exportador de perfiles es una funcionalidad que permite exportar perfiles en el formato de importación de GENis.
 

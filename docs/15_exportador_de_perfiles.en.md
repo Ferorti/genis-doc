@@ -1,4 +1,4 @@
-# 15. Profile exporter
+# Profile exporter
 
 ## Profile exporter
 
