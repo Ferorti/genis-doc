@@ -1,4 +1,4 @@
-# INSTALACIÓN DE GENIS
+# Instalación de GENis
 
 1.- Se debe copiar la carpeta que contiene la aplicación al Servidor donde se ejecutara GENis, la ruta por defecto es **/usr/share/genis**
 

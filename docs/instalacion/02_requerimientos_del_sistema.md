@@ -1,4 +1,4 @@
-# REQUERIMIENTOS DEL SISTEMA
+# Requerimientos del sistema
 
 ## Requerimientos de Equipamiento
 

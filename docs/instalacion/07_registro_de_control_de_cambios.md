@@ -1,4 +1,4 @@
-# REGISTRO DE CONTROL DE CAMBIOS
+# Registro de control de cambios
 
 | Versión. | Fecha [DD/MM/AAAA] | Autor | Detalle de los Cambios |
 | --- | --- | --- | --- |

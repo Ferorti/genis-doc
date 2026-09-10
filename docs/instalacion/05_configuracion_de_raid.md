@@ -1,4 +1,4 @@
-# CONFIGURACION DE RAID
+# Configuración de RAID
 
 1.- Para la configuración de un esquema de RAID en una nueva instalacion de Linux se debe elegir a la hora de configurar los discos y el esquema de particionamiento de manera manual
 

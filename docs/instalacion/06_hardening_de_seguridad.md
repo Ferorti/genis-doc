@@ -1,4 +1,4 @@
-# HARDENING DE SEGURIDAD
+# Hardening de seguridad
 
 ### Deshabilitar acceso del usuario root mediante SSH
 

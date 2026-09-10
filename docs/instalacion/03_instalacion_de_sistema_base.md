@@ -1,4 +1,4 @@
-# INSTALACIÓN DE SISTEMA BASE
+# Instalación de sistema base
 
 ## Información requerida antes de comenzar la instalación
 
