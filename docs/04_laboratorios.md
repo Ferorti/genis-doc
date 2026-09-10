@@ -1,6 +1,6 @@
-# 4. LABORATORIOS
+# Laboratorios
 
-## LABORATORIOS
+## Laboratorios
 
 La arquitectura de GENis permite su utilización no solo en laboratorios centrales o de referencia, sino también en **instancias operativas descentralizadas**, configuradas como nodos dentro de una red .
 

@@ -1,4 +1,4 @@
-# 4. Laboratories
+# Laboratories
 
 ## Laboratories
 
