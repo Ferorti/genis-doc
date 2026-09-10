@@ -1,4 +1,4 @@
-# 19. Reason coding
+# Reason coding
 
 ## Reason coding
 
