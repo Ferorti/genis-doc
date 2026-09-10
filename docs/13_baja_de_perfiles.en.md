@@ -1,4 +1,4 @@
-# 13. Profile deactivation
+# Profile deactivation
 
 ## Profile deactivation
 

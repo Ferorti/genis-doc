@@ -1,6 +1,6 @@
-# 13. BAJA DE PERFILES
+# Baja de perfiles
 
-## BAJA DE PERFILES
+## Baja de perfiles
 
 Toda baja en GENis es lógica, nunca física. Esto significa que el registro no se elimina físicamente de la base de datos, sino que se marca como inactivo. Un perfil dado de baja deja de participar en búsquedas, coincidencias, réplicas y procesos automáticos, pero permanece almacenado internamente para garantizar la trazabilidad, auditoría y el historial del sistema. Este procedimiento es consistente con las buenas prácticas internacionales en bases de datos genéticos criminales, donde la eliminación física de información no está permitida por razones legales, técnicas y de control de calidad. El resultado de dar de baja un perfil es que el mismo no participe más de los procesos de búsqueda.
 
@@ -24,13 +24,13 @@ Al presionar el botón para efectivizar la baja del perfil, el usuario deberá i
 
 ![](images/sec13/p117_f01.png)
 
-## CONSIDERACIONES SOBRE LA FECHA DE CADUCIDAD
+## Consideraciones sobre la fecha de caducidad
 
 La "Fecha de Caducidad" es un **dato informativo** destinado a la gestión administrativa del perfil. GENis **no realiza bajas automáticas**, no genera alertas ni ejecuta ninguna acción cuando el perfil alcanza dicha fecha.
 
  El control de este campo depende exclusivamente del usuario o del nodo responsable, y la baja del perfil debe ser ejecutada manualmente a través de este módulo cuando corresponda. La fecha de caducidad no tiene vinculación funcional con el proceso de baja ni con otros procesos internos del sistema.
 
-## CONSIDERACIONES A TENER EN CUENTA AL DAR DE BAJA UN PERFIL:
+## Consideraciones a tener en cuenta al dar de baja un perfil:
 
 Para Forense:
 
