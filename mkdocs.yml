@@ -66,6 +66,41 @@ plugins:
         - locale: en
           name: English
           build: true
+          nav_translations:
+            Inicio: Home
+            Bienvenido: Welcome
+            Introducción a GENis: Introduction to GENis
+            Declaración de principios: Declaration of principles
+            Administración del Sistema: System administration
+            Solicitar una cuenta: Requesting an account
+            Roles: Roles
+            Laboratorios: Laboratories
+            Genetistas: Geneticists
+            Tipos de materiales biológicos: Types of biological materials
+            Categorías: Categories
+            Kits: Kits
+            Marcadores: Markers
+            Bases de datos de frecuencias: Frequency databases
+            Mitocondrial: Mitochondrial
+            Auditoría: Audit
+            Notificaciones: Notifications
+            Tipificación de motivos: Reason coding
+            Reportes: Reports
+            Búsqueda de perfiles: Profile search
+            Alta de perfiles: Profile registration
+            Baja de perfiles: Profile deactivation
+            Comparador de perfiles: Profile comparator
+            Exportador de perfiles: Profile exporter
+            Gestor de coincidencias y cálculos forense: Match manager and forensic calculations
+            Coincidencia de perfiles: Profile matching
+            Búsqueda de personas: Missing persons search
+            Interconexión de instancias: Instance interconnection
+            Anexos técnicos: Technical annexes
+            Anexo I - Algoritmo de búsqueda de coincidencias de STR: Annex I - STR match search algorithm
+            Anexo II - Gestor de coincidencias y cálculos estadísticos por default: Annex II - Match manager and default statistical calculations
+            Anexo III - Interpretación de estadísticas de evidencias: Annex III - Interpretation of evidence statistics
+            Anexo IV - Errores frecuentes y diccionario de errores: Annex IV - Frequent errors and error dictionary
+            Anexo V - Marco de seguridad y protección de datos personales: Annex V - Security and personal data protection framework
   - glightbox:
       touchNavigation: true
       loop: false
