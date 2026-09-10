@@ -1,6 +1,6 @@
-# 22. REPORTES
+# Reportes
 
-## REPORTES
+## Reportes
 
 GENis permite la posibilidad de generar reportes según la información a la que se desea acceder.
 

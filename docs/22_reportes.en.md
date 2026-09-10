@@ -1,4 +1,4 @@
-# 22. Reports
+# Reports
 
 ## Reports
 
