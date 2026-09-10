@@ -1,4 +1,4 @@
-# 0. DECLARACIÓN DE PRINCIPIOS
+# Declaración de principios
 
 ![](images/sec00/p009_f01.png)
 
