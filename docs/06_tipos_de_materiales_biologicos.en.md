@@ -1,4 +1,4 @@
-# 6. Types of biological materials
+# Types of biological materials
 
 ## Types of biological materials
 
