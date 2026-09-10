@@ -1,4 +1,4 @@
-# 25. Annex II - Match manager and default statistical calculations
+# Annex II - Match manager and default statistical calculations
 
 ## Annex II – Match manager and default statistical calculations
 

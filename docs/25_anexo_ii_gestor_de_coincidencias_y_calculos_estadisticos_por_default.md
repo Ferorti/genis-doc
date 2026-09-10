@@ -1,6 +1,6 @@
-# 25. ANEXO II - GESTOR DE COINCIDENCIAS Y CÁLCULOS ESTADÍSTICOS POR DEFAULT
+# Anexo II - Gestor de coincidencias y cálculos estadísticos por default
 
-## ANEXO II – GESTOR DE COINCIDENCIAS Y CÁLCULOS ESTADÍSTICOS POR DEFAULT
+## Anexo II – Gestor de coincidencias y cálculos estadísticos por default
 
 ### Introducción
 
@@ -10,7 +10,7 @@ Sin embargo, para poder ejecutar los procesos automáticos de comparación, orga
 
 Este anexo describe el fundamento lógico, matemático y estadístico de dichos procedimientos, con el objetivo de transparentar el funcionamiento interno del sistema. Los cálculos aquí presentados **no sustituyen el análisis pericial formal**, sino que constituyen herramientas automáticas de apoyo a la gestión de grandes volúmenes de información genética.
 
-## INFERENCIA DEL NÚMERO DE APORTANTES A UNA EVIDENCIA
+## Inferencia del número de aportantes a una evidencia
 
 GENis es capaz de proveer una estimación del número más probable de aportantes, denotado como ***n\****, para un perfil genético evidenciario ***R***. Esta estimación se obtiene maximizando, en función del número de aportantes, la probabilidad de que la evidencia provenga de un conjunto de ***x*** contribuyentes desconocidos:
 
@@ -26,7 +26,7 @@ La inferencia del número de aportantes cumple, en particular, tres funciones op
 2. Habilita el cálculo automático de valores de LR por default bajo hipótesis simplificadas.
 3. Determina cuándo puede ejecutarse el algoritmo específico de comparación Mezcla–Mezcla, el cual solo se aplica cuando ambas evidencias tienen inferidos dos aportantes.
 
-## CÁLCULO DE LR POR DEFAULT
+## Cálculo de LR por default
 
 Con el objetivo de brindar al analista una valoración inicial del posible peso estadístico de una coincidencia, GENis realiza cálculos automáticos de cocientes de verosimilitud (LR) bajo supuestos predefinidos. Estos cálculos permiten jerarquizar coincidencias dentro del gestor y orientar el análisis posterior.
 
@@ -38,7 +38,7 @@ El cociente de verosimilitud se define de la siguiente manera:
 
 En un caso general, las hipótesis consideran la posible contribución a la muestra ***M*** de individuos con perfiles conocidos ***S₁,S₂,…,Sₙ*** y de aportantes desconocidos ***D₁,D₂,…,Dₘ***. Este enfoque permite tratar de manera unificada tanto problemas de fuente única como análisis de mezclas con múltiples contribuyentes.
 
-## DEFINICIÓN DE CONJUNTOS Y FORMULACIÓN DEL PROBLEMA
+## Definición de conjuntos y formulación del problema
 
 Para estimar la probabilidad ***P(evidencia|H)***, se adopta la nomenclatura introducida por *Curran* y colaboradores. Se definen los siguientes conjuntos:
 
@@ -56,7 +56,7 @@ donde el índice ***j*** recorre los distintos conjuntos posibles de contribuyen
 
 Siguiendo el desarrollo propuesto en *Curran* (2005), esta expresión permite integrar, de manera formal, todas las configuraciones genéticas compatibles con la hipótesis planteada.
 
-## IMPLEMENTACIÓN DEL CÁLCULO EN GENIS
+## Implementación del cálculo en GENis
 
 GENis considera como ensamble de conjuntos ***{Uj}*** a todas las posibles permutaciones de ***2 x*** alelos tomados con repetición de los ***k*** valores alélicos observados en el sistema analizado:
 
@@ -68,7 +68,7 @@ Para estimar las probabilidades ***P(Uj│T,V)*** y ***P(T,V)***, se utiliza la 
 
 Cuando ***θ=0***, los resultados convergen a los esperados bajo la hipótesis de Hardy–Weinberg.
 
-## INCORPORACIÓN DE DROP-OUT, DROP-IN Y ESTRUCTURA POBLACIONAL
+## Incorporación de drop-out, drop-in y estructura poblacional
 
 La estimación de la probabilidad ***P(R│T,Uj)*** de observar la réplica ***R***, dados los contribuyentes conocidos y desconocidos que propone la hipótesis ***H***, tiene en cuenta:
 
@@ -88,7 +88,7 @@ La probabilidad buscada resulta:
 
 *donde **nAi** es la multiplicidad del alelo **Ai** entre los alelos de **T ∪ Uj**, y **pAi** es la frecuencia poblacional del alelo.*
 
-## CÁLCULOS AUTOMÁTICOS SEGÚN TIPO DE COINCIDENCIA
+## Cálculos automáticos según tipo de coincidencia
 
 En función del tipo de perfil agrupador, del tipo de perfil coincidente y del número de aportantes inferidos, GENis aplica distintos esquemas de cálculo estadístico por default, resumidos en la siguiente tabla:
 
@@ -96,7 +96,7 @@ En función del tipo de perfil agrupador, del tipo de perfil coincidente y del n
 
 Estos cálculos tienen un carácter orientativo y operativo, y no deben interpretarse como sustitutos de un análisis pericial exhaustivo mediante software especializado.
 
-## VALORACIÓN ESTADÍSTICA DE ASOCIACIONES ENTRE MEZCLAS EVIDENCIARIAS
+## Valoración estadística de asociaciones entre mezclas evidenciarias
 
 Cuando se comparan dos mezclas evidenciarias ***M*** y ***M´*** GENis permite evaluar la probabilidad de que ambas puedan explicarse bajo la hipótesis de un contribuyente común ***Cs*** junto con contribuyentes adicionales distintos en cada muestra.
 
@@ -106,7 +106,7 @@ Se contrasta dicha hipótesis frente a una hipótesis alternativa en la cual dif
 
 Este enfoque permite valorar estadísticamente asociaciones entre evidencias, facilitando la identificación de posibles vínculos entre escenas o eventos distintos.
 
-## ALCANCE Y LIMITACIONES
+## Alcance y limitaciones
 
 Los cálculos y deducciones presentados en este anexo constituyen la base formal del funcionamiento estadístico del gestor de coincidencias de GENis. Su objetivo es brindar soporte automático y consistente a la gestión de coincidencias en bases de datos genéticas de gran escala.
 
