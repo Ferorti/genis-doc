@@ -1,4 +1,4 @@
-# 14. Profile comparator
+# Profile comparator
 
 ## Profile comparator
 

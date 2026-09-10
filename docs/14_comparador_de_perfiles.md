@@ -1,6 +1,6 @@
-# 14. COMPARADOR DE PERFILES
+# Comparador de perfiles
 
-## COMPARADOR DE PERFILES
+## Comparador de perfiles
 
 El comparador de perfiles es una funcionalidad que permite comparar dos perfiles de cualquier categoría y ver las diferencias y coincidencias entre sus alelos.
 
@@ -18,10 +18,10 @@ Presionando los botones **Mostrar diferencias** y **Mostrar coincidencias** mues
 
 ![](images/sec14/p121_f01.png)
 
-## MOSTRAR DIFERENCIAS
+## Mostrar diferencias
 
 ![](images/sec14/p121_f02.png)
 
-## MOSTRAR COINCIDENCIAS
+## Mostrar coincidencias
 
 ![](images/sec14/p122_f01.png)
