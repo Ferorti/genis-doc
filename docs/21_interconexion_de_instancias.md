@@ -1,12 +1,12 @@
-# 21. INTERCONEXIÓN DE INSTANCIAS
+# Interconexión de instancias
 
-## INTERCONEXIÓN DE INSTANCIAS
+## Interconexión de instancias
 
 La interconexión de instancias constituye uno de los pilares centrales del ecosistema GENis, ya que permite que distintos nodos —por ejemplo, laboratorios provinciales, un nodo nacional, o nodos judiciales— cooperen en la búsqueda de coincidencias genéticas sin compartir directamente sus bases completas. Se trata de una arquitectura federada: cada institución conserva la propiedad y administración de sus perfiles, pero GENis habilita un mecanismo estandarizado para enviar, recibir y procesar información genética de manera segura, trazable y científicamente coherente.
 
 Este esquema replica, en escala nacional, los principios de redes internacionales como **Prüm** en la Unión Europea, **NDIS/CODIS** en EE. UU. y los lineamientos de **ISFG** y **ENFSI** para intercambio transinstitucional. Al igual que en esos sistemas, la interconexión en GENis requiere que exista una armonización mínima entre las instancias para que los perfiles puedan interpretarse correctamente y las coincidencias tengan sentido científico.
 
-## FUNCIONAMIENTO GENERAL DEL INTERCAMBIO
+## Funcionamiento general del intercambio
 
 Cuando un laboratorio necesita compartir un perfil genético con otra instancia —por ejemplo, enviar un perfil provincial a la instancia nacional— GENis genera un paquete que contiene:
 
@@ -30,7 +30,7 @@ Cuando ocurre una coincidencia, la instancia superior notifica a la inferior, qu
 
 ![](images/sec21/p239_f01.png)
 
-## CONDICIONES NECESARIAS PARA QUE LA INTERCONEXIÓN FUNCIONE
+## Condiciones necesarias para que la interconexión funcione
 
 Para que dos instancias puedan interoperar sin errores, es imprescindible que compartan un conjunto mínimo de configuraciones fundamentales. GENis no intenta resolver diferencias semánticas entre laboratorios: exige que ambos hablen exactamente el mismo “idioma operativo”. Esto coincide con lo establecido por ISFG (2023) y ENFSI-QCLD (2022) para redes criminalísticas federadas.
 
@@ -71,7 +71,7 @@ Por lo tanto, aunque GENis funcione con bases diferentes para la parte operacion
 2. distribuir actualizaciones desde un repositorio unificado,
 3. asegurar que los LR interinstancia puedan reproducirse en cualquier nodo.
 
-## NOTIFICACION DE COINCIDENCIAS ENTRE INSTANCIAS
+## Notificación de coincidencias entre instancias
 
 Cuando la instancia superior encuentra una coincidencia con un perfil proveniente de una instancia inferior, el proceso es automático:
 
@@ -84,7 +84,7 @@ Cuando la instancia superior encuentra una coincidencia con un perfil provenient
 
 Este flujo es equivalente al procedimiento que plantea Prüm: el país que recibe la coincidencia responde con un “match positivo confirmado” o “sin coincidencia”.
 
-## GESTIÓN DE PERFILES IMPORTADOS Y CONTROL DE CALIDAD
+## Gestión de perfiles importados y control de calidad
 
 Al llegar perfiles desde instancias inferiores, la instancia superior no los incorpora automáticamente: primero los revisa. Si detecta errores —cabeceras inválidas, marcadores inconsistentes, kits inexistentes, categorías desconocidas— deberá rechazar el perfil.
 
@@ -99,7 +99,7 @@ GENis sigue la misma filosofía.
 
 La comunicación entre los nodos de la red GENis es estrictamente vertical. Esto implica que los nodos **Laboratorios** se comunican solamente con el registro del cual dependen. Los **Registros Provinciales** se comunican con el **Registro Nacional** y los **Laboratorios** que dependen de él. El **Registro Nacional** se comunica con los **Registros Provinciales** y con los **Laboratorios** que dependan del (en caso de que exista alguno).
 
-## INTERCONEXIÓN DE INSTANCIAS
+## Interconexión de instancias
 
 Dentro de una instancia inferior, para poder realizar la configuración de una instancia superior, ir al menú **Configuración/Interconexión de Instancias/Instancia Superior:**
 
@@ -121,7 +121,7 @@ A la **Instancia Superior** le llega una notificación de que la **Instancia Inf
 
 ![](images/sec21/p245_f03.png)
 
-## REPLICAR PERFILES
+## Replicar perfiles
 
 Para poder realizar la interconexión entre instancias, la categoría a la que pertenece el perfil deberá tener chequeado el casillero de **Replicar a instancias superiores**, caso contrario el perfil no se podrá interconectar con ningún laboratorio:
 
@@ -148,7 +148,7 @@ Según se determine por la subcategoría a la que pertenece el perfil, el mismo 
 
 Cuando se carga un electroferograma o archivo asociado a un perfil y ese perfil se replica entre instancias, también se replicar el electroferograma y/o adjunto y se pueden visualizar los mismos.
 
-## APROBACIÓN/RECHAZO DE PERFILES EN INSTANCIA SUPERIOR
+## Aprobación/rechazo de perfiles en instancia superior
 
 Supongamos el ejemplo que el **Laboratorio 1** realiza una carga masiva de una mezcla, la cual se replica a la instancia superior:
 
@@ -186,7 +186,7 @@ Nota: tener en cuenta que para que la notificación de match le llegue al perfil
 
 Nota: Si bien es posible replicar perfiles que no contengan la misma configuracion de reglas de búsqueda es posible que no se obtengan en la instancia superior e inferior los mismos resultados.
 
-## REPLICAR PERFILES ASOCIADOS
+## Replicar perfiles asociados
 
 En la pantalla de aprobación de perfiles de instancia superior se muestra el siguiente campo:
 
@@ -198,7 +198,7 @@ Durante el proceso de coincidencias, tanto en la instancia local como en la inst
 
 En consecuencia, las coincidencias entre una evidencia mezclada y un perfil candidato (por ejemplo, un condenado) se determinan únicamente a partir de la compatibilidad alelo por alelo entre dichos perfiles, aplicando los parámetros configurados de discrepancias, drop-out y drop-in para la categoría correspondiente. La presencia de la víctima no modifica el resultado de la coincidencia ni el cálculo de compatibilidad, y su perfil permanece excluido del proceso de búsqueda en cualquier instancia.
 
-## MODIFICACIÓN DE PERFILES
+## Modificación de perfiles
 
 Cuando un perfil es replicado a una instancia superior, no se le podrá realizar ninguna modificación, esto implica que se deshabilitaran los botones para agregar más información.
 
@@ -206,7 +206,7 @@ En el caso de que se tenga más información asociada al perfil, la única maner
 
 Los perfiles que pertenecen a otros laboratorios no podrán ser editados, esto implica que no se podrá: agregar análisis, replicar a otras instancias, adjuntar archivos ni tampoco se podrá ver su código interno de la muestra.
 
-## PROPAGAR HIT Y DESCARTES ENTRE INSTANCIAS
+## Propagar hit y descartes entre instancias
 
 Cuando un match es transformado en hit o descarte, el evento es replicado a las instancias involucradas. Esto será informado en la bandeja de entrada de los genetistas responsables y de los usuarios con permisos para recibir notificaciones de interconexión. Se registra el estado del hit/descarte parcial y del hit/descarte completo (ver detalle de notificaciones en la sección 18. Notificaciones).
 
@@ -214,11 +214,11 @@ Cuando un match es transformado en hit o descarte, el evento es replicado a las 
 
 ![](images/sec21/p253_f02.png)
 
-## BAJA DE PERFILES
+## Baja de perfiles
 
 La baja de perfiles funciona independientemente en cada instancia, es decir, cuando se da de baja un perfil en una instancia, la misma no se replica al resto de las instancias. Por lo que debe considerarse que si la baja de un perfil es por un error de carga o asignación alelica debe comunicarse a la instancia superior para que esta también proceda con la baja.
 
-## FILTROS
+## Filtros
 
 Dentro del listado de perfiles en la solapa **Perfiles**, se tiene el tilde **Pendientes de Replicar**, que me muestra los perfiles que no fueron replicados a una instancia superior:
 

@@ -1,4 +1,4 @@
-# 21. Instance interconnection
+# Instance interconnection
 
 ## Instance interconnection
 
