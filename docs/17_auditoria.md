@@ -1,6 +1,6 @@
-# 17. AUDITORÍA
+# Auditoría
 
-## AUDITORÍA Y TRAZABILIDAD EN GENIS
+## Auditoría y trazabilidad en GENis
 
 GENis incorpora un sistema de auditoría integral diseñado para garantizar la trazabilidad de las operaciones realizadas sobre la base de datos genética y sus elementos asociados. Estas funcionalidades se alinean con las recomendaciones actuales de organismos internacionales (ISFG, ENFSI, SWGDAM) y con los requisitos de sistemas de gestión de calidad utilizados en laboratorios forenses (por ejemplo, ISO/IEC 17025 e ISO/IEC 27001).
 

@@ -1,4 +1,4 @@
-# 17. Audit
+# Audit
 
 ## Audit and traceability in GENis
 
