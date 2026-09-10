@@ -1,6 +1,6 @@
-# 20. BÚSQUEDA DE PERSONAS
+# Búsqueda de personas
 
-## BÚSQUEDA DE PERSONAS
+## Búsqueda de personas
 
 Este capítulo abarca dos módulos:
 
@@ -9,7 +9,7 @@ Este capítulo abarca dos módulos:
 
 Las investigaciones de personas, son situaciones donde los perfiles genéticos de determinados restos humanos son comparados con perfiles obtenidos de muchas y diferentes muestras biológicas, lo que introduce un nivel de complejidad que va mas allá de los desafíos del análisis de parentesco convencional en ciencias forenses.
 
-## CREACIÓN DE UN CASO
+## Creación de un caso
 
 El primer paso para trabajar con pedigrís, es dar de alta un caso.
 
@@ -52,7 +52,7 @@ Para ingresar al caso, hacer click en el ícono ![](images/sec20/p180_f02.png) d
 
 Una vez guardado el caso se pueden completar las solapas e ingresar la metadata. El Código del caso y el Tipo de caso quedan en un estado de solo lectura sin poder modificarse:
 
-## ESTADOS DE UN CASO
+## Estados de un caso
 
 Se tienen tres estados posibles por los que puede pasar un caso:
 
@@ -74,7 +74,7 @@ Antes de darlo de baja me aparece un cartel de advertencia (mismo cartel de para
 
 Al borrar el caso, el mismo aparece en el listado grisado sin posibilidad de poder accederlo.
 
-## METADATA DE UN CASO
+## Metadata de un caso
 
 Dentro de un caso, en la solapa **Datos de la causa**, me permite agregar la metadata.
 
@@ -87,7 +87,7 @@ Al hacer click sobre **Ver/Editar datos**, me permite agregar más información.
 
 Dentro del recuadro de **Información persona buscada**, me aparece el listado de toda la metadata que se hayan cargado para el caso. Los registros estan ordenados por el campo alias.
 
-## INFORMACIÓN DE LA PERSONA BUSCADA / GRUPO FAMILIAR
+## Información de la persona buscada / grupo familiar
 
 La sección "Información persona buscada / grupo familiar" permite registrar metadata descriptiva del caso MPI, vinculada a la persona de interés y a su contexto familiar.
 Esta información cumple una **función administrativa, documental y de trazabilidad**, y está destinada a facilitar la organización, comprensión y seguimiento del caso por parte de los usuarios del sistema.
@@ -97,7 +97,7 @@ No obstante, esta metadata resulta relevante como **soporte contextual** para la
 
 ![](images/sec20/p184_f01.png)
 
-## ASOCIAR PERFILES A UN CASO
+## Asociar perfiles a un caso
 
 El siguiente paso, luego se haber creado el caso, es asociar los perfiles que se van a utilizar cuando se generen los nodos del pedigrís.
 Según el tipo de caso (MPI o DVI) se tienen las siguientes solapas para asociar perfiles:
@@ -111,7 +111,7 @@ Según el tipo de caso (MPI o DVI) se tienen las siguientes solapas para asociar
 
 Estas solapa permite asociar los perfiles que se van a poder asociar a los nodos del pedigrí.
 
-## SOLAPA PERFILES DE REFERENCIA
+## Solapa perfiles de referencia
 
 Esta solapa solo me permite asociar perfiles pertenecientes a las categorías:
 
@@ -126,7 +126,7 @@ Esta solapa solo me permite asociar perfiles pertenecientes a las categorías:
 
 Se puede asociar un perfil en particular o un lote completo.
 
-## SOLAPA PERFILES NN POST MORTEM
+## Solapa perfiles NN post mortem
 
 Para el tipo de caso DVI, aparte de la solapa Perfiles de Referencia, se tiene la solapa Perfiles NN Post Mortem.
 
@@ -137,7 +137,7 @@ Esta solapa permite asociar perfiles pertenecientes a las categorías Post Morte
 - Personas fallecidas no identificadas (INN)
 - Personas fallecidas cuya identidad quiere analizarse (PFNI)
 
-## ASOCIAR LOTE
+## Asociar lote
 
 Para asociar un lote, hacer click en el botón **Asociar Lote** y aparece una pantalla que me permite buscar el lote por ID o por nombre:
 
@@ -153,7 +153,7 @@ Tener en cuenta las siguientes consideraciones:
 - Para los casos de DVI que tienen ambas solapas (Perfiles de referencia y Perfiles NN post mortem), según la categoría perteneciente al perfil se asociarán en una solapa u otra. Ejemplo: si en la solapa **Perfiles de Referencia** cargo un perfil con categoría ER, este perfil se cargará automáticamente en la solapa **Perfiles NN Post Mortem**.
 -  Tener en cuenta que para el caso de DVI, si se tiene un pedigrí activo y se asocia un nuevo lote, **solo** se asociarán los perfiles correspondientes a la solapa de **Perfiles de referencia**. Para que se pueden exportar tambien los perfiles pertenecientes a la solapa **Perfiles NN Post Mortem**, cambiar el estado de los pedigrís a **En Construcción**, importar el lote y volver a activarlos.
 
-## ASOCIAR PERFILES
+## Asociar perfiles
 
 Para asociar perfiles se cumplen las mismas reglas que para asociar un lote. Para buscar el perfil a asociar se puede buscar por los siguientes campos:
 
@@ -167,7 +167,7 @@ Para poder hacer efectiva la asociación del perfil, se debe marcar el casillero
 
 Tener en cuenta que los perfiles ya asociados no se van a poder tildar.
 
-## DESASOCIAR PERFILES DEL CASO
+## Desasociar perfiles del caso
 
 Se puede desasociar un perfil especifico, haciendo click sobre el ícono de la papelera o seleccionar los perfiles que se desean desasociar y hacer click en el botón **Desasociar seleccionados**:
 
@@ -178,7 +178,7 @@ Validaciones
 - No se puede desasociar un perfil que este asociado a un pedigrí
 - Tener en cuenta que si se quiere desasociar un perfil que es padre (Ver sección **20.22 Agrupaciones de Restos**), los hijos asociados al perfil agrupador pasarán al estado **Activo**.
 
-## CREACIÓN DEL GENOGRAMA O PEDIGRI
+## Creación del genograma o pedigrí
 
 El próximo paso es construir el pedigrí.
 
@@ -195,7 +195,7 @@ Se deberá completar el campo mandatorio **Nombre del Pedigrí**. Si no se tiene
 
 Mientras el pedigrí esté en modo construcción, aparece la leyenda: *"Este pedigrí se encuentra en modo construcción, por lo tanto, no participa de las búsquedas"*
 
-## ASIGNAR NODOS A UN PEDIGRÍ
+## Asignar nodos a un pedigrí
 
 La asociación de nodos dentro del pedigrí permite asignar perfiles que estén asociados dentro del caso. Según el tipo de caso se comporta de la siguiente manera:
 
@@ -236,7 +236,7 @@ Para los perfiles asociados a los nodos, se utilizan los siguientes colores:
     - Restos biológicos no identificados
     - Personas fallecidas no identificadas
 
-## CAMBIOS DE ESTADO DE UN PEDIGRÍ
+## Cambios de estado de un pedigrí
 
 Un pedigrí puede pasar por los siguientes estados:
 
@@ -267,7 +267,7 @@ Para borrar un pedigrí, hacer click sobre el ícono de Borrar, dentro de la sol
 
 Al borrar el pedigrí se elimina automáticamente de la lista de pedigrís del caso sin posibilidad de acceder nuevamente al mismo.
 
-## FILTROS
+## Filtros
 
 Se tienen varios filtros para la búsqueda de pedigrís dentro de un caso:
 
@@ -284,7 +284,7 @@ Se puede realizar una combinación de los filtros que permita buscar la informac
 
 ![](images/sec20/p200_f01.png)
 
-## CHEQUEO DE CONSISTENCIA
+## Chequeo de consistencia
 
 El chequeo de consistencias permite analizar si el pedigrí es consistente, ya sea porque el pedigrí está incompleto o los perfiles asociados a los nodos no tienen relación entre sí.
 
@@ -318,7 +318,7 @@ Presionar el botón **Chequear Consistencia** y automáticamente me aparece el r
 
 Si se realizan cambios sobre el pedigrí, el chequeo de consistencia anterior se elimina, teniendo la posibilidad de volver a realizar el chequeo de consistencias sobre el pedigrí modificado.
 
-## BÚSQUEDA: ACTIVACIÓN DEL PEDIGRÍ
+## Búsqueda: activación del pedigrí
 
 Para activar un pedigrí hacer click sobre el botón Activar dentro del pedigrí:
 
@@ -372,7 +372,7 @@ Una vez activado el pedigrí, se tiene el botón **Ver parámetros de activació
 
 Estos parametros son de solo consulta, están grisados sin posibilidad de modificación.
 
-## SCREENING MITOCONDRIAL
+## Screening mitocondrial
 
 Dentro de un pedigrí perteneciente a un caso, al activar el mismo, se tiene un casillero para chequear si se quiere correr el screening mitocondrial, como se vio en la sección anterior.
 
@@ -396,7 +396,7 @@ Dentro del detalle del match se tiene una columna de **Análisis Mitocondrial**,
 - Para los casos de DVI el casillero de **Correr screening mitocondrial y Cantidad de no coincidencias para mitocondrial**, esta siempre grisado, es decir, para los casos de DVI no se utiliza el Screening Mitocondrial. Esta decisión responde a la naturaleza del proceso de identificación en desastres, donde el universo de perfiles es cerrado y donde el uso del análisis mitocondrial como filtro excluyente podría conducir a la pérdida de asociaciones válidas, especialmente en contextos de perfiles incompletos, degradados o parciales.
 - En DVI, el análisis mitocondrial puede estar disponible como información complementaria, pero la identificación se basa principalmente en el análisis autosomal, la agrupación de restos y la evaluación integral de la evidencia genética dentro del caso.
 
-## MUTACIONES
+## Mutaciones
 
 Cuando el pedigrí tiene un modelo mutacional asociado, lo que se tiene en cuenta es si alguno de los alelos de la persona de interes es distinto a los que podria tomar, en base a los alelos de la familia, porque se considera la posibilidad de que hayan mutado.
 
@@ -424,7 +424,7 @@ Para modificar un modelo mutacional, hacer click en el ícono ![](images/sec20/p
 
 ![](images/sec20/p211_f02.png)
 
-## GESTOR DE COINCIDENCIAS (MATCHES)
+## Gestor de coincidencias (matches)
 
 Al igual que Forense, se tiene el **Gestor de Coincidencias** para el caso de MPI/DVI.
 
@@ -474,7 +474,7 @@ A partir de cada match permite crear un escenario (Ver detalle de cómo crear un
 
 Para los casos de DVI, tener en cuenta que cuando se ingresan perfiles nuevos a la base, no se busca coincidencias con los Pedigrís activos (como ocurre para MPI), es decir, cuando se activa un pedigrí de DVI, la búsqueda se realiza sobre los perfiles activos, dentro del caso de DVI al cual pertenece el pedigrí.
 
-## ESCENARIOS
+## Escenarios
 
 Los escenarios permiten evaluar la probabilidad del pedigrí o de un subconjunto del mismo. Existen dos tipos de escenarios:
 
@@ -543,7 +543,7 @@ Si no se chequea esa opción, el pedigrí solamente pasa al estado **Confirmado*
 
 ![](images/sec20/p220_f02.png)
 
-## COPIA DEL PEDIGRÍ
+## Copia del pedigrí
 
 Dentro de cada pedigrí se tiene la opción de poder realizar una copia del mismo.
 
@@ -575,7 +575,7 @@ Tener en cuenta de que si se está modificando el pedigrí original, se seleccio
 
 El botón **Cancelar** vuelve a la pantalla anterior de edición del pedigrí original y el botón Aceptar abre la pantalla de copia de pedigrí.
 
-## TRAZABILIDAD DE UN PEDIGRÍ
+## Trazabilidad de un pedigrí
 
 La trazabilidad del pedigrí permite guardar determinadas acciones asociados al mismo. Las acciones queden registradas son las siguientes:
 
@@ -590,7 +590,7 @@ Para ver la trazabilidad de un **Pedigrí**, ubicarse en la solapa Pedrigrí y p
 
 ![](images/sec20/p224_f01.png)
 
-## AGRUPACIONES DE RESTOS (COLLAPSING)
+## Agrupaciones de restos (collapsing)
 
 Para los tipos de casos de DVI, se tiene la solapa **Agrupaciones de Restos**, el cual me permite realizar el collapsing.
 
@@ -720,7 +720,7 @@ Precionando sobre el ícono del ojo dentro de la columna **Ver perfiles asociado
 
 ![](images/sec20/p231_f01.png)
 
-## AGRUPACIÓN MANUAL
+## Agrupación manual
 
 Dentro de la solapa **Agrupación de Restos**, hacer click sobre el botón de **Agrupación Manual**, me aparece la siguiente pantalla:
 
@@ -765,7 +765,7 @@ Eliminar el resto de los perfiles padres, haciendo click en la cruz "X". En el c
 - No se puede realizar una agrupación con un perfil que tiene coincidencia pendiente.
 - Al desagrupar un perfil de un grupo (Ver seccion siguiente), o agregar un nuevo perfil de resto, el perfil no podrá estar en ningún pedigrí activo.
 
-## DESAGRUPAR PERFILES
+## Desagrupar perfiles
 
 Dentro de la solapa **Perfiles NN Post Mortem** se visualizan los perfiles **Activos** por defecto. Se puede ver los perfiles **Agrupados** chequeado el casillero:
 

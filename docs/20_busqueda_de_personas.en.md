@@ -1,4 +1,4 @@
-# 20. Missing persons search
+# Missing persons search
 
 ## Missing persons search
 
