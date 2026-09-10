@@ -1,6 +1,6 @@
-# 7. CATEGORÍAS
+# Categorías
 
-## CATEGORÍAS
+## Categorías
 
 Todos los perfiles genéticos que se incorporan en GENis deben pertenecer a una categoría. La definición y de las categorías son fundamentales para el funcionamiento del sistema. En ellas se definen: parámetros de admisibilidad de perfiles genéticos, reglas de asociación, reglas de búsquedas y una lista de alias posibles para la carga masiva en el caso de venir dada la categoría en el archivo correspondiente en el campo **Specimen Category**.
 
@@ -40,7 +40,7 @@ Para una mayor claridad y facilidad en la administración de las categorías, la
 
 ![](images/sec07/p048_f01.png)
 
-## DEFINICIÓN DE CATEGORÍAS
+## Definición de categorías
 
 Para los módulos de búsqueda de personas (MPI / DVI), se definieron categorías fijas que no se pueden eliminar ni modificar. Estas categorías son las siguientes:
 
@@ -90,7 +90,7 @@ Cuando se ingresa un perfil a la base, para correr el match, primero se verifica
 - Si es un perfil con una categoría perteneciente al agrupador **MPI**, solo corre el match con las categorías de MPI, es decir, busca contra todos los pedigrís activos de MPI.
 - Si es un perfil con una categoría perteneciente al agrupador **DVI**, no se lanzará ninguna búsqueda, es decir, esta búsqueda se lanza al activar los pedigrís dentro del caso con los perfiles del caso.
 
-## CREACIÓN Y EDICIÓN DE GRUPOS DE CATEGORÍAS FORENSE
+## Creación y edición de grupos de categorías forense
 
 Ingresando en el menú **Configuración/Categorías**, presionar el botón **Agregar Grupo** en el menú de la izquierda, para definir una agrupación de categorías:
 
@@ -104,7 +104,7 @@ Presionar **Agregar** y se observa el grupo creado:
 
 Para editar los datos del grupo presionar en ✎ y desde allí será posible modificar cualquiera de los campos disponibles o eliminar la agrupación en el caso de que no existan categorías asociadas.
 
-## CREACIÓN DE UNA NUEVA CATEGORÍA
+## Creación de una nueva categoría
 
 Para crear una nueva categoría, seleccionar **Agregar Categoría** del menú de la izquierda:
 
@@ -134,7 +134,7 @@ Se podrán habilitar los siguientes casilleros:
 
 - **Admite carga manual:** permitir realizar carga manual de perfiles con esta categoría.
 
-## ALTA DE ANÁLISIS
+## Alta de análisis
 
 En esta solapa se establecen los criterios de admisibilidad de los perfiles que podrán ser incorporados a la categoría:
 
@@ -144,7 +144,7 @@ En esta solapa se establecen los criterios de admisibilidad de los perfiles que 
 
 - **Cantidad máxima de alelos por marcador:** para el caso de las categorías del tipo Evidencia, indica la cantidad de alelos que puedo tener como máximo en cada marcador.
 
-## ASOCIACIÓN DE PERFILES
+## Asociación de perfiles
 
 Esta solapa se encuentra disponible solamente para las categorías definidas como evidencias y permite seleccionar la otra categoría a la cual deberán asociarse los perfiles de aportantes múltiples. Su utilidad radica en permitir asociar los perfiles de referencia de las víctimas a las evidencias optimizando de este modo las búsquedas de coincidencias:
 
@@ -156,7 +156,7 @@ Para efectivizar el alta, debe presionarse el botón ![](images/sec07/p055_f02.p
 
 ![](images/sec07/p055_f03.png)
 
-## REGLAS DE BÚSQUEDA
+## Reglas de búsqueda
 
 En esta solapa deben configurarse las reglas de búsqueda de coincidencias entre perfiles incorporados a la categoría.
 
