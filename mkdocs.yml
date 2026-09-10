@@ -55,6 +55,17 @@ theme:
 plugins:
   - search:
       lang: es
+  - i18n:
+      docs_structure: suffix
+      reconfigure_material: true
+      languages:
+        - locale: es
+          name: Español
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
   - glightbox:
       touchNavigation: true
       loop: false
