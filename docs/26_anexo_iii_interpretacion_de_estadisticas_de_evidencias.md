@@ -1,6 +1,6 @@
-# 26. ANEXO III - INTERPRETACIÓN DE ESTADÍSTICAS DE EVIDENCIAS
+# Anexo III - Interpretación de estadísticas de evidencias
 
-## ANEXO III – INTERPRETACIÓN DE ESTADÍSTICAS DE EVIDENCIAS
+## Anexo III – Interpretación de estadísticas de evidencias
 
 El presente anexo describe el marco **estadístico y probabilístico** utilizado por GENis para la valoración cuantitativa de evidencias genéticas, particularmente en contextos que involucran **mezclas de ADN y múltiples hipótesis de contribución**. Su objetivo es brindar al usuario una comprensión conceptual de los cálculos realizados por el sistema, sin pretender sustituir la formación estadística especializada ni la interpretación pericial formal.
 
@@ -12,7 +12,7 @@ En términos generales, el LR se define como:
 
 donde ***H<sub>f</sub> y H<sub>d</sub>*** representan dos hipótesis en competencia, típicamente asociadas a la **participación o no de determinados individuos en la muestra evidenciaria**. Un valor de LR mayor que 1 indica que la evidencia es más probable bajo la hipótesis del numerador que bajo la del denominador, mientras que valores menores que 1 indican lo contrario
 
-## MARCO GENERAL DE HIPÓTESIS Y CONTRIBUYENTES
+## Marco general de hipótesis y contribuyentes
 
 En un caso general, las hipótesis consideradas por GENis contemplan la posible contribución genética a una muestra evidenciaria ***M*** por parte de:
 
@@ -34,13 +34,13 @@ La probabilidad de la evidencia bajo una hipótesis determinada se expresa enton
 
 donde la suma recorre todos los escenarios compatibles de contribuyentes desconocidos.
 
-## CONSIDERACIÓN DE FRECUENCIAS ALÉLICAS Y SUBESTRUCTURA POBLACIONAL
+## Consideración de frecuencias alélicas y subestructura poblacional
 
 Para estimar las probabilidades asociadas a los distintos escenarios, GENis utiliza las **frecuencias alélicas poblacionales** correspondientes a la base seleccionada por el usuario. Asimismo, se contempla la posible **estructura subpoblacional** mediante el parámetro θ, de acuerdo con los modelos clásicos de Balding–Nichols.
 
 La probabilidad de observar un determinado conjunto de alelos se calcula considerando la multiplicidad de cada alelo y su frecuencia poblacional, permitiendo incorporar correcciones por endogamia o estructura genética cuando corresponde.
 
-## MODELADO DE DROP-OUT Y DROP-IN
+## Modelado de drop-out y drop-in
 
 GENis incorpora explícitamente los fenómenos de **drop-out** y **drop-in**, fundamentales en el análisis de mezclas:
 
@@ -57,7 +57,7 @@ La probabilidad de observar la evidencia ***R*** dado un conjunto de contribuyen
 
 Este enfoque permite que GENis evalúe escenarios complejos de mezcla de forma probabilística, aun cuando el usuario no haya definido explícitamente el número de aportantes ni la composición exacta de la mezcla.
 
-## VALORACIÓN ESTADÍSTICA DE ASOCIACIONES ENTRE MEZCLAS DE EVIDENCIAS
+## Valoración estadística de asociaciones entre mezclas de evidencias
 
 El anexo también describe el caso particular de **asociación entre dos mezclas evidenciarias**, donde se evalúa la hipótesis de que ambas compartan uno o más contribuyentes comunes. Este tipo de análisis es utilizado, por ejemplo, en el algoritmo **Mezcla–Mezcla**, aplicable cuando ambas evidencias tienen dos aportantes inferidos.
 
@@ -68,13 +68,13 @@ En este contexto, se comparan hipótesis del tipo:
 
 La valoración se realiza mediante un LR construido a partir de los escenarios compatibles con cada hipótesis, siguiendo el mismo marco probabilístico general.
 
-## ALCANCE E INTERPRETACIÓN DE LOS RESULTADOS
+## Alcance e interpretación de los resultados
 
 Es importante destacar que los valores estadísticos generados por GENis, incluidos los LR calculados en este marco, deben interpretarse como **herramientas de apoyo para la evaluación y priorización de coincidencias**, y no como sustitutos del análisis pericial completo.
 
 GENis no implementa modelos semicontinuos ni continuos de intensidad de picos, ni optimiza parámetros de drop-out a partir de los datos de cada caso, como lo hacen software periciales especializados (por ejemplo LRmix, EuroForMix o STRmix). En consecuencia, los resultados obtenidos deben ser comprendidos dentro del alcance y las limitaciones del sistema.
 
-## IMPLEMENTACIÓN DEL CÁLCULO
+## Implementación del cálculo
 
 GENiS considera como ensamble de conjuntos ***{Uj}*** de alelos correspondientes a los ***x*** contribuyentes desconocidos que propone la hipótesis ***H***, a todas las posibles permutaciones de ***2x*** alelos tomados con repetición de los ***k*** valores alélicos del sistema analizado.
 
@@ -104,7 +104,7 @@ Con
 
 Donde ***n<sub>Ai</sub>*** es la multiplicidad del alelo ***A<sub>i</sub>*** entre los alelos ***{T,Uj}*** y ***p<sub>Ai</sub>*** la frecuencia de aparición de dicho alelo en la población de interés.
 
-## VALORACIÓN ESTADÍSTICA DE ASOCIACIONES ENTRE MEZCLAS EVIDENCIARIAS
+## Valoración estadística de asociaciones entre mezclas evidenciarias
 
 Supongamos que dentro de un sistema de almacenamiento de muestras evidenciarias se dispone de un procedimiento para asociar dos mezclas, ***M*** y ***M´***, basado por ejemplo en criterios de similitud de composición (i.e. matching).
 

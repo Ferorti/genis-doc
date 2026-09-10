@@ -1,4 +1,4 @@
-# 26. Annex III - Interpretation of evidence statistics
+# Annex III - Interpretation of evidence statistics
 
 ## Annex III – Interpretation of evidence statistics
 
