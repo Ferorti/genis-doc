@@ -1,6 +1,6 @@
-# 12. ALTA DE PERFILES
+# Alta de perfiles
 
-## ALTA DE PERFILES
+## Alta de perfiles
 
 El proceso de **alta de perfiles** corresponde al conjunto de acciones mediante las cuales un perfil genético es incorporado formalmente a la base de datos del sistema GENis, quedando disponible para su almacenamiento, comparación y eventual replicación a instancias superiores. Esta etapa constituye un punto crítico en términos de trazabilidad, responsabilidad técnica y validez del registro, ya que define el vínculo entre la muestra biológica, el perfil genético generado y su representación digital dentro del sistema.
 
@@ -11,7 +11,7 @@ Para el alta de un nuevo perfil:
 3. Completar los campos requeridos según la categoría del perfil.
 4. Finalizar el proceso presionando **"Guardar"**, momento en el cual el sistema registra el perfil en la base de datos.
 
-## CONSIDERACIONES SOBRE DATOS FILIATORIOS, CÓDIGO DE LABORATORIO Y RESPONSABLE DEL PERFIL
+## Consideraciones sobre datos filiatorios, código de laboratorio y responsable del perfil
 
 ### a) Datos filiatorios y categoría del perfil
 
@@ -86,7 +86,7 @@ Para ingresar el resultado de un análisis genético, ir al menú **Perfiles**/L
 
 ![](images/sec12/p087_f01.png)
 
-## CARGA DE ANÁLISIS MITOCONDRIAL
+## Carga de análisis mitocondrial
 
 El análisis de ADN mitocondrial (mtDNA) en GENis permite incorporar al sistema los haplotipos obtenidos para un perfil determinado. La carga debe realizarse siguiendo una estructura estandarizada que garantice la correcta interpretación de los rangos y mutaciones ingresadas, así como la ejecución confiable del proceso de matching mitocondrial.
 
@@ -101,7 +101,7 @@ Para verificar esto, acceder a Configuración → Categorías y revisar:
 - "Cantidad máxima de marcadores no coincidentes"
 - Si la categoría "Notifica coincidencias"
 
-## ACCESO A LA CARGA DEL ANÁLISIS
+## Acceso a la carga del análisis
 
 1. Ir a **Perfiles** → **Listado de perfiles**.
 2. En la fila del perfil deseado, hacer clic en **+** en la columna *Agregar análisis*.
@@ -109,7 +109,7 @@ Para verificar esto, acceder a Configuración → Categorías y revisar:
 
 ![](images/sec12/p088_f01.png)
 
-## CARGA DE RANGOS Y MUTACIONES
+## Carga de rangos y mutaciones
 
 1. Hacer clic en **Agregar Rango**.
 2. Completar los campos solicitados:
@@ -123,7 +123,7 @@ Para verificar esto, acceder a Configuración → Categorías y revisar:
 - Es obligatorio **ingresar al menos una mutación** dentro del rango.
 - El sistema no permitirá guardar rangos inconsistentes o vacíos.
 
-## DOBLE CARGA CIEGA
+## Doble carga ciega
 
 GENis exige una doble carga ciega para minimizar errores:
 
@@ -134,7 +134,7 @@ GENis exige una doble carga ciega para minimizar errores:
 
 ![](images/sec12/p090_f01.png)
 
-## ALTA EFECTIVA
+## Alta efectiva
 
 El botón **Guardar** permanecerá deshabilitado hasta que:
 
@@ -148,7 +148,7 @@ Al presionar **Guardar**:
 
 ![](images/sec12/p090_f02.png)
 
-## CARGA DE ANÁLISIS AUTOSOMAL
+## Carga de análisis autosomal
 
 La carga de un análisis autosomal en GENis consiste en ingresar los alelos obtenidos en laboratorio para cada marcador incluido en un kit STR. El sistema requiere una estructura fija por kit y una **doble carga** ciega para evitar errores en la transcripción de alelos.
 
@@ -174,7 +174,7 @@ Antes de cargar un análisis autosómico, verificar que:
 - Con el botón **+** el usuario puede agregar alelos adicionales si el marcador lo requiere (p. ej., sistemas con ≥3 alelos, tri-allelicos).
 - Los alelos que se encuentren fuera del rango permitido por el kit serán marcados automáticamente en color para alertar al usuario.
 
-## DOBLE CARGA CIEGA
+## Doble carga ciega
 
 1. Completar la primera carga y presionar **Verificar carga**.
 2. El sistema solicitará ingresar nuevamente todos los alelos.
@@ -182,7 +182,7 @@ Antes de cargar un análisis autosómico, verificar que:
 
 ![](images/sec12/p092_f01.png)
 
-## CARGA DE ARCHIVOS ADJUNTOS Y ELECTROFEROGRAMAS
+## Carga de archivos adjuntos y electroferogramas
 
 GENis permite adjuntar evidencia documental asociada al análisis:
 
@@ -201,7 +201,7 @@ Una vez cargado los archivos se pueden visualizar los electroferogramas:
 ![](images/sec12/p093_f02.png)
 ![](images/sec12/p093_f03.png)
 
-## CARGA MASIVA
+## Carga masiva
 
 La carga masiva permite tomar la salida de GeneMapper en un archivo de texto para realizar el alta de perfiles genéticos.
 
@@ -214,13 +214,13 @@ Un usuario administrativo puede ingresar los datos de la muestra y los datos fil
 
 Para esto, el código interno de la muestra debe coincidir con el **Sample Name** en el archivo de carga masiva.
 
-## GENERACIÓN DEL ARCHIVO PARA CARGA MASIVA DESDE GENEMAPPER / GENEMAPPER ID-X
+## Generación del archivo para carga masiva desde GeneMapper / GeneMapper ID-X
 
 La carga masiva de perfiles en GENis requiere un archivo **.txt tabulado** con una estructura específica. Para ello, es necesario configurar un **Table Setting dedicado al archivo de carga masiva** en GeneMapper / GeneMapper ID-X y completar correctamente los campos que GENis valida al momento de la importación.
 
 A continuación, se describen los pasos recomendados para generar correctamente el archivo.
 
-### 1. CONFIGURACIÓN DEL TABLE SETTING EN GENEMAPPER / ID-X
+### 1. Configuración del table setting en GeneMapper / ID-X
 
 1. Abrir GeneMapper ID-X e ingresar a:
 
@@ -247,7 +247,7 @@ A continuación, se describen los pasos recomendados para generar correctamente 
 **Nota:**
 Si bien puede incluirse mas columnas que sirvan al usuario al momento de revisar el archivo Size, Height, Peak Area, Dye, Panel, Mutation u otras GENis no interpreta estos parámetros en carga masiva.
 
-### 2. COMPLETAR LOS CAMPOS UD1 Y UD2 EN EL PROYECTO
+### 2. Completar los campos UD1 y UD2 en el proyecto
 
 Antes de exportar el archivo:
 
@@ -257,7 +257,7 @@ Antes de exportar el archivo:
 
 Si los valores de UD1 o UD2 no coinciden con los configurados en GENis, la carga masiva será rechazada.
 
-### 3. CONFIGURACIÓN DE SPECIMEN CATEGORY (VÍA CODIS EXPORT MANAGER)
+### 3. Configuración de specimen category (vía CODIS export manager)
 
 Para que una categoría pueda seleccionarse dentro de la columna **Specimen Category** del proyecto, primero debe crearse en GeneMapper ID-X.
 
@@ -283,7 +283,7 @@ A partir de este momento, la categoría aparecerá en la lista desplegable de la
 El nombre de la categoría debe coincidir exactamente con el nombre de categoría configurado en GENis (incluyendo mayúsculas, minúsculas y tildes).
 Si no coincide, GENis no podrá interpretar la categoría y la carga masiva fallará.
 
-### 4. EXPORTACIÓN DEL ARCHIVO DESDE GENEMAPPER / ID-X
+### 4. Exportación del archivo desde GeneMapper / ID-X
 
 Para generar el archivo:
 
@@ -312,7 +312,7 @@ Si la cabecera contiene menos de 8 columnas de alelos aparecera el mensaje aunqu
 
 ![](images/sec12/p098_f01.png)
 
-### 5. CONTROL PREVIO ANTES DE LA CARGA MASIVA EN GENIS
+### 5. Control previo antes de la carga masiva en GENis
 
 Se recomienda revisar el archivo .txt antes de cargarlo, verificando:
 
@@ -343,7 +343,7 @@ Ejemplo de archivo de carga para mitocondrial:
 
 Si los datos de la muestra fueron previamente ingresados, por coincidencia del código interno de la muestra, se realizará la asociación. De lo contrario el usuario deberá cargar los datos (datos de la muestra y de corresponder conforme a la categoría seleccionada, los datos filiatorios).
 
-## PRIMER NIVEL DE APROBACIÓN
+## Primer nivel de aprobación
 
 Para comenzar el proceso de carga masiva, ir al menú **Perfiles/Alta Masiva de Análisis**:
 
@@ -398,7 +398,7 @@ a la derecha del código interno de la muestra, lo que indica que los metadatos 
 
 ![](images/sec12/p103_f03.png)
 
-## SEGUNDO NIVEL DE APROBACIÓN
+## Segundo nivel de aprobación
 
 Una vez aprobada la primera instancia, el usuario responsable de los perfiles o un superusuario (usuario que tiene permisos para operar sobre todos los perfiles de la instancia), podrá proceder a efectuar el alta efectiva. Para ello, acceder al menú **Perfiles /Aceptación masiva de Análisis**.
 
@@ -423,7 +423,7 @@ A partir del alta efectiva, se corre automáticamente el proceso de Match, lo qu
 
 ![](images/sec12/p105_f01.png)
 
-## RECHAZAR PERFIL
+## Rechazar perfil
 
 En el caso de que se quiera rechazar el análisis, se deberá completar el motivo de rechazo para poder avanzar:
 
@@ -435,7 +435,7 @@ El motivo del rechazo queda registrado junto con el análisis:
 
 ![](images/sec12/p106_f02.png)
 
-## ERRORES QUE PUEDEN IMPEDIR LA ACEPTACIÓN DE UN ANÁLISIS
+## Errores que pueden impedir la aceptación de un análisis
 
 En algunos casos, un análisis cargado mediante carga masiva puede ser importado correctamente, pero **no ser aceptado** en la etapa de “Aceptación de Perfiles”. Esto se debe a validaciones adicionales que GENis realiza antes de permitir que el perfil ingrese a la base de datos y sea considerado en las búsquedas de coincidencias.
 
@@ -478,7 +478,7 @@ Si GENis no permite la aceptación, el usuario debe:
 
 Esto asegura que solo entren a la base de datos perfiles validados, completos y compatibles con las reglas del sistema.
 
-## EVIDENCIAS ASOCIADAS A LAS VÍCTIMAS
+## Evidencias asociadas a las víctimas
 
 GENis permite asociar evidencias de aportantes múltiples al perfil de la víctima. Es por eso que puede configurarse una categoría que permita esta asociación.
 
@@ -502,7 +502,7 @@ Al presionar **Aceptar** se podrá visualizar las etiquetas de los alelos corres
 
 ![](images/sec12/p110_f03.png)
 
-## ETIQUETADO DE EVIDENCIAS
+## Etiquetado de evidencias
 
 Cuando un genetista analiza una evidencia forense de aportantes múltiples, en ocasiones puede proceder a realizar la deconvolución de la mezcla, tarea que permite identificar cuáles son los alelos correspondientes a la víctima y al sospechoso.
 
@@ -528,7 +528,7 @@ Una vez resaltados los alelos a etiquetar, seleccionar la etiqueta correspondien
 
 Para salvar los cambios, presionar en **Guardar etiquetas.**
 
-## NOTAS SOBRE EL ETIQUETADO DE EVIDENCIAS
+## Notas sobre el etiquetado de evidencias
 
 El etiquetado de evidencias en GENis es una herramienta destinada a la clasificación y marcado de alelos cuando se trabaja con mezclas o perfiles complejos. Por esta razón, la opción de etiquetar no siempre aparece disponible.
 

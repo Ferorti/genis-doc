@@ -1,4 +1,4 @@
-# 12. Profile registration
+# Profile registration
 
 ## Profile registration
 
