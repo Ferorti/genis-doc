@@ -143,7 +143,7 @@ chmod +x ./bin/genis
 
 Adjust the service connection parameters by editing the *./conf/storage.conf* file.
 
-```text
+```properties
 # LDAP 
 ldap {
   default {
@@ -179,7 +179,7 @@ mongodb {
 
 Enter the laboratory data by editing the *./conf/genis_misc.conf* file, for example:
 
-```text
+```properties
 ...
 laboratory {
   country = "AR"
@@ -380,8 +380,8 @@ Exit the container with `CTRL+D`.
 
 ### Creating a systemd service (recommended for production)
 Create /etc/systemd/system/genis.service:
-```text
-ini[Unit]
+```ini
+[Unit]
 Description=GENis Forensic System
 After=network.target
 
