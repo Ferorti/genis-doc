@@ -1,4 +1,4 @@
-# 1. Introduction to GENis
+# Introduction to GENis
 
 ![](images/sec01/p012_f01.png)
 
