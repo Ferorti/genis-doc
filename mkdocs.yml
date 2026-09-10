@@ -1,0 +1,141 @@
+site_name: Documentación GENis
+site_description: Documentación funcional del sistema GENis
+site_url: https://fundacion-sadosky.github.io/genis/
+repo_url: https://github.com/fundacion-sadosky/genis
+repo_name: fundacion-sadosky/genis
+edit_uri: ""
+docs_dir: docs
+
+theme:
+  name: material
+  language: es
+  icon:
+    logo: material/dna
+    repo: fontawesome/brands/github
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Cambiar al modo claro
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar al modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar al modo automático
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+
+plugins:
+  - search:
+      lang: es
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: fade
+      slide_effect: slide
+      width: 90%
+      height: auto
+      zoomable: true
+      draggable: true
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/fundacion-sadosky/genis
+      name: GENis en GitHub
+
+nav:
+  - Inicio:
+      - Bienvenido: index.md
+      - Introducción a GENis: 01_introduccion_a_genis.md
+      - Declaración de principios: 00_declaracion_de_principios.md
+  - Administración del Sistema:
+      - Solicitar una cuenta: 02_solicitar_una_cuenta.md
+      - Roles: 03_roles.md
+      - Laboratorios: 04_laboratorios.md
+      - Genetistas: 05_genetistas.md
+      - Tipos de materiales biológicos: 06_tipos_de_materiales_biologicos.md
+      - Categorías: 07_categorias.md
+      - Kits: 08_kits.md
+      - Marcadores: 09_marcadores.md
+      - Bases de datos de frecuencias: 10_bases_de_datos_de_frecuencias.md
+      - Mitocondrial: 11_mitocondrial.md
+      - Auditoría: 17_auditoria.md
+      - Notificaciones: 18_notificaciones.md
+      - Tipificación de motivos: 19_tipificacion_de_motivos.md
+      - Reportes: 22_reportes.md
+  - Búsqueda de perfiles:
+      - Alta de perfiles: 12_alta_de_perfiles.md
+      - Baja de perfiles: 13_baja_de_perfiles.md
+      - Comparador de perfiles: 14_comparador_de_perfiles.md
+      - Exportador de perfiles: 15_exportador_de_perfiles.md
+      - Gestor de coincidencias y cálculos forense: 16_gestor_de_coincidencias_y_calculos_forense.md
+      - Coincidencia de perfiles: 24_coincidencia_de_perfiles.md
+      - Búsqueda de personas: 20_busqueda_de_personas.md
+      - Interconexión de instancias: 21_interconexion_de_instancias.md
+  - Anexos técnicos:
+      - Anexo I - Algoritmo de búsqueda de coincidencias de STR: 23_anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md
+      - Anexo II - Gestor de coincidencias y cálculos estadísticos por default: 25_anexo_ii_gestor_de_coincidencias_y_calculos_estadisticos_por_default.md
+      - Anexo III - Interpretación de estadísticas de evidencias: 26_anexo_iii_interpretacion_de_estadisticas_de_evidencias.md
+      - Anexo IV - Errores frecuentes y diccionario de errores: 27_anexo_iv_errores_frecuentes_y_diccionario_de_errores.md
+      - Anexo V - Marco de seguridad y protección de datos personales: 28_anexo_v_marco_de_seguridad_y_proteccion_de_datos_personales.md

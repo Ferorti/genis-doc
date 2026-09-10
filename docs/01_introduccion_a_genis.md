@@ -1,0 +1,23 @@
+# 1. INTRODUCCIÓN A GENis
+
+![](images/sec01/p012_f01.png)
+
+## INTRODUCCIÓN
+
+GENis es un sistema informático abierto para el almacenamiento, intercambio y comparación de perfiles genéticos con fines forenses, diseñado para su utilización en el ámbito de la investigación penal, la búsqueda de personas y la identificación de víctimas. El sistema integra herramientas de genética forense y bioinformática, con el objetivo de facilitar el cotejo sistemático de perfiles genéticos, asegurar la trazabilidad de la información y fortalecer la calidad técnica y probatoria de los resultados obtenidos.
+
+El desarrollo de GENis se inscribe en un proceso institucional de articulación entre organismos judiciales, la comunidad científica y el sector tecnológico de América Latina, orientado a dotar a los países de una herramienta propia para la gestión de bases de datos genéticos forenses. Desde su concepción, el sistema fue diseñado a partir de requerimientos operativos reales de laboratorios forenses y organismos judiciales, y tomando como referencia estándares y recomendaciones internacionales vigentes en la materia.
+
+En particular, la arquitectura y el funcionamiento de GENis se encuentran alineados con las recomendaciones de la **Sociedad Internacional de Genética Forense (ISFG)**, la **European Network of Forensic Science Institutes (ENFSI)** e **INTERPOL**, entre otros organismos de referencia. Estos lineamientos se reflejan tanto en los criterios de admisibilidad y búsqueda de coincidencias como en la transparencia de los modelos de cálculo, la auditabilidad del sistema y la protección de la información genética almacenada.
+
+**Un principio rector en el diseño de GENis es la transparencia de los modelos estadísticos y algoritmos de búsqueda, entendida como una condición necesaria para la reproducibilidad independiente de los resultados y su adecuada evaluación en el ámbito pericial y judicial. En este sentido, GENis adopta una arquitectura de código abierto**, lo que permite el acceso a sus modelos conceptuales, facilita auditorías técnicas y habilita su adaptación a distintos marcos normativos y organizacionales.
+
+Desde el punto de vista funcional, GENis permite el ingreso y la gestión de perfiles genéticos autosomales STR, cromosoma Y, cromosoma X y ADN mitocondrial. El sistema es altamente configurable, posibilitando la definición de categorías de perfiles, reglas de admisión, parámetros de búsqueda y criterios de comparación acordes a la normativa y a las políticas de cada jurisdicción o laboratorio.
+
+Uno de los ejes centrales de GENis es su **motor de búsqueda de coincidencias**, diseñado para operar tanto en contextos forenses clásicos como en escenarios de búsqueda de personas (MPI) e identificación de víctimas de desastres (DVI). En el ámbito forense, GENis implementa los algoritmos de coincidencia definidos por ENFSI en exigencia alta, media y baja, así como un algoritmo específico que permite identificar la posible participación de un mismo individuo en diferentes evidencias aun en ausencia de perfiles de referencia. En el ámbito de MPI y DVI, el sistema incorpora modelos basados en redes bayesianas que permiten el análisis de parentesco y la evaluación probabilística de hipótesis complejas.
+
+Complementariamente, GENis incorpora mecanismos robustos de seguridad, control de accesos, auditoría y trazabilidad, permitiendo registrar de manera detallada todas las acciones realizadas sobre perfiles, análisis, coincidencias y escenarios. Estas características resultan fundamentales para el cumplimiento de los requisitos de calidad, integridad y control exigidos por las normas y recomendaciones internacionales aplicables a bases de datos genéticas forenses.
+
+El presente manual tiene como objetivo describir de manera detallada y operativa el funcionamiento de GENis, abordando tanto los aspectos técnicos como los conceptuales necesarios para su correcta utilización. A lo largo del documento se explican los flujos de trabajo, los criterios de búsqueda y comparación, la interpretación de resultados, los mecanismos de auditoría y las particularidades de cada uno de los módulos del sistema. Asimismo, se incorporan notas técnicas y referencias normativas destinadas a contextualizar el uso del sistema dentro del marco de la genética forense contemporánea.
+
+Este manual está dirigido a genetistas forenses, operadores técnicos, responsables de bases de datos, legisladores, comunidad academica, ONGs y busca constituirse como una herramienta de consulta indispensable para el uso responsable, consistente y normativamente alineado del sistema GENis.
