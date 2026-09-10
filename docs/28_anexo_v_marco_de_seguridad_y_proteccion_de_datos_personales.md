@@ -1,4 +1,4 @@
-# 28. ANEXO V: MARCO DE SEGURIDAD Y PROTECCIÓN DE DATOS PERSONALES
+# Anexo V: Marco de seguridad y protección de datos personales
 
 ## Marco de Seguridad y Protección de Datos Personales
 

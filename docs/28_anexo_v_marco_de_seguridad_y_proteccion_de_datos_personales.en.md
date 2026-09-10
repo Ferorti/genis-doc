@@ -1,4 +1,4 @@
-# 28. Annex V: Security and personal data protection framework
+# Annex V: Security and personal data protection framework
 
 ## Security and personal data protection framework
 
