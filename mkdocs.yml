@@ -71,7 +71,6 @@ plugins:
           build: true
           nav_translations:
             GENis: GENis
-            Resumen: Overview
             Funcionalidades del sistema: System functionalities
             Genética Forense: Forensic genetics
             Estándares y mejores prácticas: Standards and best practices
@@ -166,7 +165,7 @@ extra:
 
 nav:
   - GENis:
-      - Resumen: index.md
+      - GENis: index.md
       - Funcionalidades del sistema: wiki/Funcionalidades-del-sistema-GENis.md
       - Genética Forense: wiki/GeneticaForense.md
       - Estándares y mejores prácticas: wiki/Estándares-y-mejores-prácticas.md
