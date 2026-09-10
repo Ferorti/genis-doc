@@ -1,8 +1,8 @@
-# 2. SOLICITAR UNA CUENTA
+# Solicitar una cuenta
 
 ![](images/sec02/p016_f01.png)
 
-## PREVIO A SOLICITAR UNA CUENTA
+## Previo a solicitar una cuenta
 
 GENis utiliza un **sistema de autenticación de doble factor (2FA)** para reforzar la seguridad en el acceso de los usuarios.
 
@@ -16,7 +16,7 @@ La contraseña consta de 6 dígitos y se regenera cada 30 segundos. Para comenza
 
 **_https://24timezones.com_**
 
-## SOLICITAR UNA CUENTA
+## Solicitar una cuenta
 
 Antes de acceder a GENis, el usuario deberá solicitar al administrador o personal de instalacion, la creación de una cuenta con determinados roles definidos por un administrador.
 
@@ -46,7 +46,7 @@ GENis le ofrecerá nombres alternativos de usuario en base al nombre y apellido 
 
 ![](images/sec02/p021_f01.png)
 
-## ACTIVACIÓN DE UNA CUENTA DE USUARIO
+## Activación de una cuenta de usuario
 
 El usuario administrador o quien tenga los permisos suficientes para aprobar el acceso a nuevos usuarios, recibirá en su bandeja de notificaciones una notificación nueva de que tiene una solicitud de usuario pendiente de aprobación.
 
@@ -68,7 +68,7 @@ Para dar el alta efectiva del usuario en GENis, modificar el estado del usuario 
 
 ![](images/sec02/p022_f02.png)
 
-## BLANQUEO DE CONTRASEÑA
+## Blanqueo de contraseña
 
 Para que un usuario pueda realizar el blanqueo de contraseña, el usuario administrador debe cambiar el Estado del usuario solicitante a **Pendiente de reset**. Si el usuario no se encuentra en este estado, no podrá blanquear la contraseña:
 
@@ -92,7 +92,7 @@ Si no se realiza este cambio de estado, el usuario solicitante no podrá acceder
 
 Siempre que se realice un blanqueo de contraseña, el sistema asigna un nuevo código QR para la generación del TOTP.
 
-## BLOQUEO DE ACCESO A UNA CUENTA DE USUARIO
+## Bloqueo de acceso a una cuenta de usuario
 
 Un usuario con permisos de administrador podrá bloquear el acceso de un usuario accediendo al menú **Configuración/Usuarios** y seleccionando el estado **Bloqueado**:
 
@@ -100,7 +100,7 @@ Un usuario con permisos de administrador podrá bloquear el acceso de un usuario
 
 El bloqueo de un usuario se realiza cuando se detecta un mal uso de la aplicación, por ejemplo, se detectan varios intentos fallidos de acceso al sistema en menos de cinco minutos.
 
-## DESACTIVAR UNA CUENTA DE USUARIO
+## Desactivar una cuenta de usuario
 
 Para desactivar una cuenta de usuario, acceder al menú **Configuración/Seguridad/Usuarios** y seleccionar el estado **Inactivo**:
 
@@ -108,7 +108,7 @@ Para desactivar una cuenta de usuario, acceder al menú **Configuración/Segurid
 
 La inactivación de un usuario es una acción planificada, la cual se realiza por un periodo determinado, por ejemplo, el usuario se va de vacaciones, y entonces se lo inactiva para que en ese período queda inhabilitado el acceso al sistema.
 
-## INICIO DE SESIÓN
+## Inicio de sesión
 
 Una vez que un administrador haya aceptado la solicitud, el usuario estará en condiciones de acceder al GENis completando los datos en la pantalla de inicio de sesión:
 

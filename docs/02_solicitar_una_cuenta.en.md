@@ -1,4 +1,4 @@
-# 2. Requesting an account
+# Requesting an account
 
 ![](images/sec02/p016_f01.png)
 
