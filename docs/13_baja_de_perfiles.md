@@ -1,7 +1,5 @@
 # Baja de perfiles
 
-## Baja de perfiles
-
 Toda baja en GENis es lógica, nunca física. Esto significa que el registro no se elimina físicamente de la base de datos, sino que se marca como inactivo. Un perfil dado de baja deja de participar en búsquedas, coincidencias, réplicas y procesos automáticos, pero permanece almacenado internamente para garantizar la trazabilidad, auditoría y el historial del sistema. Este procedimiento es consistente con las buenas prácticas internacionales en bases de datos genéticos criminales, donde la eliminación física de información no está permitida por razones legales, técnicas y de control de calidad. El resultado de dar de baja un perfil es que el mismo no participe más de los procesos de búsqueda.
 
 Para proceder a la baja de un perfil, desde el menú se accede a Perfiles/Listado de Perfiles y presionar en el botón

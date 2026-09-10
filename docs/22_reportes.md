@@ -1,7 +1,5 @@
 # Reportes
 
-## Reportes
-
 GENis permite la posibilidad de generar reportes según la información a la que se desea acceder.
 
 Para ver los reportes ir al menú **Monitoreo/Reportes:**

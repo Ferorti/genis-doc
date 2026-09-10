@@ -1,7 +1,5 @@
 # Reason coding
 
-## Reason coding
-
 Reason coding allows you to configure the reasons that will appear when the following actions are performed:
 
 - Rejection of a profile

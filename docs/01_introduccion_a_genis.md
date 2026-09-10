@@ -1,7 +1,5 @@
 # Introducción a GENis
 
-![](images/sec01/p012_f01.png)
-
 ## Introducción
 
 GENis es un sistema informático abierto para el almacenamiento, intercambio y comparación de perfiles genéticos con fines forenses, diseñado para su utilización en el ámbito de la investigación penal, la búsqueda de personas y la identificación de víctimas. El sistema integra herramientas de genética forense y bioinformática, con el objetivo de facilitar el cotejo sistemático de perfiles genéticos, asegurar la trazabilidad de la información y fortalecer la calidad técnica y probatoria de los resultados obtenidos.

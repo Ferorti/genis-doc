@@ -1,7 +1,5 @@
 # Profile exporter
 
-## Profile exporter
-
 The profile exporter is a feature that allows exporting profiles in GENis's import format.
 
 To use the profile exporter, go to the Profiles/Profile Exporter menu:

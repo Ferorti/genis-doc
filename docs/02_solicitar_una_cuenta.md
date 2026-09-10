@@ -1,7 +1,5 @@
 # Solicitar una cuenta
 
-![](images/sec02/p016_f01.png)
-
 ## Previo a solicitar una cuenta
 
 GENis utiliza un **sistema de autenticación de doble factor (2FA)** para reforzar la seguridad en el acceso de los usuarios.

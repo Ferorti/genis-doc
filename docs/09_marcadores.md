@@ -1,7 +1,5 @@
 # Marcadores
 
-## Marcadores
-
 Para acceder a los marcadores ir al menú **Configuración/Marcadores**:
 
 ![](images/sec09/p061_f01.png)

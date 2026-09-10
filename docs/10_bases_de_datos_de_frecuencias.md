@@ -1,9 +1,5 @@
 # Bases de datos de frecuencias
 
-![](images/sec10/p068_f01.png)
-
-## Bases de datos de frecuencias
-
 GENis debe contar con una Base de Datos de Frecuencias Alélicas (Base de Datos Poblacional) porque esta información es **esencial e indispensable para la valoración estadística de las coincidencias** de perfiles genéticos.
 
 Esta base de datos poblacional se utiliza para:

@@ -1,7 +1,5 @@
 # Types of biological materials
 
-## Types of biological materials
-
 When a profile is created in GENis, one of the fields to fill in is the type of biological material the sample comes from. From the **Configuration/Biological Material Type** menu, an administrator can create, modify, and delete items from the list:
 
 ![](images/sec06/p042_f01.png)

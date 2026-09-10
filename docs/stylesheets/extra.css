@@ -1,0 +1,62 @@
+/* Reduce body text size in the documentation content area only,
+   leaving the Material chrome (tabs, sidebar, header) at default size. */
+.md-typeset {
+  font-size: .75rem;
+}
+
+/* GENis brand pink, sampled from the app logo and UI screenshots
+   (docs/images/sec02/p016_f01.png, docs/images/sec20/p192_f02.png).
+   Used for header/tabs/buttons and, via --md-typeset-a-color below, for
+   in-content links. The base pink reads only ~3.5:1 against either
+   background, so link text uses a scheme-tuned shade instead. */
+[data-md-color-scheme="default"][data-md-color-primary="custom"] {
+  --md-primary-fg-color: #D061B4;
+  --md-primary-fg-color--light: #E28AC9;
+  --md-primary-fg-color--dark: #A64A90;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: hsla(0, 0%, 100%, 0.7);
+  --md-typeset-a-color: #AA5094;
+}
+
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] {
+  --md-primary-fg-color: #D061B4;
+  --md-primary-fg-color--light: #E28AC9;
+  --md-primary-fg-color--dark: #A64A90;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: hsla(0, 0%, 100%, 0.7);
+  --md-typeset-a-color: #E28AC9;
+}
+
+/* Accent = hover color for links/interactive elements, plus the search-match
+   highlight background. Tuned per scheme so hover always moves toward
+   better contrast against the page background, never worse:
+   - light: a darker pink (~4.9:1 on white)
+   - dark: a soft, tenue pink, lighter than the resting link color, so hover
+     reads as "brighter" against the dark slate background instead of
+     muddier (a plain darker shade would sink into the dark background). */
+[data-md-color-scheme="default"][data-md-color-accent="custom"] {
+  --md-accent-fg-color: #AA5094;
+  --md-accent-fg-color--transparent: #aa50941a;
+  --md-accent-bg-color: #ffffff;
+  --md-accent-bg-color--light: hsla(0, 0%, 100%, 0.7);
+}
+
+[data-md-color-scheme="slate"][data-md-color-accent="custom"] {
+  --md-accent-fg-color: #EAB3DE;
+  --md-accent-fg-color--transparent: #eab3de1a;
+  --md-accent-bg-color: #ffffff;
+  --md-accent-bg-color--light: hsla(0, 0%, 100%, 0.7);
+}
+
+/* In dark mode, keep the header/tabs bar a neutral dark gray instead of
+   pink — --md-primary-fg-color stays pink above so active nav text, links,
+   etc. still carry the brand color, only the header/tabs backgrounds are
+   overridden here. Uses the exact tone (hsla(hue,15%,9%)) Material's own
+   built-in "black" primary uses for these same elements in slate mode, so
+   it stays visually native to the theme. */
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] .md-header,
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] .md-tabs,
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] .md-nav__source,
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] .md-nav--primary .md-nav__title[for="__drawer"] {
+  background-color: hsla(var(--md-hue), 15%, 9%, 1);
+}

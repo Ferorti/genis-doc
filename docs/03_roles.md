@@ -1,9 +1,5 @@
 # Roles
 
-![](images/sec03/p028_f01.png)
-
-## Roles
-
 GENis provee la posibilidad de generar roles que son luego asignados a los usuarios y definen las operaciones que los mismos pueden realizar sobre el sistema.
 
 Para acceder a la configuración de roles, seleccionar en el menú **Configuración /Seguridad/Roles**

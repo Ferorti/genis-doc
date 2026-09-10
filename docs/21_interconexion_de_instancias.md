@@ -1,7 +1,5 @@
 # Interconexión de instancias
 
-## Interconexión de instancias
-
 La interconexión de instancias constituye uno de los pilares centrales del ecosistema GENis, ya que permite que distintos nodos —por ejemplo, laboratorios provinciales, un nodo nacional, o nodos judiciales— cooperen en la búsqueda de coincidencias genéticas sin compartir directamente sus bases completas. Se trata de una arquitectura federada: cada institución conserva la propiedad y administración de sus perfiles, pero GENis habilita un mecanismo estandarizado para enviar, recibir y procesar información genética de manera segura, trazable y científicamente coherente.
 
 Este esquema replica, en escala nacional, los principios de redes internacionales como **Prüm** en la Unión Europea, **NDIS/CODIS** en EE. UU. y los lineamientos de **ISFG** y **ENFSI** para intercambio transinstitucional. Al igual que en esos sistemas, la interconexión en GENis requiere que exista una armonización mínima entre las instancias para que los perfiles puedan interpretarse correctamente y las coincidencias tengan sentido científico.

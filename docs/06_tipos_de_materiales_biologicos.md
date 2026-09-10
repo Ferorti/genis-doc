@@ -1,7 +1,5 @@
 # Tipos de materiales biológicos
 
-## Tipos de materiales biológicos
-
 Cuando se crea un perfil en GENis, uno de los datos a completar es el tipo de material biológico del que proviene la muestra. Desde el menú **Configuración/Tipo de Material Biológico** un administrador podrá crear, modificar y eliminar elementos del listado:
 
 ![](images/sec06/p042_f01.png)

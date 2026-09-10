@@ -1,7 +1,5 @@
 # Categorías
 
-## Categorías
-
 Todos los perfiles genéticos que se incorporan en GENis deben pertenecer a una categoría. La definición y de las categorías son fundamentales para el funcionamiento del sistema. En ellas se definen: parámetros de admisibilidad de perfiles genéticos, reglas de asociación, reglas de búsquedas y una lista de alias posibles para la carga masiva en el caso de venir dada la categoría en el archivo correspondiente en el campo **Specimen Category**.
 
 **Nota: La guía de ENFSI (“Guideline for DNA Database Management Review and Recommendations”, 2023) indica que:**

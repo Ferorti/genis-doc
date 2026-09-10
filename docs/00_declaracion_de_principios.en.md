@@ -1,7 +1,5 @@
 # Declaration of principles
 
-![](images/sec00/p009_f01.png)
-
 A set of principles has guided the design of the **GENis** system, from its conception and throughout its entire development cycle. They are:
 
 - **TRANSPARENCY**: "algorithmic transparency" is an essential attribute for the scientific validation of the tool from its logical-mathematical dimension. In its legal dimension, it is a necessary condition for the exercise of the right to due process, which requires public knowledge about how the systems used to produce expert reports operate. Around the world, judicial authorities rely on these systems to hand down rulings that affect people's lives and freedom. Given these values to protect, it is essential to provide the possibility that expert results can be reproduced by the parties through alternative methods and on independent platforms. Foregoing this would mean resigning oneself to a forensic "black box" and facing the risk of numerous challenges. Throughout the GENis development cycle, the recommendations of the DNA Commission of the International Society for Forensic Genetics (ISFG) on transparency, availability, and reproducibility for computer systems that perform biostatistical calculations in forensic applications have been taken into account.

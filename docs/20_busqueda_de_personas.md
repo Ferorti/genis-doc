@@ -1,7 +1,5 @@
 # Búsqueda de personas
 
-## Búsqueda de personas
-
 Este capítulo abarca dos módulos:
 
 - Búsqueda de personas desaparecidas (MPI)

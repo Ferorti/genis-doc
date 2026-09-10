@@ -1,7 +1,5 @@
 # Introduction to GENis
 
-![](images/sec01/p012_f01.png)
-
 ## Introduction
 
 GENis is an open computer system for the storage, exchange, and comparison of genetic profiles for forensic purposes, designed for use in criminal investigation, missing persons search, and victim identification. The system integrates forensic genetics and bioinformatics tools, with the aim of facilitating the systematic comparison of genetic profiles, ensuring the traceability of information, and strengthening the technical and evidentiary quality of the results obtained.

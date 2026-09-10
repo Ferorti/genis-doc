@@ -1,7 +1,5 @@
 # Categories
 
-## Categories
-
 All genetic profiles incorporated into GENis must belong to a category. The definition of categories is fundamental to the system's operation. Categories define: admissibility parameters for genetic profiles, association rules, search rules, and a list of possible aliases for batch uploads, in case the category is provided in the corresponding file in the **Specimen Category** field.
 
 **Note: The ENFSI guide ("Guideline for DNA Database Management Review and Recommendations", 2023) states that:**

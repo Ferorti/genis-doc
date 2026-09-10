@@ -1,7 +1,5 @@
 # Exportador de perfiles
 
-## Exportador de perfiles
-
 El exportador de perfiles es una funcionalidad que permite exportar perfiles en el formato de importación de GENis.
 
 Para utilizar el exportador de perfiles ir al menú Perfiles/Exportador de Perfiles:

@@ -1,7 +1,5 @@
 # Markers
 
-## Markers
-
 To access markers, go to the **Settings/Markers** menu:
 
 ![](images/sec09/p061_f01.png)

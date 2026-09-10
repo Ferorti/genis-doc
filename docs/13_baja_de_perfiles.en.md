@@ -1,7 +1,5 @@
 # Profile deactivation
 
-## Profile deactivation
-
 Every deactivation in GENis is logical, never physical. This means the record is not physically deleted from the database, but rather marked as inactive. A deactivated profile no longer takes part in searches, matches, replications, or automatic processes, but remains stored internally to ensure traceability, auditing, and the system's history. This procedure is consistent with international best practices for criminal genetic databases, where the physical deletion of information is not permitted for legal, technical, and quality-control reasons. The result of deactivating a profile is that it no longer takes part in search processes.
 
 To deactivate a profile, from the menu go to Profiles/Profile List and click the button

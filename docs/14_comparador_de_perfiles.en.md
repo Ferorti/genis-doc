@@ -1,7 +1,5 @@
 # Profile comparator
 
-## Profile comparator
-
 The profile comparator is a feature that allows you to compare two profiles of any category and see the differences and matches between their alleles.
 
 You can compare a maximum of two profiles, and the comparison result is displayed on screen but is not saved.

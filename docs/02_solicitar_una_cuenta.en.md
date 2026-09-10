@@ -1,7 +1,5 @@
 # Requesting an account
 
-![](images/sec02/p016_f01.png)
-
 ## Before requesting an account
 
 GENis uses a **two-factor authentication system (2FA)** to strengthen the security of user access.

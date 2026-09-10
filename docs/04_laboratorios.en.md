@@ -1,7 +1,5 @@
 # Laboratories
 
-## Laboratories
-
 GENis's architecture allows it to be used not only in central or reference laboratories, but also in **decentralized operational instances**, configured as nodes within a network.
 
 This design enables the deployment of GENis in **rapid-processing laboratories**, such as those located at **border crossings**, **airports**, **ports**, **mobile units**, or **rapid-response centers**, where it is necessary to perform preliminary genetic comparisons within short timeframes.

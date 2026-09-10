@@ -1,7 +1,5 @@
 # Profile registration
 
-## Profile registration
-
 The **profile registration** process refers to the set of actions through which a genetic profile is formally incorporated into the GENis system database, becoming available for storage, comparison, and eventual replication to higher-level instances. This stage is a critical point in terms of traceability, technical responsibility, and validity of the record, since it defines the link between the biological sample, the generated genetic profile, and its digital representation within the system.
 
 To register a new profile:

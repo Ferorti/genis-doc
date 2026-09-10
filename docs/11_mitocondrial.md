@@ -1,7 +1,5 @@
 # Mitocondrial
 
-## Mitocondrial
-
 El ADN mitocondrial (mtDNA) es un marcador genético de especial utilidad en genética forense debido a su **elevado número de copias por célula**, su **transmisión estrictamente materna** y su **mayor resistencia a la degradación** en comparación con el ADN nuclear. Estas características lo convierten en un recurso valioso para el análisis de muestras muy **degradadas**, como huesos antiguos, cabellos sin raíz, restos humanos de larga data o evidencias biológicas con escaso ADN nuclear.
 
 En el ámbito de una base de datos forense, el mtDNA permite ampliar las posibilidades de comparación cuando:

@@ -1,7 +1,5 @@
 # Notifications
 
-## Notifications
-
 GENis has a notifications inbox. It is an envelope icon located on the right side that shows the number of pending notifications.
 
 To access the notification details, click on the envelope icon:

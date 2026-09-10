@@ -1,7 +1,5 @@
 # Tipificación de motivos
 
-## Tipificación de motivos
-
 La tipificación de motivos permite configurar los motivos que van a aparecer cuando se realicen las siguientes acciones:
 
 - Rechazo de un perfil

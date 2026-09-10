@@ -1,7 +1,5 @@
 # Instance interconnection
 
-## Instance interconnection
-
 Instance interconnection is one of the central pillars of the GENis ecosystem, since it allows different nodes —for example, provincial laboratories, a national node, or judicial nodes— to cooperate in the search for genetic matches without directly sharing their complete databases. This is a federated architecture: each institution retains ownership and administration of its profiles, but GENis enables a standardized mechanism to send, receive, and process genetic information in a secure, traceable, and scientifically consistent manner.
 
 This scheme replicates, on a national scale, the principles of international networks such as **Prüm** in the European Union, **NDIS/CODIS** in the US, and the guidelines of **ISFG** and **ENFSI** for cross-institutional exchange. As in those systems, interconnection in GENis requires a minimum level of harmonization between instances so that profiles can be correctly interpreted and matches make scientific sense.

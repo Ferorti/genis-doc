@@ -1,7 +1,5 @@
 # Comparador de perfiles
 
-## Comparador de perfiles
-
 El comparador de perfiles es una funcionalidad que permite comparar dos perfiles de cualquier categoría y ver las diferencias y coincidencias entre sus alelos.
 
 Solo se puede comparar dos perfiles como máximo y el resultado de la comparación se muestra por pantalla, pero no queda guardado.

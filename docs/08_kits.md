@@ -1,7 +1,5 @@
 # Kits
 
-## Kits
-
 Cada perfil genético se obtiene a partir de la utilización de uno o más kits.
 
 Cada kit posee un conjunto de marcadores o sistemas.

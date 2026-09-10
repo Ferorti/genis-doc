@@ -1,7 +1,5 @@
 # Alta de perfiles
 
-## Alta de perfiles
-
 El proceso de **alta de perfiles** corresponde al conjunto de acciones mediante las cuales un perfil genético es incorporado formalmente a la base de datos del sistema GENis, quedando disponible para su almacenamiento, comparación y eventual replicación a instancias superiores. Esta etapa constituye un punto crítico en términos de trazabilidad, responsabilidad técnica y validez del registro, ya que define el vínculo entre la muestra biológica, el perfil genético generado y su representación digital dentro del sistema.
 
 Para el alta de un nuevo perfil:

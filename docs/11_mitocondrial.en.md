@@ -1,7 +1,5 @@
 # Mitochondrial
 
-## Mitochondrial
-
 Mitochondrial DNA (mtDNA) is a genetic marker of special use in forensic genetics due to its **high copy number per cell**, its **strictly maternal inheritance**, and its **greater resistance to degradation** compared to nuclear DNA. These characteristics make it a valuable resource for analyzing highly **degraded** samples, such as ancient bones, rootless hairs, long-buried human remains, or biological evidence with little nuclear DNA.
 
 In the context of a forensic database, mtDNA expands the possibilities for comparison when:

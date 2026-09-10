@@ -1,7 +1,5 @@
 # Geneticists
 
-## Geneticists
-
 When an instance of GENis allows registering profiles from other laboratories, it is also possible to specify who the geneticist responsible for the profile being added from that laboratory is. These geneticists are not GENis users, so, in case it becomes necessary for another user to contact the person responsible for an entered genetic profile, it is useful to enter their details.
 
 To register the details of geneticists who send genetic profiles from laboratories that do not have their own GENis instance, go to the **Configuration/Geneticists** menu and fill in the fields on the **New Geneticist** tab:

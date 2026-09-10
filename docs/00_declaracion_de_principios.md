@@ -1,7 +1,5 @@
 # Declaración de principios
 
-![](images/sec00/p009_f01.png)
-
 Un conjunto de principios ha guiado el diseño del sistema **GENis**, desde su concepción y a lo largo de todo su ciclo de desarrollo. Ellos son:
 
 - **TRANSPARENCIA**: la “transparencia algorítmica” es un atributo esencial para la validación científica de la herramienta desde su dimensión lógico-matemática. En su dimensión jurídica, es una condición necesaria para el ejercicio del derecho de debido proceso, que requiere un conocimiento público sobre el funcionamiento de los sistemas con que se producen las pericias. En todo el mundo las autoridades judiciales se valen de esos sistemas para definir sentencias que afectan la vida y la libertad de las personas. Con esos valores a proteger, es fundamental proveer la chance de que los resultados periciales puedan ser reproducidos por las partes mediante modos alternativos y en soportes independientes. Renunciar a lo anterior implicaría resignarse a una “caja negra” pericial y a confrontar el riesgo de numerosas impugnaciones. A lo largo del ciclo de desarrollo del sistema GENis se han tenido en cuenta las recomendaciones de la Comisión de ADN de la Sociedad Internacional de Genética Forense (ISFG) sobre transparencia, disponibilidad y reproducibilidad para sistemas informáticos que realizan cálculos bioestadísticos en aplicaciones forenses.

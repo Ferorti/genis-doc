@@ -1,7 +1,5 @@
 # Reports
 
-## Reports
-
 GENis makes it possible to generate reports based on the information you want to access.
 
 To view the reports, go to the **Monitoring/Reports** menu:

@@ -1,9 +1,5 @@
 # Roles
 
-![](images/sec03/p028_f01.png)
-
-## Roles
-
 GENis provides the ability to create roles that are then assigned to users and define the operations they can perform in the system.
 
 To access the role configuration, select **Configuration/Security/Roles** from the menu

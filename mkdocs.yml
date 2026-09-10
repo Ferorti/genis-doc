@@ -1,10 +1,13 @@
 site_name: Documentación GENis
 site_description: Documentación funcional del sistema GENis
-site_url: https://fundacion-sadosky.github.io/genis/
+site_url: https://ferorti.github.io/genis-doc/
 repo_url: https://github.com/fundacion-sadosky/genis
 repo_name: fundacion-sadosky/genis
 edit_uri: ""
 docs_dir: docs
+
+extra_css:
+  - stylesheets/extra.css
 
 theme:
   name: material
@@ -22,15 +25,15 @@ theme:
         name: Cambiar al modo claro
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Cambiar al modo oscuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Cambiar al modo automático
@@ -67,11 +70,22 @@ plugins:
           name: English
           build: true
           nav_translations:
-            Inicio: Home
-            Bienvenido: Welcome
-            Introducción a GENis: Introduction to GENis
+            GENis: GENis
+            Resumen: Overview
+            Funcionalidades del sistema: System functionalities
+            Genética Forense: Forensic genetics
+            Estándares y mejores prácticas: Standards and best practices
             Declaración de principios: Declaration of principles
-            Administración del Sistema: System administration
+            Instalación: Installation
+            Requerimientos del sistema: System requirements
+            Instalación con Docker: Installation with Docker
+            Instalación manual: Manual installation
+            Instalación de sistema base: Base system installation
+            Instalación de GENis: GENis installation
+            Configuración de RAID: RAID configuration
+            Hardening de seguridad: Security hardening
+            Registro de control de cambios: Change control log
+            Administración: Administration
             Solicitar una cuenta: Requesting an account
             Roles: Roles
             Laboratorios: Laboratories
@@ -151,11 +165,22 @@ extra:
       name: GENis en GitHub
 
 nav:
-  - Inicio:
-      - Bienvenido: index.md
-      - Introducción a GENis: 01_introduccion_a_genis.md
+  - GENis:
+      - Resumen: index.md
+      - Funcionalidades del sistema: wiki/Funcionalidades-del-sistema-GENis.md
+      - Genética Forense: wiki/GeneticaForense.md
+      - Estándares y mejores prácticas: wiki/Estándares-y-mejores-prácticas.md
       - Declaración de principios: 00_declaracion_de_principios.md
-  - Administración del Sistema:
+  - Instalación:
+      - Requerimientos del sistema: instalacion/02_requerimientos_del_sistema.md
+      - Instalación con Docker: wiki/docker.md
+      - Instalación manual:
+          - Instalación de sistema base: instalacion/03_instalacion_de_sistema_base.md
+          - Instalación de GENis: instalacion/04_instalacion_de_genis.md
+      - Configuración de RAID: instalacion/05_configuracion_de_raid.md
+      - Hardening de seguridad: instalacion/06_hardening_de_seguridad.md
+      - Registro de control de cambios: instalacion/07_registro_de_control_de_cambios.md
+  - Administración:
       - Solicitar una cuenta: 02_solicitar_una_cuenta.md
       - Roles: 03_roles.md
       - Laboratorios: 04_laboratorios.md

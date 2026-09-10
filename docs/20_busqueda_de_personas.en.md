@@ -1,7 +1,5 @@
 # Missing persons search
 
-## Missing persons search
-
 This chapter covers two modules:
 
 - Missing Persons Search (MPI)

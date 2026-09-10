@@ -1,7 +1,5 @@
 # Notificaciones
 
-## Notificaciones
-
 GENis cuenta con un inbox de notificaciones. Es un sobre ubicado en la parte derecha que indica la cantidad de notificaciones pendientes.
 
 Para acceder al detalle de las notificaciones, al hacer click sobre el ícono del sobre:

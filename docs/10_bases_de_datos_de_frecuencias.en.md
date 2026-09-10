@@ -1,9 +1,5 @@
 # Frequency databases
 
-![](images/sec10/p068_f01.png)
-
-## Frequency databases
-
 GENis must have an Allelic Frequency Database (Population Database) because this information is **essential and indispensable for the statistical assessment of matches** between genetic profiles.
 
 This population database is used for:

@@ -1,7 +1,5 @@
 # Laboratorios
 
-## Laboratorios
-
 La arquitectura de GENis permite su utilización no solo en laboratorios centrales o de referencia, sino también en **instancias operativas descentralizadas**, configuradas como nodos dentro de una red .
 
 Este diseño habilita la implementación de GENis en **laboratorios de procesamiento rápido**, tales como aquellos ubicados en **pasos fronterizos**, **aeropuertos**, **puertos**, **unidades móviles** o **centros de respuesta inmediata**, donde resulta necesario realizar comparaciones genéticas preliminares en plazos reducidos.

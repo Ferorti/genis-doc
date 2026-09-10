@@ -1,7 +1,5 @@
 # Kits
 
-## Kits
-
 Each genetic profile is obtained using one or more kits.
 
 Each kit has a set of markers or systems.
