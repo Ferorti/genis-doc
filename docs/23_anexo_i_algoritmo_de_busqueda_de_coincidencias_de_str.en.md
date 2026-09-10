@@ -1,4 +1,4 @@
-# 23. Annex I - STR match search algorithm
+# Annex I - STR match search algorithm
 
 ## Annex I – STR match search algorithm
 

@@ -1,6 +1,6 @@
-# 23. ANEXO I - ALGORITMO DE BÚSQUEDA DE COINCIDENCIAS DE STR
+# Anexo I - Algoritmo de búsqueda de coincidencias de STR
 
-## ANEXO I – ALGORITMO DE BÚSQUEDA DE COINCIDENCIAS DE STR
+## Anexo I – Algoritmo de búsqueda de coincidencias de STR
 
 GENis integra **dos motores de búsqueda conceptualmente distintos**, diseñados para responder a problemas forenses diferentes:
 
@@ -8,7 +8,7 @@ GENis integra **dos motores de búsqueda conceptualmente distintos**, diseñados
 
 - El **motor MPI (Búsqueda de Personas)** está orientado a **identificación por parentesco** y búsqueda en grandes bases de personas/familias, mediante un enfoque probabilístico formal basado en **Redes Bayesianas**, que permite obtener y validar **Likelihood Ratios (LR)** en pedigríes complejos.
 
-## MOTOR FORENSE (STR): ALGORITMOS DE BÚSQUEDA Y “EXIGENCIA”
+## Motor forense (STR): algoritmos de búsqueda y “exigencia”
 
 En el módulo forense, GENis implementa búsquedas de coincidencias para perfiles STR utilizando **reglas de comparación por marcador y niveles de exigencia**. Estas reglas son consistentes con el concepto internacional de “search stringencies” (alta / moderada / baja) utilizado en sistemas de bases de datos de ADN y descrito por ENFSI para la gestión de bases.
 
@@ -24,7 +24,7 @@ Además de los modos de exigencia tradicionales, GENis incorpora un algoritmo de
 
 **Nota técnica:** el algoritmo mezcla–mezcla no equivale a un software de interpretación probabilística de mezclas (PG). No realiza deconvolución, no asigna aportantes, ni reemplaza herramientas periciales como LRmix / EuroForMix / STRmix. Su función es **operativa dentro del motor de coincidencias**.
 
-## MOTOR MPI (BÚSQUEDA DE PERSONAS): REDES BAYESIANAS Y LR POR PEDIGRÍ
+## Motor MPI (búsqueda de personas): redes bayesianas y LR por pedigrí
 
 El módulo MPI trabaja con un problema distinto: la evidencia central no es “perfil vs perfil” sino **“familia/pedigrí vs candidatos”**.
 
@@ -40,11 +40,11 @@ A partir de esto, GENis calcula distribuciones de probabilidad del genotipo del 
 - -Chernomoretz et al., GENis, an open-source multi-tier forensic DNA information system (Forensic Science International: Reports, 2020). Repositorio CONICET
 - -Chernomoretz et al., Bayesian networks for DNA-based kinship analysis: Functionality and validation of the GENis missing person identification module (FSI: Genetics Supplement Series, 2022).
 
-## LOCUS O MARCADOR
+## Locus o marcador
 
 Un locus es una posición dentro del genoma. En el contexto de este documento, Locus y Marcador significan lo mismo. Ejemplo: los valores posibles de Locus son D3S1358, TPOX, TH01.
 
-## ALELO
+## Alelo
 
 Un alelo es un valor de alguna de las siguientes formas:
 
@@ -54,22 +54,22 @@ Un alelo es un valor de alguna de las siguientes formas:
 N)
 - [x] dónde x es un número como en el ítem anterior obligatorio para el matching
 
-## GENOTIPO
+## Genotipo
 
 Un Genotipo es una dupla Locus → (Alelo, Alelo,…). Por ejemplo un Genotipo es D3S1358 → (28.5, 22).
 
-## GENOTIPIFICACIÓN
+## Genotipificación
 
 Una genotipificación es una lista de genotipos donde no se repiten los locus de cada elemento.
 
-## PERFIL GENÉTICO
+## Perfil genético
 
 Un perfil genético es una estructura que se compone de:
 
 - Un identificador único id
 - Una genotipificación
 
-## IGUALDAD DE ALELOS
+## Igualdad de alelos
 
 Dados dos alelos x e y, definimos la función **equalₐ: Alelo×Alelo→Bool** de la siguiente manera:
 
@@ -79,7 +79,7 @@ Dados dos alelos x e y, definimos la función **equalₐ: Alelo×Alelo→Bool** 
 - **equalₐ ([x]; [y]) = x == y**
 - **en otro caso = false**
 
-## COINCIDENCIA EN EXIGENCIA ALTA DE GENOTIPOS
+## Coincidencia en exigencia alta de genotipos
 
 Dados dos Genotipos **X=M₁ → ( x₁,x₂,…,xₙ)** e **Y= M₂ →( y₁,y₂,…,yₘ)** definimos **X =ₘ Y** si y solo si se satisfacen estas condiciones:
 
@@ -87,7 +87,7 @@ Dados dos Genotipos **X=M₁ → ( x₁,x₂,…,xₙ)** e **Y= M₂ →( y₁,y
 - **n = m**
 - **∃ una permutación x₁',x₂',…,xₙ' de x₁,x₂,…,xₙ tal que ∀ i:1,…,n:equalₐ (xᵢ',yᵢ)**
 
-## COINCIDENCIA EN EXIGENCIA MEDIA O MODERADA DE GENOTIPOS
+## Coincidencia en exigencia media o moderada de genotipos
 
 Dados dos Genotipos **X=M₁ → ( x₁,x₂,…,xₙ)** e **Y= M₂ →( y₁,y₂,…,yₘ)** definimos **X⊂ₘY** si y solo si se satisfacen estas condiciones.
 
@@ -95,7 +95,7 @@ Dados dos Genotipos **X=M₁ → ( x₁,x₂,…,xₙ)** e **Y= M₂ →( y₁,y
 - **n = m**
 - **∃ una permutación x₁',x₂',…,xₙ' de la colección formada por x₁,x₂,…,xₙ seguida de m — n alelos tal que ∀ i:1,…,n:equalₐ (xᵢ',yᵢ)**
 
-## COINCIDENCIA EN EXIGENCIA BAJA DE LOCUS
+## Coincidencia en exigencia baja de locus
 
 Dados dos locus **X=(M₁,x₁,x₂)** e **Y=(M₂,y₁,y₂)** definimos **X≈ₘY** si y solo si se satisfacen estas condiciones
 
