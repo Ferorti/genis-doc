@@ -1,6 +1,6 @@
-# 8. KITS
+# Kits
 
-## KITS
+## Kits
 
 Cada perfil genético se obtiene a partir de la utilización de uno o más kits.
 

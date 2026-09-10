@@ -1,4 +1,4 @@
-# 8. Kits
+# Kits
 
 ## Kits
 
