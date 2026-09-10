@@ -1,6 +1,6 @@
-# 11. MITOCONDRIAL
+# Mitocondrial
 
-## MITOCONDRIAL
+## Mitocondrial
 
 El ADN mitocondrial (mtDNA) es un marcador genético de especial utilidad en genética forense debido a su **elevado número de copias por célula**, su **transmisión estrictamente materna** y su **mayor resistencia a la degradación** en comparación con el ADN nuclear. Estas características lo convierten en un recurso valioso para el análisis de muestras muy **degradadas**, como huesos antiguos, cabellos sin raíz, restos humanos de larga data o evidencias biológicas con escaso ADN nuclear.
 
@@ -32,7 +32,7 @@ Los puntos no concluyentes 16193, 309, 455, 463, 573 no son tenido en cuenta en 
 -  no son estables entre tejidos de una misma persona,
 no aportan valor discriminante real.
 
-## 11.1 FORMATO DE CARGA
+## Formato de carga
 
 Los formatos admitidos para la carga de las mutaciones son las siguientes:
 
@@ -48,7 +48,7 @@ Los formatos admitidos para la carga de las mutaciones son las siguientes:
 
 ![](images/sec11/p078_f03.png)
 
-## MATCH
+## Match
 
 El sistema GENis compara haplotipos mitocondriales utilizando un modelo basado en diferencias entre posiciones (mismatches). El match mitocondrial se realiza siempre en **modo de alta exigencia**, es decir, considerando todas las posiciones informativas del haplotipo, excepto aquellas correspondientes a regiones altamente variables (309, 455, 463, 573 y 16193), que no se usan para excluir perfiles.
 

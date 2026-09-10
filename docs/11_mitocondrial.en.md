@@ -1,4 +1,4 @@
-# 11. Mitochondrial
+# Mitochondrial
 
 ## Mitochondrial
 
@@ -32,7 +32,7 @@ The inconclusive points 16193, 309, 455, 463, 573 are not taken into account in 
 - they are not stable across tissues of the same person,
 they provide no real discriminating value.
 
-## 11.1 Upload format
+## Upload format
 
 The accepted formats for loading mutations are as follows:
 
