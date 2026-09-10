@@ -1,14 +1,14 @@
-# 16. GESTOR DE COINCIDENCIAS Y CÁLCULOS FORENSE
+# Gestor de coincidencias y cálculos forense
 
 El **Gestor de Coincidencias** se divide en tarjetas que agrupan las coincidencias por perfil.
 
 En una primera pantalla, se muestra la coincidencia con el perfil con el que dio el LR más alto y en una segunda pantalla, los perfiles se agrupan según su categoría (evidencia, referencia y número de aportantes inferido). Las agrupaciones mostradas dependen también de la categoría del perfil agrupador, las cuales se describen en las siguientes secciones..
 
-## PERFIL AGRUPADOR
+## Perfil agrupador
 
 Cuando se de alta un perfil genético en una categoría, se lanzan los procesos de búsqueda como se definieron para esa categoría. El perfil ingresado puede encontrar uno o más perfiles coincidentes. En el momento de acceder al gestor de coincidencias, este perfil que encontró otros perfiles coincidentes con él se denomina **perfil agrupador**.
 
-## SISTEMAS COMPARTIDOS
+## Sistemas compartidos
 
 Cuando un mismo perfil posee más de un análisis autosómico aceptado (por ejemplo, análisis obtenidos con diferentes kits), GENis utiliza en la búsqueda la totalidad de los marcadores disponibles entre todos los análisis cargados lo que se conoce como: *perfil compuesto, perfil acumulativo, perfil consolidado, perfil consenso*.
 
@@ -18,7 +18,7 @@ La combinación solo se aplica dentro del mismo perfil y nunca entre perfiles di
 
 Los análisis deben estar aceptados, pertenecer a categorías habilitadas para búsqueda y no presentar conflictos de marcadores
 
-## PORCENTAJE DE ALELOS COMPARTIDOS
+## Porcentaje de alelos compartidos
 
 El "porcentaje de alelos compartidos" es una medida utilizada por GENis para cuantificar el grado de coincidencia entre dos perfiles genéticos, comparando marcador por marcador la proporción de alelos que ambos comparten.
 
@@ -66,7 +66,7 @@ Coincidentes = {12, 14}
 
 El porcentaje indica en qué medida la evidencia contiene la información genética de la referencia.
 
-## ESTADOS
+## Estados
 
 Cuando GENis encuentra una coincidencia entre dos perfiles, la misma debe ser confirmada o descartada. Dado que los perfiles intervinientes pueden pertenecer a diferentes usuarios responsables de ellos, la confirmación o descarte de una coincidencia se establece en base a un sistema de votación. Para que la confirmación o el descarte sean definitivos, ambos usuarios responsables deben haber realizado la misma operación sobre la coincidencia, es decir, confirmarla o descartada.
 
@@ -94,7 +94,7 @@ A través del botón de **Imprimir Reporte**, se genera un PDF con la informaci�
 
 ![](images/sec16/p133_f01.png)
 
-## ESCENARIO
+## Escenario
 
 Cuando en la coincidencia participa una evidencia, se podrán generar escenarios en los que el usuario podrá modificar los parámetros de cálculo. Podrá determinar el o los perfiles participantes de cada hipótesis, la cantidad de desconocidos, la base de frecuencias, el valor de theta, la probabilidad de drop-in y la de drop-out.
 
@@ -118,7 +118,7 @@ Los escenarios de cálculo poseen dos solapas:
 
 En esta pantalla es posible Validar y Guardar el calculo o solo Guardarlo para verificar después.
 
-## PARÁMETROS POR DEFAULT
+## Parámetros por default
 
 Para el cálculo de LR por default se utilizan los parámetros de probabilidad de drop-in y dropout correspondientes al laboratorio responsable del perfil agrupador.
 
@@ -136,7 +136,7 @@ Estos estudios deben ser representativos de:
 
 En este sentido, cada laboratorio es responsable de **documentar y justificar** los valores o modelos utilizados para drop-out y drop-in, ya sea como valores fijos, rangos de uso o modelos derivados (por ejemplo, regresiones Pr(D)–RFU).
 
-## VISUALIZACIÓN DE PARÁMETROS UTILIZADOS EN GENIS
+## Visualización de parámetros utilizados en GENis
 
 En el contexto del módulo de coincidencias, GENis permite visualizar los valores de drop-out y drop-in aplicados al cálculo del LR directamente desde:
 
@@ -145,7 +145,7 @@ En el contexto del módulo de coincidencias, GENis permite visualizar los valore
 
 Esto asegura transparencia respecto de los parámetros involucrados en el cálculo y permite al analista verificar que corresponden a los valores definidos y validados por su laboratorio.
 
-## ACCESO AL GESTOR DE COINCIDENCIAS
+## Acceso al gestor de coincidencias
 
 De acuerdo a las reglas de búsqueda definidas para cada categoría, al encontrarse una coincidencia de perfiles genéticos, el usuario recibe una notificación de nuevas coincidencias:
 
@@ -180,7 +180,7 @@ Para poder ver del detalle de las coincidencias y poder confirmarlas o descartar
 
 ![](images/sec16/p141_f01.png)
 
-## PERFIL AGRUPADOR: REFERENCIA
+## Perfil agrupador: referencia
 
  Cuando el perfil agrupador corresponde al de una muestra de referencia, los perfiles contra los que se encontraron coincidencias se agrupan entre Referencias y Evidencias.
 
@@ -196,7 +196,7 @@ En la agrupación de las evidencias, para cada perfil podemos ver:
 3. Sistemas compartidos.
 4. Porcentaje de alelos compartidos.
 
-## PERFIL AGRUPADOR: REFERENCIA
+## Perfil agrupador: referencia
 
  Cuando el perfil agrupador corresponde al de una muestra de referencia, los perfiles contra los que se encontraron coincidencias se agrupan entre Referencias y Evidencias.
 
@@ -227,7 +227,7 @@ Descartar
 12. Acceder a la ventana de comparación.
 13. Replicar estado de coincidencia a instancia superior.
 
-## PERFIL AGRUPADOR: EVIDENCIA
+## Perfil agrupador: evidencia
 
 Debemos distinguir la cantidad de aportantes inferidos en la evidencia que actúa como perfil agrupador en dos o distinto de dos.
 
@@ -334,13 +334,13 @@ En estos casos se puede acceder a la ventana de coincidencias pero no es posible
 
 ![](images/sec16/p152_f02.png)
 
-## ORIGANIZACION DEL GESTOR DE COINCIDENCIAS:
+## Organización del gestor de coincidencias:
 
 ![](images/sec16/p153_f01.png)
 
-## INTERPRETACIÓN DEL LR EN GENIS SEGÚN EL TIPO DE COMPARACIÓN
+## Interpretación del LR en GENis según el tipo de comparación
 
-### 1. NATURALEZA DEL CÁLCULO DE LR EN GENIS
+### 1. Naturaleza del cálculo de LR en GENis
 
 El módulo forense de GENis utiliza un motor de coincidencias que e**valúa la compatibilidad probabilística entre dos perfiles genéticos**, modelando la presencia, ausencia y aparición inesperada de alelos a través de parámetros de **drop-out** y **drop-in** definidos por el laboratorio.
 
@@ -363,7 +363,7 @@ GENis, en cambio:
 En términos simples:
 **El LR de GENis es un índice de verosimilitud para la búsqueda automatizada, no un LR judicial.**
 
-### 2. CÓMO FUNCIONA EL LR OPERATIVO DE GENIS SEGÚN EL TIPO DE COMPARACIÓN
+### 2. Cómo funciona el LR operativo de GENis según el tipo de comparación
 
 A continuación se explica cómo interpretar el valor de LR en los distintos escenarios presentados en la Sección 16.
 
@@ -426,7 +426,7 @@ Interpretación practica:
 - **LR medio:** Hay cierta compatibilidad pero también diferencias explicadas por drop-out o multicontribución.
 - **LR bajo:** Las evidencias no comparten estructura genética compatible.
 
-### 3. RECOMENDACIÓN NORMATIVA PARA LA INTERPRETACIÓN DEL LR EN GENIS
+### 3. Recomendación normativa para la interpretación del LR en GENis
 
 De acuerdo con:
 
@@ -460,7 +460,7 @@ Adicionalmente, el funcionamiento exacto del motor de coincidencias puede consul
 
 El LR informado por GENis es un **índice funcional para la búsqueda y priorización de coincidencias**, y no corresponde al LR semicontinuo o continuo utilizado por software periciales como LRmix, EuroForMix oSTRmix, de acuerdo con las recomendaciones internacionales (ISFG 2016; SWGDAM 2018/2024; ENFSI DNA WG).
 
-## DESCARTE MASIVO DE MATCHES
+## Descarte masivo de matches
 
 Presionando la flecha de la izquierda, en el menú de **Coincidencias**, se despliega la coincidencia con mayor LR.
 

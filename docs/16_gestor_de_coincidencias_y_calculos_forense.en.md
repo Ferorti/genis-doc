@@ -1,4 +1,4 @@
-# 16. Match manager and forensic calculations
+# Match manager and forensic calculations
 
 The **Match Manager** is divided into cards that group matches by profile.
 
