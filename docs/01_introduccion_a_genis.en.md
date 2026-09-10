@@ -1,0 +1,23 @@
+# 1. Introduction to GENis
+
+![](images/sec01/p012_f01.png)
+
+## Introduction
+
+GENis is an open computer system for the storage, exchange, and comparison of genetic profiles for forensic purposes, designed for use in criminal investigation, missing persons search, and victim identification. The system integrates forensic genetics and bioinformatics tools, with the aim of facilitating the systematic comparison of genetic profiles, ensuring the traceability of information, and strengthening the technical and evidentiary quality of the results obtained.
+
+The development of GENis is part of an institutional process of coordination among judicial bodies, the scientific community, and the technology sector of Latin America, aimed at providing countries with their own tool for managing forensic genetic databases. Since its conception, the system was designed based on the real operational requirements of forensic laboratories and judicial bodies, and taking as a reference current international standards and recommendations in the field.
+
+In particular, the architecture and operation of GENis are aligned with the recommendations of the **International Society for Forensic Genetics (ISFG)**, the **European Network of Forensic Science Institutes (ENFSI)**, and **INTERPOL**, among other reference bodies. These guidelines are reflected both in the admissibility and match-search criteria and in the transparency of the calculation models, the system's auditability, and the protection of the stored genetic information.
+
+**A guiding principle in the design of GENis is the transparency of the statistical models and search algorithms, understood as a necessary condition for the independent reproducibility of results and their proper evaluation in the expert and judicial fields. In this sense, GENis adopts an open-source architecture**, which allows access to its conceptual models, facilitates technical audits, and enables its adaptation to different regulatory and organizational frameworks.
+
+From a functional standpoint, GENis allows the entry and management of autosomal STR, Y-chromosome, X-chromosome, and mitochondrial DNA genetic profiles. The system is highly configurable, making it possible to define profile categories, admission rules, search parameters, and comparison criteria in accordance with the regulations and policies of each jurisdiction or laboratory.
+
+One of the central pillars of GENis is its **matching engine**, designed to operate both in classic forensic contexts and in missing persons search (MPI) and disaster victim identification (DVI) scenarios. In the forensic field, GENis implements the matching algorithms defined by ENFSI at high, medium, and low stringency, as well as a specific algorithm that makes it possible to identify the possible involvement of the same individual in different pieces of evidence even in the absence of reference profiles. In the MPI and DVI fields, the system incorporates models based on Bayesian networks that allow kinship analysis and the probabilistic evaluation of complex hypotheses.
+
+In addition, GENis incorporates robust security, access control, audit, and traceability mechanisms, allowing detailed recording of all actions performed on profiles, analyses, matches, and scenarios. These features are essential for meeting the quality, integrity, and control requirements demanded by the international standards and recommendations applicable to forensic genetic databases.
+
+This manual aims to describe in detail and in an operational manner how GENis works, addressing both the technical and conceptual aspects necessary for its correct use. Throughout the document, the workflows, search and comparison criteria, interpretation of results, audit mechanisms, and particularities of each of the system's modules are explained. It also includes technical notes and regulatory references intended to place the use of the system within the framework of contemporary forensic genetics.
+
+This manual is aimed at forensic geneticists, technical operators, database managers, legislators, and the academic community and NGOs, and seeks to serve as an indispensable reference tool for the responsible, consistent, and regulation-aligned use of the GENis system.
