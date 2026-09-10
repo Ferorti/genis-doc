@@ -1,6 +1,6 @@
-# 24. COINCIDENCIA DE PERFILES
+# Coincidencia de perfiles
 
-## COINCIDENCIA EN EXIGENCIA ALTA DE PERFILES
+## Coincidencia en exigencia alta de perfiles
 
 Dados dos perfiles ***P=(id1,p1,p12,…,pn)*** y ***Q=(id2,q1,q2,…,qn)*** y donde los
 
@@ -16,7 +16,7 @@ el locus.
 
 Definimos ***P=ₚQ*** si y solo si ∀ ***m∈R:pₘ=qₘ***
 
-## COINCIDENCIA EN EXIGENCIA MEDIA O MODERADA DE PERFILES
+## Coincidencia en exigencia media o moderada de perfiles
 
 Dados dos perfiles ***P=(id1,p1,p12,…,pn)*** y ***Q=(id2,q1,q2,…,qn)*** donde los ***pi,qi***
 
@@ -34,7 +34,7 @@ el Locus.
 
 Definimos ***P⊂ₚQ*** si y solo si ∀ ***m∈R:pₘ⊂ₘqₘ***
 
-## COINCIDENCIA EN EXIGENCIA BAJA DE PERFILES
+## Coincidencia en exigencia baja de perfiles
 
 Dados dos perfiles ***P=(id1,p1,p12,…,pn)*** y ***Q=(id2,q1,q2,…,qn)*** donde los ***pi,qj***
 
@@ -50,7 +50,7 @@ el Locus.
 
 Definimos ***P≈ₚQ*** si y solo si ∀ ***m∈R:pₘ≈ₘqₘ***
 
-## COINCIDENCIA ENTRE DOS PERFILES APORTANTES
+## Coincidencia entre dos perfiles aportantes
 
 Dados dos perfiles mezcla ***M*** y ***M'***, decimos que ***M≈ₘₘM'*** si y solo si ∃ ***S,***
 

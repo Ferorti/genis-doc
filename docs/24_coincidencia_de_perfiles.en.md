@@ -1,4 +1,4 @@
-# 24. Profile matching
+# Profile matching
 
 ## Profile matching at high stringency
 
