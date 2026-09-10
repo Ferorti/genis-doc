@@ -1,6 +1,6 @@
-# 9. MARCADORES
+# Marcadores
 
-## MARCADORES
+## Marcadores
 
 Para acceder a los marcadores ir al menú **Configuración/Marcadores**:
 
@@ -8,7 +8,7 @@ Para acceder a los marcadores ir al menú **Configuración/Marcadores**:
 
 Se tienen dos solapas: **Agregar Marcador**, para agregar marcadores nuevos y la solapa **Marcadores** con toda la lista de los marcadores existentes.
 
-## AGREGAR MARCADORES
+## Agregar marcadores
 
 Para agregar un nuevo marcador ubicarse en la primera solapa **Agregar Marcador**.
 
@@ -32,7 +32,7 @@ En el caso del **Tipo de análisis Autosomal**, se tiene la posibilidad de ligar
 
 - **Requerido:** debe chequearse el casillero si se quiere que el marcador sea requerido. Caso contrario el marcador quedará como aceptado. Tanto los marcadores de tipo **Requerido** como los del tipo **Aceptado** participarán en el proceso de Matching. La cantidad mínima de marcadores deberá validarse contra la totalidad de marcadores **Requeridos** solamente.
 
-## MODIFICAR/ELIMINAR MARCADORES
+## Modificar/eliminar marcadores
 
 La solapa **Marcadores**, me muestra todos los marcadores existentes ordenados alfabéticamente:
 
@@ -48,13 +48,13 @@ Solo se podrán modificar los campos: alias, casillero Requerido, y los valores 
 
 Para eliminar un marcador, presionar el botón de eliminar
 
-## VALORES ALÉLICOS FUERA DE ESCALA
+## Valores alélicos fuera de escala
 
 Si el valor alélico ingresado para el marcador se encuentra fuera de las escaleras alélicas definidas, el análisis será aceptado y los alelos fuera de rango quedarán marcados de un color diferente:
 
 ![](images/sec09/p064_f01.png)
 
-## AGREGAR MARCADORES SUELTOS
+## Agregar marcadores sueltos
 
 Se pueden agregar marcadores sueltos a un perfil existente. Tener en cuenta que para poder agregar marcadores sueltos, el rol debe tener la configurada la opción (Ver sección **3.2 Configuración de Roles**).
 
@@ -64,7 +64,7 @@ Para agregar un marcador suelto ir al perfil donde se quiere agregar el marcador
 
 ![](images/sec09/p065_f02.png)
 
-## MICROVARIANTES
+## Microvariantes
 
 ![](images/sec09/p066_f01.png)
 
