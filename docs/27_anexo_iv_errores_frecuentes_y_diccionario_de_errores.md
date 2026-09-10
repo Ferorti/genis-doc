@@ -1,4 +1,4 @@
-# 27. ANEXO IV: ERRORES FRECUENTES Y DICCIONARIO DE ERRORES
+# Anexo IV: Errores frecuentes y diccionario de errores
 
 Durante la operación cotidiana de GENis pueden presentarse mensajes de error asociados a validaciones internas del sistema, restricciones de estado, permisos de usuario o inconsistencias en los datos ingresados. Estos mensajes cumplen una función preventiva y de control, orientada a preservar la integridad de la base de datos, la trazabilidad de los perfiles y la coherencia científica de las búsquedas y comparaciones.
 
@@ -6,7 +6,7 @@ El presente anexo reúne un **listado de los errores más frecuentes observados 
 
 Para el detalle completo y actualizado de todos los mensajes de error definidos en GENis, se remite al **diccionario oficial de errores** disponible en el repositorio público del proyecto, el cual constituye la fuente primaria de referencia técnica.
 
-## ERRORES MÁS FRECUENTES
+## Errores más frecuentes
 
 **1. E0101 – Perfil no encontrado**
 

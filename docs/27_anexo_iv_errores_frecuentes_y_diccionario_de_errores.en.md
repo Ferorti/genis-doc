@@ -1,4 +1,4 @@
-# 27. Annex IV: Frequent errors and error dictionary
+# Annex IV: Frequent errors and error dictionary
 
 During the day-to-day operation of GENis, error messages may appear related to internal system validations, status restrictions, user permissions, or inconsistencies in the data entered. These messages serve a preventive and control function, aimed at preserving the integrity of the database, the traceability of profiles, and the scientific consistency of searches and comparisons.
 
