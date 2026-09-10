@@ -1,4 +1,4 @@
-# 3. Roles
+# Roles
 
 ![](images/sec03/p028_f01.png)
 
