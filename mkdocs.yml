@@ -158,10 +158,14 @@ markdown_extensions:
   - pymdownx.tilde
 
 extra:
+  generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/fundacion-sadosky/genis
-      name: GENis en GitHub
+      link: https://github.com/fundacion-sadosky
+      name: Fundación Sadosky en GitHub
+
+copyright: >
+  <a href="https://www.fundacionsadosky.org.ar" target="_blank" rel="noopener">Fundación Sadosky</a>
 
 nav:
   - GENis:
