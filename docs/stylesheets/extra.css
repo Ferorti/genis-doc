@@ -60,3 +60,12 @@
 [data-md-color-scheme="slate"][data-md-color-primary="custom"] .md-nav--primary .md-nav__title[for="__drawer"] {
   background-color: hsla(var(--md-hue), 15%, 9%, 1);
 }
+
+/* Clarifying prefix injected by nav-fix.js in front of a nested section's
+   back-arrow title, e.g. "Volver al menú principal — GENis". Slightly
+   muted so the section's own name (the rest of the label) still reads as
+   the primary text. */
+.md-nav__back-hint {
+  color: var(--md-default-fg-color--light);
+  font-weight: normal;
+}
