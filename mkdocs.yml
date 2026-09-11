@@ -9,6 +9,9 @@ docs_dir: docs
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/nav-fix.js
+
 theme:
   name: material
   language: es
