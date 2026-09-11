@@ -49,7 +49,7 @@
 }
 
 /* In dark mode, keep the header/tabs bar a neutral dark gray instead of
-   pink — --md-primary-fg-color stays pink above so active nav text, links,
+   pink. --md-primary-fg-color stays pink above so active nav text, links,
    etc. still carry the brand color, only the header/tabs backgrounds are
    overridden here. Uses the exact tone (hsla(hue,15%,9%)) Material's own
    built-in "black" primary uses for these same elements in slate mode, so
