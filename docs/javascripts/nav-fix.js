@@ -13,3 +13,40 @@ document.addEventListener("change", function (event) {
     }
   }
 });
+
+// The back-arrow shown for a top-level tab section in the sidebar (mobile
+// drill-down menu) only displays that section's own name, e.g. "GENis" -
+// it's not obvious it's a back button that returns to the full tab list.
+// Prefix it with a short "Inicio" / "Home" so it reads inline next to the
+// arrow without wrapping. Only applied to top-level sections (id like
+// "__nav_1"); deeper nested ones (id like "__nav_2_3") return to their own
+// parent section, not the main menu, so they are left as-is.
+function addHomeHints() {
+  var isEnglish = document.documentElement.lang.indexOf("en") === 0;
+  var text = isEnglish ? "Home" : "Inicio";
+  var titles = document.querySelectorAll(
+    '.md-nav__title:not([data-home-hint-added])'
+  );
+  titles.forEach(function (title) {
+    var forAttr = title.getAttribute("for");
+    if (!forAttr || !/^__nav_\d+$/.test(forAttr)) {
+      return;
+    }
+    var icon = title.querySelector(".md-nav__icon");
+    var hint = document.createElement("span");
+    hint.className = "md-nav__home-hint";
+    hint.textContent = text + " ";
+    if (icon) {
+      icon.insertAdjacentElement("afterend", hint);
+    } else {
+      title.insertBefore(hint, title.firstChild);
+    }
+    title.setAttribute("data-home-hint-added", "true");
+  });
+}
+
+addHomeHints();
+new MutationObserver(addHomeHints).observe(document.body, {
+  childList: true,
+  subtree: true,
+});

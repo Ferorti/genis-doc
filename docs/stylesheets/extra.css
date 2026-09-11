@@ -60,3 +60,12 @@
 [data-md-color-scheme="slate"][data-md-color-primary="custom"] .md-nav--primary .md-nav__title[for="__drawer"] {
   background-color: hsla(var(--md-hue), 15%, 9%, 1);
 }
+
+/* "Inicio" / "Home" hint injected by nav-fix.js right after the back-arrow
+   icon on a top-level section's title, so it reads inline before the
+   section name without wrapping. Slightly muted so the section name
+   stays the primary text. */
+.md-nav__home-hint {
+  color: var(--md-default-fg-color--light);
+  font-weight: normal;
+}
