@@ -25,7 +25,7 @@ document.addEventListener("change", function (event) {
 // they are left as-is.
 function addHomeHints() {
   var isEnglish = document.documentElement.lang.indexOf("en") === 0;
-  var text = isEnglish ? "Home" : "Inicio";
+  var text = isEnglish ? "Back to Main Menu" : "Volver a Menú Principal";
   var titles = document.querySelectorAll(
     '.md-nav__title:not([data-home-hint-added])'
   );
