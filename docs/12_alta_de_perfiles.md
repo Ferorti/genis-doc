@@ -214,7 +214,7 @@ Para esto, el código interno de la muestra debe coincidir con el **Sample Name*
 
 ## Generación del archivo para carga masiva desde GeneMapper / GeneMapper ID-X
 
-La carga masiva de perfiles en GENis requiere un archivo **.txt tabulado** con una estructura específica. Para ello, es necesario configurar un **Table Setting dedicado al archivo de carga masiva** en GeneMapper / GeneMapper ID-X y completar correctamente los campos que GENis valida al momento de la importación.
+La carga masiva de perfiles en GENis requiere un archivo **`.txt` tabulado** con una estructura específica. Para ello, es necesario configurar un **Table Setting dedicado al archivo de carga masiva** en GeneMapper / GeneMapper ID-X y completar correctamente los campos que GENis valida al momento de la importación.
 
 A continuación, se describen los pasos recomendados para generar correctamente el archivo.
 
@@ -298,21 +298,23 @@ Para generar el archivo:
 - **Una línea por marcador**
 - **Incluir toda la información del marcador** (opción obligatoria; garantiza que el formato sea compatible con GENis)
 
-5. Guardar el archivo en formato **.txt tabulado**.
+5. Guardar el archivo en formato **`.txt` tabulado**.
 
 La cabecera generada debe tener, como mínimo, la siguiente estructura:
 
-**Sample Name Specimen Category UD1 UD2 Marker Allele 1 Allele 2 ... Allele 8**
+```text
+Sample Name  Specimen Category  UD1  UD2  Marker  Allele 1  Allele 2  ...  Allele 8
+```
 
 Si la cabecera contiene menos de 8 columnas de alelos aparecera el mensaje aunque el perfil genético no tenga 8 alelos:
 
-**E0305 – Faltan parámetros en la cabecera del archivo.**
+**`E0305` – Faltan parámetros en la cabecera del archivo.**
 
 ![](images/sec12/p098_f01.png)
 
 ### 5. Control previo antes de la carga masiva en GENis
 
-Se recomienda revisar el archivo .txt antes de cargarlo, verificando:
+Se recomienda revisar el archivo `.txt` antes de cargarlo, verificando:
 
 - La presencia y el orden correcto de las columnas.
 - Que todas las categorías en **Specimen Category** coinciden con GENis.
@@ -359,7 +361,7 @@ Al hacer click en **Nuevo Lote**, aparece la siguiente pantalla en la que se deb
 
 - Tipo de análisis: seleccionar si el análisis es del tipo Autosomal o Mitocondrial.
 - Archivo: haciendo click en el botón Elija archivo, me permite seleccionar el archivo deseado.
-- Nombre del lote: Campo opcional que me permite identificar un lote por el nombre cuando lo quieren asociar a un caso de MPI/DVI (ver sección 20.7 Asociar Lote)
+- Nombre del lote: Campo opcional que me permite identificar un lote por el nombre cuando lo quieren asociar a un caso de MPI/DVI (ver [Asociar lote](20_busqueda_de_personas.md#asociar-lote))
 
 ![](images/sec12/p102_f01.png)
 
@@ -387,11 +389,7 @@ También se tiene la posibilidad de aprobar todos, eliminar todos y aprobar los 
 
 **Nota:**
 
-- Puede ocurrir que aparezca el símbolo
-
-![](images/sec12/p103_f02.png)
-
-a la derecha del código interno de la muestra, lo que indica que los metadatos del perfil a incorporar han sido previamente cargados y se han asociado automáticamente.
+- Puede ocurrir que aparezca el símbolo ![](images/sec12/p103_f02.png) a la derecha del código interno de la muestra, lo que indica que los metadatos del perfil a incorporar han sido previamente cargados y se han asociado automáticamente.
 - Si no viene la subcategoría cargada, el perfil quedará en estado Incompleto hasta que se carga una subcategoría.
 
 ![](images/sec12/p103_f03.png)
@@ -410,7 +408,7 @@ en caso de que detecte que la categoría esté mal cargada.
 
 Para proceder al alta efectiva, presionar el botón con el pulgar hacia arriba en cada uno de los análisis o bien seleccionarlos individualmente o en su conjunto y presionar en **Aceptar Seleccionados** o directamente presionar el botón **Aceptar todo**.
 
-Se tiene el casillero **Replicar a instancia superior** para que se replique el perfil en caso de estar tildado (Ver detalle en la sección 21. Interconexión de instancias)
+Se tiene el casillero **Replicar a instancia superior** para que se replique el perfil en caso de estar tildado (ver detalle en [Interconexión de instancias](21_interconexion_de_instancias.md))
 
 El ícono
 
@@ -443,9 +441,9 @@ Los errores más frecuentes que impiden la aceptación son:
 
 Si el alias del kit (campo UD2) no coincide exactamente con el kit configurado en GENis, el sistema no acepta los marcadores y reporta errores del tipo:
 
-**E0686: Marcador inválido**
+**`E0686`: Marcador inválido**
 
-**E0400: No se pueden cambiar los valores de los alelos**
+**`E0400`: No se pueden cambiar los valores de los alelos**
 
 2. Nombres de marcadores no coincidentes
 

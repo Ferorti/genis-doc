@@ -198,7 +198,7 @@ Este servicio será necesario para permitir el uso del mecanismo de autenticaci�
 
 2.- Inicie la instalación del paquete ntp. Para eso, ejecute el siguiente comando:
 
-```
+```bash
 sudo apt-get install ntp
 ```
 
@@ -212,7 +212,7 @@ Para poder avanzar con la instalación, ingrese la contraseña del usuario genis
 
 5.-El servicio se instala e inicia. Para verificar contra que servidores está sincronizando, ejecute el siguiente comando:
 
-```
+```bash
 ntpq -p
 ```
 
@@ -220,7 +220,7 @@ ntpq -p
 
 6.- Es una buena práctica hacer que el servicio ntp tome la hora desde servidores lo más cercanos posible al servidor que se está configurando. Para eso se deben modificar ciertos parámetros del archivo *ntp.conf* que se encuentra en el directorio */etc*. Para esto, ejecute el siguiente comando:
 
-```
+```bash
 sudo nano /etc/ntp.conf
 ```
 
@@ -228,7 +228,7 @@ Después de ingresar la contraseña del usuario ***genis-user***, se presenta el
 
 8.- Busque (puede moverse por el documento utilizando las flechas) la siguiente sección:
 
-```
+```text
 # pool.ntp.org maps to about 1000 low-stratum NTP servers.  Your server will
 # pick a different set every time it starts up.  Please consider joining the
 # pool: <http://www.pool.ntp.org/join.html>
@@ -240,7 +240,7 @@ server 3.debian.pool.ntp.org iburst
 
 … y modifique las líneas que comienzan con "server" de la siguiente manera:
 
-```
+```text
 # pool.ntp.org maps to about 1000 low-stratum NTP servers.  Your server will
 # pick a different set every time it starts up.  Please consider joining the
 # pool: <http://www.pool.ntp.org/join.html>
@@ -255,13 +255,13 @@ server 3.south-america.pool.ntp.org
 
 10.- Para que la nueva configuración tome efecto, es necesario reiniciar el servicio. Reinicie el servicio ejecutando el siguiente comando:
 
-```
+```bash
 sudo service ntp restart
 ```
 
 11.- Para verificar que la configuración ha tomado efecto y que se encuentra utilizando los nuevos servidores, ejecute el siguiente comando:
 
-```
+```bash
 ntpq -p
 ```
 
@@ -279,7 +279,7 @@ GENis utiliza OpenLDAP como herramienta de directorio LDAP. OpenLDAP es una impl
 
 2.- Inicie la instalación de los paquetes **slapd** y **ldap-utils**. El paquete **slapd** instala los binarios necesarios para la ejecución de OpenLDAP. El paquete **ldap-utils** es necesario para realizar tareas de administración sobre el directorio desde la línea de comandos. Para esto, ejecute el siguiente comando:
 
-```
+```bash
 sudo apt-get install slapd ldap-utils
 ```
 
@@ -301,7 +301,7 @@ sudo apt-get install slapd ldap-utils
 
 7.- Como parte de la instalación de OpenLDAP, el instalador realiza la configuración inicial con una estructura de directorio básica basada en un esquema (*schema*) predeterminado. A los efectos de GENis v1, este esquema será suficiente. Se deberá ejecutar el siguiente comando indicando nuevamente los parámetros del nuevo esquema, denominado "**genis.local**" como dominio local
 
-```
+```bash
 sudo dpkg-reconfigure slapd
 ```
 
@@ -359,7 +359,7 @@ Además, para realizar parte de la configuración del directorio de GENis, es ne
 
 5.- Para importar el archivo, ejecute el comando:
 
-```
+```bash
 sudo ldapadd -x -D cn=admin,dc=genis,dc=local -W -f X-GENIS-LDAPConfig_Base_FULL.ldif
 ```
 
@@ -383,7 +383,7 @@ Si bien la aplicación GENis se encuentra desarrollada en Scala, el ambiente de 
 
 2.- Inicie la instalación del paquete **openjdk-8-jre**. Este es el paquete que instala el producto Java Runtime Environment 8. Para eso, ejecute el siguiente comando:
 
-```
+```bash
 sudo apt-get install openjdk-8-jre
 ```
 
@@ -397,8 +397,8 @@ sudo apt-get install openjdk-8-jre
 
 4.- Para verificar que la instalación ha sido satisfactoria, ejecute el siguiente comando:
 
-```
-java –version
+```bash
+java -version
 ```
 
 ![](images/sec03/p037_f02.png)
@@ -413,7 +413,7 @@ PostgreSQL es un motor de bases de datos relacional. GENis utiliza PostgreSQL pa
 
 2.- Inicie la instalación del paquete postgresql-9.6. Este es el paquete que instala el producto PostgreSQL Para eso, ejecute el siguiente comando:
 
-```
+```bash
 sudo apt-get install postgresql
 ```
 
@@ -425,7 +425,7 @@ Una vez que el motor de base de datos se encuentra instalado, es necesario reali
 
 1.- En primer lugar, es necesario crear un usuario que será el que GENis usará para las conexiones con la base de datos. Para este caso, usaremos: **_genissqladmin_** con contraseña **_contraseña-sql-demo_**. Ejecute el siguiente comando:
 
-```
+```bash
 sudo adduser genissqladmin
 ```
 
@@ -437,13 +437,13 @@ Puesto que el usuario “postgres” puede ejecutar operaciones sobre la base de
 
 3.- El siguiente paso es crear un usuario de la base de dato para ser usado por GENis en las operaciones que éste haga sobre la misma. Una vez que se haya creado el usuario, es necesario indicar una contraseña para el mismo. En este caso, y para hacerlo coincidir con el usuario de conexión, usaremos: **_genissqladmin_** con contraseña **_contraseña-sql-demo_**. Ejecute los comandos debajo uno a continuación del otro:
 
-```
+```bash
 sudo -u postgres createuser -d -e -S -R genissqladmin
 ```
 
 ![](images/sec03/p039_f01.png)
 
-```
+```bash
 sudo -u postgres psql -c "ALTER USER genissqladmin PASSWORD 'contraseña-sql-demo';"
 ```
 
@@ -451,11 +451,11 @@ sudo -u postgres psql -c "ALTER USER genissqladmin PASSWORD 'contraseña-sql-dem
 
 4.- Ahora es necesario crear dos bases de datos. Para esto se utilizará el usuario “genissqladmin” de manera que sea identificado como el propietario de las bases. La primera es para almacenar información que la aplicación utilizará para su operación, la segunda es para el almacenamiento de los registros de transacciones de la aplicación. Ejecute los siguientes comandos uno a continuación del otro:
 
-```
+```bash
 sudo -u genissqladmin createdb -e genisdb
 ```
 
-```
+```bash
 sudo -u genissqladmin createdb -e genislogdb
 ```
 
@@ -473,7 +473,7 @@ La instalación de MongoDB requiere de cierta configuración antes de poder real
 
 2.- En sistemas operativos Debian 9 es necesario instalar el paquete dirmngr para que se puedan importar las claves públicas, el mismo se instala mediante el siguiente comando:
 
-```
+```bash
 sudo apt-get install dirmngr
 ```
 
@@ -481,7 +481,7 @@ sudo apt-get install dirmngr
 
 3.- Luego, es necesario importar la clave pública utilizada para firmar los paquetes. Para eso, ejecute el siguiente comando:
 
-```
+```bash
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 ```
 
@@ -489,7 +489,7 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A1
 
 4.- Una vez que se ha importado la clave pública, es necesario modificar el archivo desde el sistema operativo busca las fuentes (/etc/sources.list) para poder ubicarlo y descargarlo. Para eso, ejecute el siguiente comando:
 
-```
+```bash
 echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.4 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
 ```
 
@@ -497,7 +497,7 @@ echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.4 main" | sudo
 
 5.- En instalaciones con Debian 9 es necesario añadir los repositorios de Debian 8 “Jessie” para que funcione la instalacion de MongoDB, se debe editar el archivo /etc/apt/sources.list y añadir la siguiente línea al final:
 
-```
+```text
 deb http://ftp.debian.org/debian jessie-backports main
 ```
 
@@ -505,7 +505,7 @@ deb http://ftp.debian.org/debian jessie-backports main
 
 6.- Una vez que el repositorio se encuentra configurado, es necesario actualizar las fuentes. Para eso ejecute el siguiente comando:
 
-```
+```bash
 sudo apt-get update
 ```
 
@@ -513,7 +513,7 @@ sudo apt-get update
 
 7.- Ahora es momento de disparar la instalación. Ejecute el siguiente comando:
 
-```
+```bash
 sudo apt-get install -y mongodb-org
 ```
 
@@ -521,7 +521,7 @@ sudo apt-get install -y mongodb-org
 
 8.- Una vez que se completa la instalación, Mongo inicia los servicios automáticamente. Para verificar que la configuración es correcta, ejecute el siguiente comando:
 
-```
+```bash
 sudo service mongod start
 ```
 
@@ -529,7 +529,7 @@ sudo service mongod start
 
 9.- Para que MongoDB inicie durante el inicio se debe ejecutar el siguiente comando:
 
-```
+```bash
 sudo systemctl enable mongod.service
 ```
 
@@ -537,30 +537,12 @@ sudo systemctl enable mongod.service
 
 10.- Para que funcionen ciertas características en GENis se deben crear las siguientes colleciones de datos, se pueden crear de manera manual o mediante un script denominado “MongoSetup” el cual se proporciona junto a este documento
 
-```
+```bash
 mongo pdgdb --eval "db.createCollection('profiles')"
-```
-
-```
 mongo pdgdb --eval "db.createCollection('matches')"
-```
-
-```
 mongo pdgdb --eval "db.createCollection('electropherograms')"
-```
-
-```
 mongo pdgdb --eval "db.createCollection('scenarios')"
-```
-
-```
 mongo pdgdb --eval "db.profiles.createIndex({categoryId:1})"
-```
-
-```
 mongo pdgdb --eval "db.createCollection('pedigrees')"
-```
-
-```
 mongo pdgdb --eval "db.createCollection('pedigreeMatches')"
 ```

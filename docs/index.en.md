@@ -2,9 +2,9 @@
 
 GENis software is a computer tool developed by the [Fundación Dr. Manuel Sadosky](https://www.fundacionsadosky.org.ar) that allows comparing genetic profiles obtained from biological samples collected at different crime or disaster scenes, thereby linking events that occurred at different times and places, increasing the chances of identifying offenders, missing persons, or victims of disasters.
 
-For a detailed explanation of how to install GENis and configure the required software, see the [GENis installation manual](https://github.com/fundacion-sadosky/genis/files/9739746/instalacion.pdf). Below is a summary of the steps for a basic configuration, along with instructions on how to run the system in development and production environments. The files referenced can be found under the */utils* directory.
+For a detailed explanation of how to install GENis and configure the required software, see the [GENis installation manual](https://raw.githubusercontent.com/wiki/fundacion-sadosky/genis/files/GENis.-.Installation.Procedure.pdf). Below is a summary of the steps for a basic configuration, along with instructions on how to run the system in development and production environments. The files referenced can be found under the */utils* directory.
 
-For information on how the system works, see the [GENis user manual](https://github.com/fundacion-sadosky/genis/files/9739748/manual.pdf).
+For information on how the system works, see the [GENis user manual](https://raw.githubusercontent.com/wiki/fundacion-sadosky/genis/files/GENis.-.User.Manual.pdf).
 
 ## Hardware Requirements
 
@@ -39,7 +39,7 @@ GENis is developed in Scala; running the application requires JRE 8, and continu
 Reconfigure ldap by entering **genis.local** as the domain name and organization name:
 
 ```bash
-sudo dpkg-reconfigure slapd 
+sudo dpkg-reconfigure slapd
 ```
 
 Load the initial configuration data:
@@ -60,7 +60,7 @@ sudo adduser genissqladmin
 sudo -u postgres createuser -d -e -S -R genissqladmin
 sudo -u postgres psql -c "ALTER USER genissqladmin PASSWORD '********';"
 sudo -u genissqladmin createdb -e genisdb
-sudo -u genissqladmin createdb -e genislogdb 
+sudo -u genissqladmin createdb -e genislogdb
 ```
 ### MongoDB configuration
 Create the initial configuration collections:
@@ -87,14 +87,14 @@ This value is not versioned and must not be shared between environments. In deve
 
 In the application's root directory, run (not all parameters are always necessary, they are included for illustration purposes):
 ```bash
-sbt run --java-home /usr/lib/jvm/java-8-openjdk-amd64
--Xms512M -Xmx10g -Xss1M -XX:+CMSClassUnloadingEnabled
--Dconfig.file=./application-dev.conf 
--Dlogger.file=./logger-dev.xml 
--Dhttps.port=9443 -Dhttp.port=9000
+sbt run --java-home /usr/lib/jvm/java-8-openjdk-amd64 \
+  -Xms512M -Xmx10g -Xss1M -XX:+CMSClassUnloadingEnabled \
+  -Dconfig.file=./application-dev.conf \
+  -Dlogger.file=./logger-dev.xml \
+  -Dhttps.port=9443 -Dhttp.port=9000
 ```
 
-In the browser, go to http://localhost:9000/. 
+In the browser, go to http://localhost:9000/.
 If this is the first time the application is run, you will be asked whether to run the evolutions scripts to create the data schema. To stop the application, press `Ctrl + C` in the console.
 
 ## Downloading, distributing, and running GENis in production
@@ -106,35 +106,42 @@ sbt dist
 ```
 
 A zip file will be generated in the *target/universal* folder with everything needed to run the system in production.
-To run GENis:
-- unzip the zip file under */usr/share*
-- grant execution permission to the bin/genis script 
-    ```sudo chmod +x bin/genis```
-- modify the system configuration parameters. The ldap database connections are found in */conf/storage.conf*, and the laboratory data and file export paths are in */conf/genis-misc.conf*
 
+To run GENis:
+
+- unzip the zip file under */usr/share*
+- grant execution permission to the `bin/genis` script:
+
+    ```bash
+    sudo chmod +x bin/genis
+    ```
+
+- modify the system configuration parameters. The ldap database connections are found in */conf/storage.conf*, and the laboratory data and file export paths are in */conf/genis-misc.conf*
 - run the system:
-```bash
-sudo ./bin/genis -v 
--DapplyEvolutions.default=true
--DapplyDownEvolutions.default=true
--DapplyEvolutions.logDb=true
--DapplyDownEvolutions.logDb=true
--Dhttp.port=9000 -Dhttps.port=9443 
--Dconfig.file=./conf/application.conf &
-```
-The RUNNING_PID file contains the process number used to stop the system. 
+
+    ```bash
+    sudo ./bin/genis -v \
+      -DapplyEvolutions.default=true \
+      -DapplyDownEvolutions.default=true \
+      -DapplyEvolutions.logDb=true \
+      -DapplyDownEvolutions.logDb=true \
+      -Dhttp.port=9000 -Dhttps.port=9443 \
+      -Dconfig.file=./conf/application.conf &
+    ```
+
+The RUNNING_PID file contains the process number used to stop the system.
 ```bash
 cat RUNNING_PID
 sudo kill -9 pid
-sudo rm –rf RUNNING_PID
+sudo rm -rf RUNNING_PID
 ```
- 
+
 ## Initial system user
 
 GENis uses an authentication mechanism based on TOPT.
 During system configuration, the user '*setup*' is created, with password '*pass*' and TOPT secret '*ETZK6M66LFH3PHIG*'.
 Feel free to use this account for development purposes, but in production request a new administrator account on the login screen, then log in with the '*setup*' user to enable it, and finally deactivate the '*setup*' user.
-If you have trouble logging into the system, you may need to install the NTP service as indicated in the [GENis installation manual](https://github.com/fundacion-sadosky/genis/files/9739746/instalacion.pdf).
+If you have trouble logging into the system, you may need to install the NTP service as indicated in the [GENis installation manual](https://raw.githubusercontent.com/wiki/fundacion-sadosky/genis/files/GENis.-.Installation.Procedure.pdf).
 To obtain the password from the TOPT, you can use https://gauth.apps.gbraad.nl/
 
 ## Other utilities

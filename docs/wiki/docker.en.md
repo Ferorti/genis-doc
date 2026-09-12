@@ -4,7 +4,7 @@ To make it easier to install the services required by GENis, we use [Docker](htt
 The environment configuration is located in the *docker-compose.yml* file, where you can also check the version used for each application. The operation of GENis using the Docker services and the installation procedure described below has been tested on Ubuntu 22.04.
 
 ### Installing Docker on Ubuntu 22.04
-You can check the Docker installation procedure on Ubuntu [here](https://docs.docker.com/engine/install/ubuntu/). 
+You can check the Docker installation procedure on Ubuntu [here](https://docs.docker.com/engine/install/ubuntu/).
 The steps are summarized below:
 
 ```bash
@@ -28,17 +28,17 @@ sudo apt-get update
 # Instalar
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-# Agregar el usuario genis-user al grupo docker y reiniciar el sistema 
+# Agregar el usuario genis-user al grupo docker y reiniciar el sistema
 sudo usermod -a -G docker genis-user
-reboot 
+reboot
 ```
 
 ### Creating the containers:
 
 In the *docker-compose.yml* file you can inspect the configuration of each container, and in particular for production installations it is recommended to change the passwords used. During container creation, configuration scripts located in the folders ending in *_init* are run, performing the following tasks:
 
-- In Postgresql, the user **genissqladmin** is created with password **genissqladminp**, along with the **genisdb** and **genislogdb** databases owned by **genissqladmin** (it is recommended to change the passwords in production installations) 
-- In LDAP, the initial structure and the first-access user **setup** are created 
+- In Postgresql, the user **genissqladmin** is created with password **genissqladminp**, along with the **genisdb** and **genislogdb** databases owned by **genissqladmin** (it is recommended to change the passwords in production installations)
+- In LDAP, the initial structure and the first-access user **setup** are created
 - In MongoDB, the **pdgdb** database is created with the required collections
 
 Assuming you have downloaded the docker folder into the genis-user directory, the steps to create the containers are:
@@ -76,7 +76,7 @@ To connect to the containers you can use the hostname, **localhost**, **127.0.0.
 127.0.0.1 genis_mongo-express
 ```
 
-Once the containers have been created, they can be queried with client applications to check that the initial data was loaded correctly: 
+Once the containers have been created, they can be queried with client applications to check that the initial data was loaded correctly:
 
 - For Postgresql you can use [DataGrip](https://www.jetbrains.com/datagrip/) or the `psql` client inside the container:
 
@@ -92,14 +92,14 @@ Inside the container:
 su - postgres
 psql
 # listado de bases de datos, se esperan genisdb y genislogdb
-\l	
+\l
 # listado de usuarios, se espera genissqladmin
 \dg
 # chequeo de configuración md5
 select * from  pg_settings where name ilike '%encr%';
-table pg_hba_file_rules ;	
+table pg_hba_file_rules ;
 # salida del cliente psql
-\q	
+\q
 ```
 
 Exit the container with `CTRL+D`
@@ -133,7 +133,7 @@ docker volume rm docker_pgsql_data
 
 ### Running GENis in a production environment
 
-For a production installation, see the [GENis installation manual](https://github.com/fundacion-sadosky/genis/files/9739746/instalacion.pdf) for the correct configuration of the system user account and other required services, such as NTP and the Java 8 runtime environment. You must download the [latest GENis release](https://github.com/fundacion-sadosky/genis/releases/latest) from the repository as a zip file, unzip it under */usr/share*, and grant execution permissions to the application.
+For a production installation, see the [GENis installation manual](https://raw.githubusercontent.com/wiki/fundacion-sadosky/genis/files/GENis.-.Installation.Procedure.pdf) for the correct configuration of the system user account and other required services, such as NTP and the Java 8 runtime environment. You must download the [latest GENis release](https://github.com/fundacion-sadosky/genis/releases/latest) from the repository as a zip file, unzip it under */usr/share*, and grant execution permissions to the application.
 
 ```bash
 unzip genis-5.1.9.zip
@@ -144,7 +144,7 @@ chmod +x ./bin/genis
 Adjust the service connection parameters by editing the *./conf/storage.conf* file.
 
 ```properties
-# LDAP 
+# LDAP
 ldap {
   default {
     url = "genis_ldap"
@@ -191,12 +191,12 @@ laboratory {
 Run the application.
 
 ```bash
-sudo ./bin/genis -v 
+sudo ./bin/genis -v
 -DapplyEvolutions.default=true
 -DapplyDownEvolutions.default=true
 -DapplyEvolutions.logDb=true
 -DapplyDownEvolutions.logDb=true
--Dhttp.port=9000 -Dhttps.port=9443 
+-Dhttp.port=9000 -Dhttps.port=9443
 -Dconfig.file=./conf/application.conf &
 ```
 
@@ -229,7 +229,7 @@ Load the initial system data and configure the users as indicated below.
 
 ### Initial GENis data
 
-The first time you access the application from the browser, the evolutions scripts that define the data model will run. To finish the installation, we must load the initial GENis data and the data specific to the installation region (if the country is not Argentina). The initial GENis data files and the local information files are located under the *utils* folder in the root directory of the GENis source code. 
+The first time you access the application from the browser, the evolutions scripts that define the data model will run. To finish the installation, we must load the initial GENis data and the data specific to the installation region (if the country is not Argentina). The initial GENis data files and the local information files are located under the *utils* folder in the root directory of the GENis source code.
 The scripts must be copied to the **genis_postgres** container in order to run them:
 
 
@@ -256,7 +256,7 @@ Exit the container with `CTRL+D`
 
 During system configuration, the user **setup** is created, with password **pass** and TOPT secret '*ETZK6M66LFH3PHIG*'.
 It can be used freely for development purposes, but in production request a new administrator account on the login screen, then log in with the **setup** user to enable it, and finally deactivate the **setup** user.
-If you have trouble logging into the system, you may need to install the NTP service as indicated in the [GENis installation manual](https://github.com/fundacion-sadosky/genis/files/9739746/instalacion.pdf).
+If you have trouble logging into the system, you may need to install the NTP service as indicated in the [GENis installation manual](https://raw.githubusercontent.com/wiki/fundacion-sadosky/genis/files/GENis.-.Installation.Procedure.pdf).
 To obtain the password from the TOPT, you can use https://gauth.apps.gbraad.nl/
 
 ### Database backup and recovery
@@ -350,7 +350,7 @@ fi
 echo "Restore process completed."
 ```
 
-### Other utilities and examples 
+### Other utilities and examples
 
 Two useful scripts are included for development that delete the contents of the profile and match tables in the databases; they can be run with:
 

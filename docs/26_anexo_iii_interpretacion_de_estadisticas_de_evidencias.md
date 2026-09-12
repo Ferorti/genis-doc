@@ -1,7 +1,5 @@
 # Anexo III - Interpretación de estadísticas de evidencias
 
-## Anexo III – Interpretación de estadísticas de evidencias
-
 El presente anexo describe el marco **estadístico y probabilístico** utilizado por GENis para la valoración cuantitativa de evidencias genéticas, particularmente en contextos que involucran **mezclas de ADN y múltiples hipótesis de contribución**. Su objetivo es brindar al usuario una comprensión conceptual de los cálculos realizados por el sistema, sin pretender sustituir la formación estadística especializada ni la interpretación pericial formal.
 
 GENis implementa un enfoque basado en el **cociente de verosimilitudes (Likelihood Ratio, LR)**, ampliamente aceptado en genética forense, el cual permite comparar la plausibilidad relativa de dos hipótesis alternativas frente a una misma evidencia genética.

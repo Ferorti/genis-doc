@@ -38,7 +38,7 @@ Las condiciones de armonización incluyen:
 - **Marcadores definidos de manera uniforme:** GENis no interpreta equivalencias (Penta E ≠ PentaE).
 - **Alias de kits coincidentes:** si un laboratorio usa “GF6C” y el otro “GlobalFiler6C”, el perfil será rechazado.
 - **Reglas de coincidencia equivalentes:** los niveles de exigencia (alta, media, baja) deben estar definidos de manera simétrica.
-- **Bases de frecuencias poblacionales compatibles:** este punto tiene implicancias directas sobre los cálculos de LR (ver sección siguiente).
+- **Bases de frecuencias poblacionales compatibles:** este punto tiene implicancias directas sobre los cálculos de LR (ver [Implicancias de las bases de frecuencias](#nota-implicancias-de-las-bases-de-frecuencias-y-la-recomendacion-internacional)).
 
 Estas condiciones no responden a un capricho del sistema, sino a la necesidad de preservar consistencia científica. De otro modo, la instancia superior podría interpretar un mismo perfil de manera diferente que la instancia inferior, generando falsos descartes o falsos hits.
 
@@ -174,7 +174,7 @@ Una vez aprobados los perfiles, los mismos pasan a formar parte de la instancia 
 
 El Código GENis me indica el laboratorio al que pertenece el perfil.
 
-La instancia superior y los laboratorios reciben la notificación de que se generó un match (Ver detalle de las notificaciones de Interconexión de Instancias en la sección 18.Notificaciones):
+La instancia superior y los laboratorios reciben la notificación de que se generó un match (ver detalle de las notificaciones de Interconexión de Instancias en [Notificaciones](18_notificaciones.md)):
 
 ![](images/sec21/p250_f02.png)
 
@@ -206,7 +206,7 @@ Los perfiles que pertenecen a otros laboratorios no podrán ser editados, esto i
 
 ## Propagar hit y descartes entre instancias
 
-Cuando un match es transformado en hit o descarte, el evento es replicado a las instancias involucradas. Esto será informado en la bandeja de entrada de los genetistas responsables y de los usuarios con permisos para recibir notificaciones de interconexión. Se registra el estado del hit/descarte parcial y del hit/descarte completo (ver detalle de notificaciones en la sección 18. Notificaciones).
+Cuando un match es transformado en hit o descarte, el evento es replicado a las instancias involucradas. Esto será informado en la bandeja de entrada de los genetistas responsables y de los usuarios con permisos para recibir notificaciones de interconexión. Se registra el estado del hit/descarte parcial y del hit/descarte completo (ver detalle de notificaciones en [Notificaciones](18_notificaciones.md)).
 
 ![](images/sec21/p253_f01.png)
 

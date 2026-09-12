@@ -22,7 +22,7 @@ The ID must contain at least 4 characters and must not contain spaces or accente
 
 ![](images/sec03/p030_f01.png)
 
-Each role is assigned a series of permissions, which in turn group a set of operations that will be enabled for the user or users assigned that role (see next section: Role configuration).
+Each role is assigned a series of permissions, which in turn group a set of operations that will be enabled for the user or users assigned that role (see [Role configuration](#role-configuration)).
 
 ## Role configuration
 

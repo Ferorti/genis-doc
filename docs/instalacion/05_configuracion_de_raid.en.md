@@ -98,7 +98,7 @@
 
 23.- We can check the RAID status at any time with the following command:
 
-```
+```bash
 sudo mdadm -D /dev/md0
 ```
 
@@ -106,7 +106,7 @@ sudo mdadm -D /dev/md0
 
 24.- As indicated in previous steps, the boot loader (GRUB) must be installed on each of the disks that are part of the array; this is done with the following command:
 
-```
+```bash
 sudo grub-install /dev/xxx
 ```
 

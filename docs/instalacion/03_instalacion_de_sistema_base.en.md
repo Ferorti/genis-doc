@@ -198,7 +198,7 @@ This service will be required to enable the TOPT-based (*Time-Based One Time Pas
 
 2.- Start the installation of the ntp package. To do this, run the following command:
 
-```
+```bash
 sudo apt-get install ntp
 ```
 
@@ -212,7 +212,7 @@ To proceed with the installation, enter the genisadminuser user's password when 
 
 5.- The service installs and starts. To check which servers it is synchronizing against, run the following command:
 
-```
+```bash
 ntpq -p
 ```
 
@@ -220,7 +220,7 @@ ntpq -p
 
 6.- It is good practice to have the ntp service get the time from servers as close as possible to the server being configured. To do this, certain parameters in the *ntp.conf* file located in the */etc* directory must be modified. To do this, run the following command:
 
-```
+```bash
 sudo nano /etc/ntp.conf
 ```
 
@@ -228,7 +228,7 @@ After entering the password for the ***genis-user*** user, the file is displayed
 
 8.- Look for (you can navigate through the document using the arrow keys) the following section:
 
-```
+```text
 # pool.ntp.org maps to about 1000 low-stratum NTP servers.  Your server will
 # pick a different set every time it starts up.  Please consider joining the
 # pool: <http://www.pool.ntp.org/join.html>
@@ -240,7 +240,7 @@ server 3.debian.pool.ntp.org iburst
 
 … and modify the lines starting with "server" as follows:
 
-```
+```text
 # pool.ntp.org maps to about 1000 low-stratum NTP servers.  Your server will
 # pick a different set every time it starts up.  Please consider joining the
 # pool: <http://www.pool.ntp.org/join.html>
@@ -255,13 +255,13 @@ server 3.south-america.pool.ntp.org
 
 10.- For the new configuration to take effect, the service needs to be restarted. Restart the service by running the following command:
 
-```
+```bash
 sudo service ntp restart
 ```
 
 11.- To verify that the configuration has taken effect and that it is using the new servers, run the following command:
 
-```
+```bash
 ntpq -p
 ```
 
@@ -279,7 +279,7 @@ GENis uses OpenLDAP as its LDAP directory tool. OpenLDAP is an implementation of
 
 2.- Start the installation of the **slapd** and **ldap-utils** packages. The **slapd** package installs the binaries needed to run OpenLDAP. The **ldap-utils** package is needed to perform administration tasks against the directory from the command line. To do this, run the following command:
 
-```
+```bash
 sudo apt-get install slapd ldap-utils
 ```
 
@@ -301,7 +301,7 @@ sudo apt-get install slapd ldap-utils
 
 7.- As part of the OpenLDAP installation, the installer performs the initial configuration with a basic directory structure based on a default schema. For the purposes of GENis v1, this schema will suffice. The following command must be run, specifying again the parameters for the new schema, using "**genis.local**" as the local domain.
 
-```
+```bash
 sudo dpkg-reconfigure slapd
 ```
 
@@ -359,7 +359,7 @@ In addition, to carry out part of the GENis directory configuration, an addition
 
 5.- To import the file, run the command:
 
-```
+```bash
 sudo ldapadd -x -D cn=admin,dc=genis,dc=local -W -f X-GENIS-LDAPConfig_Base_FULL.ldif
 ```
 
@@ -383,7 +383,7 @@ Although the GENis application is developed in Scala, the Java Runtime Environme
 
 2.- Start the installation of the **openjdk-8-jre** package. This is the package that installs the Java Runtime Environment 8 product. To do this, run the following command:
 
-```
+```bash
 sudo apt-get install openjdk-8-jre
 ```
 
@@ -397,8 +397,8 @@ sudo apt-get install openjdk-8-jre
 
 4.- To verify that the installation was successful, run the following command:
 
-```
-java –version
+```bash
+java -version
 ```
 
 ![](images/sec03/p037_f02.png)
@@ -413,7 +413,7 @@ PostgreSQL is a relational database engine. GENis uses PostgreSQL to store part 
 
 2.- Start the installation of the postgresql-9.6 package. This is the package that installs the PostgreSQL product. To do this, run the following command:
 
-```
+```bash
 sudo apt-get install postgresql
 ```
 
@@ -425,7 +425,7 @@ Once the database engine is installed, a number of configuration steps must be c
 
 1.- First, a user must be created for GENis to use for connections to the database. In this case, we will use **_genissqladmin_** with the password **_contraseña-sql-demo_**. Run the following command:
 
-```
+```bash
 sudo adduser genissqladmin
 ```
 
@@ -437,13 +437,13 @@ Since the “postgres” user can perform operations on the database, the follow
 
 3.- The next step is to create a database user to be used by GENis for the operations it performs against the database. Once the user has been created, a password must be set for it. In this case, to match the connection user, we will use **_genissqladmin_** with the password **_contraseña-sql-demo_**. Run the commands below one after the other:
 
-```
+```bash
 sudo -u postgres createuser -d -e -S -R genissqladmin
 ```
 
 ![](images/sec03/p039_f01.png)
 
-```
+```bash
 sudo -u postgres psql -c "ALTER USER genissqladmin PASSWORD 'contraseña-sql-demo';"
 ```
 
@@ -451,11 +451,11 @@ sudo -u postgres psql -c "ALTER USER genissqladmin PASSWORD 'contraseña-sql-dem
 
 4.- Now two databases need to be created. For this, the “genissqladmin” user will be used so that it is identified as the owner of the databases. The first is for storing information the application uses for its operation; the second is for storing the application's transaction logs. Run the following commands one after the other:
 
-```
+```bash
 sudo -u genissqladmin createdb -e genisdb
 ```
 
-```
+```bash
 sudo -u genissqladmin createdb -e genislogdb
 ```
 
@@ -473,7 +473,7 @@ Installing MongoDB requires some configuration before the actual package install
 
 2.- On Debian 9 operating systems, the dirmngr package must be installed so that public keys can be imported; it is installed using the following command:
 
-```
+```bash
 sudo apt-get install dirmngr
 ```
 
@@ -481,7 +481,7 @@ sudo apt-get install dirmngr
 
 3.- Next, the public key used to sign the packages must be imported. To do this, run the following command:
 
-```
+```bash
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 ```
 
@@ -489,7 +489,7 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A1
 
 4.- Once the public key has been imported, the file the operating system uses to look up sources (/etc/sources.list) must be modified so it can be located and downloaded. To do this, run the following command:
 
-```
+```bash
 echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.4 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
 ```
 
@@ -497,7 +497,7 @@ echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.4 main" | sudo
 
 5.- On Debian 9 installations, the Debian 8 “Jessie” repositories must be added for the MongoDB installation to work; edit the /etc/apt/sources.list file and add the following line at the end:
 
-```
+```text
 deb http://ftp.debian.org/debian jessie-backports main
 ```
 
@@ -505,7 +505,7 @@ deb http://ftp.debian.org/debian jessie-backports main
 
 6.- Once the repository is configured, the sources need to be updated. To do this, run the following command:
 
-```
+```bash
 sudo apt-get update
 ```
 
@@ -513,7 +513,7 @@ sudo apt-get update
 
 7.- Now it is time to trigger the installation. Run the following command:
 
-```
+```bash
 sudo apt-get install -y mongodb-org
 ```
 
@@ -521,7 +521,7 @@ sudo apt-get install -y mongodb-org
 
 8.- Once the installation is complete, Mongo starts the services automatically. To verify that the configuration is correct, run the following command:
 
-```
+```bash
 sudo service mongod start
 ```
 
@@ -529,7 +529,7 @@ sudo service mongod start
 
 9.- For MongoDB to start on boot, the following command must be run:
 
-```
+```bash
 sudo systemctl enable mongod.service
 ```
 
@@ -537,30 +537,12 @@ sudo systemctl enable mongod.service
 
 10.- For certain features in GENis to work, the following data collections must be created; they can be created manually or via a script called “MongoSetup” which is provided along with this document.
 
-```
+```bash
 mongo pdgdb --eval "db.createCollection('profiles')"
-```
-
-```
 mongo pdgdb --eval "db.createCollection('matches')"
-```
-
-```
 mongo pdgdb --eval "db.createCollection('electropherograms')"
-```
-
-```
 mongo pdgdb --eval "db.createCollection('scenarios')"
-```
-
-```
 mongo pdgdb --eval "db.profiles.createIndex({categoryId:1})"
-```
-
-```
 mongo pdgdb --eval "db.createCollection('pedigrees')"
-```
-
-```
 mongo pdgdb --eval "db.createCollection('pedigreeMatches')"
 ```

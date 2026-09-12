@@ -8,63 +8,63 @@ For the complete and up-to-date detail of all error messages defined in GENis, r
 
 ## Most frequent errors
 
-**1. E0101 – Profile not found**
+**1. `E0101` – Profile not found**
 
 Indicates that the requested profile does not exist in the database or is not accessible to the current user. It usually appears when trying to modify, associate, or delete a nonexistent or already deregistered profile.
 
-**2. E0104 – Cannot transition from status {0} to status {1}**
+**2. `E0104` – Cannot transition from status `{0}` to status `{1}`**
 
 Status transition error. Occurs when attempting to change the status of a profile or entity without meeting the prior conditions required by the system.
 
-**3. E0106 – Cannot update a profile in status {0}**
+**3. `E0106` – Cannot update a profile in status `{0}`**
 
 The profile is in a status that prevents modifications (for example, associated with active matches, scenarios, or pedigrees).
 
-**4. E0112 – Cannot add analyses to a profile with confirmed or pending matches**
+**4. `E0112` – Cannot add analyses to a profile with confirmed or pending matches**
 
 Protects the integrity of matches already generated. Requires resolving the matches first before modifying the profile.
 
-**5. E0126 – The profile is associated with an active or under-construction pedigree**
+**5. `E0126` – The profile is associated with an active or under-construction pedigree**
 
 Prevents the deletion or modification of profiles participating in pedigrees in use within the MPI/DVI module.
 
-**6. E0129 – The profile has pending MPI/DVI matches**
+**6. `E0129` – The profile has pending MPI/DVI matches**
 
 Indicates that there are matches not yet ruled out or confirmed, blocking certain operations.
 
-**7. E0201 – The pedigree has no frequency database associated with it**
+**7. `E0201` – The pedigree has no frequency database associated with it**
 
 A common error when activating a pedigree without having previously configured the population frequency database required for the calculation.
 
-**8. E0204 – The user does not have permission to confirm the match**
+**8. `E0204` – The user does not have permission to confirm the match**
 
 Authorization error. The user's role does not enable the requested action.
 
-**9. E0211 – The case contains active pedigrees**
+**9. `E0211` – The case contains active pedigrees**
 
 Prevents closing or deregistering a case that still has pedigrees in active status.
 
-**10. E0302 – The format of the lines does not match the header**
+**10. `E0302` – The format of the lines does not match the header**
 
 A typical error in bulk uploads. Indicates an inconsistency between the file's structure and its header.
 
-**11. E0305 – Missing parameters in the file header**
+**11. `E0305` – Missing parameters in the file header**
 
 The bulk upload file does not contain all the mandatory fields.
 
-**12. E0610 – The default statistical options are not configured**
+**12. `E0610` – The default statistical options are not configured**
 
 Indicates that the minimum statistical configurations needed for automatic searches or calculations are missing.
 
-**13. E0643 – The user does not have permission to modify the pedigree**
+**13. `E0643` – The user does not have permission to modify the pedigree**
 
 Restriction based on role or on the pedigree's status.
 
-**14. E0724 – The higher-level instance rejected the profile**
+**14. `E0724` – The higher-level instance rejected the profile**
 
 Interconnection error between instances. The profile does not meet the defined replication criteria.
 
-**15. E0802 – The session is invalid or has expired**
+**15. `E0802` – The session is invalid or has expired**
 
 Authentication error. Requires logging in again.
 

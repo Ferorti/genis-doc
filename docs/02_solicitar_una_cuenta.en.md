@@ -18,7 +18,7 @@ The password consists of 6 digits and regenerates every 30 seconds. To start usi
 
 Before accessing GENis, the user must request the administrator or installation staff to create an account with certain roles defined by an administrator.
 
-As mentioned, GENis provides a two-factor authentication mechanism, so to log in, in addition to the username and password, the token code provided by the Google Authenticator app (described in the previous section) must also be entered.
+As mentioned, GENis provides a two-factor authentication mechanism, so to log in, in addition to the username and password, the token code provided by the Google Authenticator app (described in [Before requesting an account](#before-requesting-an-account)) must also be entered.
 
 ![](images/sec02/p018_f01.png)
 
@@ -119,7 +119,7 @@ The GENis menu adapts to the permissions held by the user who logs in. On the ri
 ![](images/sec02/p026_f02.png)
 
 ![](images/sec02/p026_f03.png)
-Indicates pending notifications (see notification details in section **18. Notifications**).
+Indicates pending notifications (see details in [Notifications](18_notificaciones.md)).
 
 ![](images/sec02/p026_f04.png)
 Indicator of match searches in progress

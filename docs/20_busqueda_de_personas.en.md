@@ -176,7 +176,7 @@ You can remove a specific profile by clicking the trash-can icon, or select the 
 Validations
 
 - A profile that is associated with a pedigree cannot be removed
-- Keep in mind that if you want to remove a profile that is a parent (see section **20.22 Remains Grouping**), the children associated with the grouping profile will move to the **Active** status.
+- Keep in mind that if you want to remove a profile that is a parent (see [Remains grouping](#remains-grouping-collapsing)), the children associated with the grouping profile will move to the **Active** status.
 
 ## Creating the genogram or pedigree
 
@@ -201,7 +201,7 @@ Assigning nodes within the pedigree allows you to assign profiles that are assoc
 
 **For DVI:**
 
-- Profiles can be associated both from the **Reference Profiles** tab (IR_DVI) and from the NN Post-Mortem Profiles tab (PFNI_DVI, ENN_DVI, RNN_DVI, INN_DVI) that are within the case. Keep in mind that only profiles in the Active status can be associated (see section **20.22 Remains Grouping**)
+- Profiles can be associated both from the **Reference Profiles** tab (IR_DVI) and from the NN Post-Mortem Profiles tab (PFNI_DVI, ENN_DVI, RNN_DVI, INN_DVI) that are within the case. Keep in mind that only profiles in the Active status can be associated (see [Remains grouping](#remains-grouping-collapsing))
 
 **For MPI:**
 
@@ -244,7 +244,7 @@ A pedigree can go through the following statuses:
 | --- | --- | --- | --- | --- | --- | --- |
 | Create pedigree | - | Under construction | YES | NO | YES | First status the pedigree is created in |
 | Deactivate button | Under construction | Deleted | NO | NO | YES | Can only be done if the pedigree has never gone through the Activated status. If it has already been activated once, this action cannot be performed and the following message will appear: "The pedigree cannot be deleted because it was activated at least once." |
-| Activate button | Under construction | Active | NO | YES | YES | Active in searches. Before activating the pedigree, a screen appears with certain information that must be completed (see section 20.15 Search: Pedigree Activation) |
+| Activate button | Under construction | Active | NO | YES | YES | Active in searches. Before activating the pedigree, a screen appears with certain information that must be completed (see [Search: pedigree activation](#search-pedigree-activation)) |
 | Edit button | Active | Under construction | YES | NO | YES | This action can be performed if there is no HIT. This status can only be returned to if there are discarded matches. If there are pending matches, the following message will appear: "The pedigree cannot be edited because it has matches that have not been discarded" |
 | Close button | Active | Closed | NO | NO | NO | It moves to the Closed status if the following conditions are met: There are no pending matches. It has no Hits |
 | Create pedigree | Active | Confirmed | NO | NO | YES | It moves to the Confirmed status when a match scenario is validated. When validating the scenario, a warning message appears with the following confirmation: Should the pedigree remain active in searches? Yes: the pedigree moves to the Confirmed status and a copy of the current pedigree is created in the Active status, named "Copy of original pedigree name". No: it moves to the Confirmed status. The pedigree automatically moves to the Confirmed status, and so does the match. A pedigree can only have one validated scenario. Scenarios generated from the pedigree cannot be validated. |
@@ -328,7 +328,7 @@ Before activating the pedigree, the following parameters must be specified:
 
 ![](images/sec20/p204_f01.png)
 
-- **Run mitochondrial screening:** enables the search using mitochondrial analysis (see details in the next section, 20.16 Mitochondrial Screening)
+- **Run mitochondrial screening:** enables the search using mitochondrial analysis (see details in [Mitochondrial screening](#mitochondrial-screening))
 
 - **Number of mismatches allowed for mitochondrial:** this parameter is enabled when the Run mitochondrial screening field is checked.
 
@@ -468,7 +468,7 @@ From the case, on the Match Manager tab, only the matches belonging to that case
 
 Pedigree matches do not have a hit — they only have discards. This is because validation for pedigrees is done at the scenario level.
 
-Each match makes it possible to create a scenario (see details on how to create a scenario in the next section).
+Each match makes it possible to create a scenario (see details on how to create a scenario in [Scenarios](#scenarios)).
 
 ### Matches for DVI
 
@@ -511,7 +511,7 @@ There is also the option to delete the scenario by pressing the **Delete** butto
 
 - For DVI:
     - Only profiles from the NN Post-Mortem Profiles tab within the case can be associated with the unknown.
-    - Profiles can be associated in both the Active status and the Grouped status (see details in section 20.22 Remains Grouping)
+    - Profiles can be associated in both the Active status and the Grouped status (see details in [Remains grouping](#remains-grouping-collapsing))
 - For MPI
     - Any MPI category profile can be associated with the unknown, except the IR category.
 
@@ -714,7 +714,7 @@ Keep the following in mind when confirming/discarding a collapsing:
 This way, a profile ends up with two possible statuses:
 
 - **Active:** the status of profiles that are grouping/parent profiles (they have associated child profiles), or profiles that have no associated profiles.
-- **Grouped:** the status of child profiles that were grouped (collapsed) — that is, they have a parent profile. A grouped profile behaves like a profile that is disabled, as if it had been deactivated. It will appear grayed out and no action can be performed on it, except moving it back to the Active status (see section 20.22.3 Ungrouping profiles) and associating it with a scenario.
+- **Grouped:** the status of child profiles that were grouped (collapsed) — that is, they have a parent profile. A grouped profile behaves like a profile that is disabled, as if it had been deactivated. It will appear grayed out and no action can be performed on it, except moving it back to the Active status (see [Ungrouping profiles](#ungrouping-profiles)) and associating it with a scenario.
 
 Clicking the eye icon in the **View associated profiles** column shows the profiles associated with the grouping profile:
 
@@ -763,7 +763,7 @@ Remove the rest of the parent profiles by clicking the "X". If you want to chang
 
 - When confirming a grouping (either manual or automatic), the child profiles must not be associated with an active or under-construction pedigree — that is, a profile associated with a pedigree cannot be deactivated.
 - A grouping cannot be performed with a profile that has a pending match.
-- When ungrouping a profile from a group (see next section), or adding a new remains profile, the profile must not be in any active pedigree.
+- When ungrouping a profile from a group (see [Ungrouping profiles](#ungrouping-profiles)), or adding a new remains profile, the profile must not be in any active pedigree.
 
 ## Ungrouping profiles
 

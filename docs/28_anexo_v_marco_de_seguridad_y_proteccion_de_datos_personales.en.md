@@ -1,7 +1,5 @@
 # Annex V: Security and personal data protection framework
 
-## Security and personal data protection framework
-
 This annex brings together the security and personal data protection recommendations applicable to the deployment and operation of GENis. It is aimed both at the technical team responsible for the installation and at institutional authorities and end users, and it describes the conditions under which the system was designed to operate and the practices that every user institution implements so that its specific deployment complies with those conditions.
 
 ## 1. Introduction

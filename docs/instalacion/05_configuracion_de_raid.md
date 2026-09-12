@@ -98,7 +98,7 @@
 
 23.- Podremos ver el estado del RAID en todo momento mediante el siguiente comando:
 
-```
+```bash
 sudo mdadm -D /dev/md0
 ```
 
@@ -106,7 +106,7 @@ sudo mdadm -D /dev/md0
 
 24.- Como se indicó en pasos anteriores es necesario instalar el gestor de arranque (GRUB) en cada uno de los discos que forman parte del arreglo, esto se realiza mediante el siguiente comando:
 
-```
+```bash
 sudo grub-install /dev/xxx
 ```
 

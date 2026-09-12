@@ -34,7 +34,7 @@ Como veremos más adelante, por cuestiones de lógica de funcionamiento del sist
 
 Para una mayor claridad y facilidad en la administración de las categorías, las mismas se crean perteneciendo a grupos. Por ejemplo, puede definirse un grupo llamado “Muestras de referencia indubitadas” en el que se incorporarán las categorías que almacenarán perfiles provenientes de muestras de referencia; y otro grupo llamado “Evidencias” en el que se incorporarán las categorías que poseerán perfiles genéticos provenientes de evidencias obtenidas de escenas del hecho.
 
-**Nota:** Tener en cuenta que para las agrupaciones MPI/DVI no se pueden agregar, borrar ni editar categorías ni grupos (Ver detalle en la sección siguiente). Para acceder a la administración de las categorías seleccionar en el menú Configuración/Categorías:
+**Nota:** Tener en cuenta que para las agrupaciones MPI/DVI no se pueden agregar, borrar ni editar categorías ni grupos (ver detalle en [Definición de categorías](#definicion-de-categorias)). Para acceder a la administración de las categorías seleccionar en el menú Configuración/Categorías:
 
 ![](images/sec07/p048_f01.png)
 
@@ -60,6 +60,7 @@ Para los módulos de búsqueda de personas (MPI / DVI), se definieron categoría
    - a. Individuos de Referencia (IR): Pariente/s de la/s personas buscadas.
 
      En esta categoría ingresan los perfiles que se asociarán a un pedigrí (IR_DVI).
+
 2. **Muestras Post Mortem (PM)**
    - a. Elementos Personales hallados de la persona desaparecida (ENN_DVI).
    - b. Restos Biológicos no identificados (RNN_DVI).

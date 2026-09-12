@@ -54,7 +54,7 @@ Si el valor alélico ingresado para el marcador se encuentra fuera de las escale
 
 ## Agregar marcadores sueltos
 
-Se pueden agregar marcadores sueltos a un perfil existente. Tener en cuenta que para poder agregar marcadores sueltos, el rol debe tener la configurada la opción (Ver sección **3.2 Configuración de Roles**).
+Se pueden agregar marcadores sueltos a un perfil existente. Tener en cuenta que para poder agregar marcadores sueltos, el rol debe tener la configurada la opción (ver [Configuración de roles](03_roles.md#configuracion-de-roles)).
 
 Para agregar un marcador suelto ir al perfil donde se quiere agregar el marcador y seleccionar **Agregar Análisis**. En el menú debajo a la izquierda **Agregar un marcador**, seleccionar el marcador que se desea agregar:
 

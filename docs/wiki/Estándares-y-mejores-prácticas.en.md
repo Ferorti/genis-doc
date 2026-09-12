@@ -6,18 +6,18 @@ GENis was designed from its inception (2014) based on four pillars set by the **
 
 | Organization | Application in GENis |
 |---|---|
-| **ISFG** (International Society for Forensic Genetics) — DNA Commission | Transparency, availability and reproducibility of forensic biostatistical calculations. Guides the system's four design pillars (see [[Gobernanza]]). |
+| **ISFG** (International Society for Forensic Genetics) — DNA Commission | Transparency, availability and reproducibility of forensic biostatistical calculations. Guides the system's four design pillars (see [Declaration of principles](../00_declaracion_de_principios.md)). |
 | **ENFSI** (European Network of Forensic Science Institutes) | Matching algorithms at high, medium and low stringency ("*Guidelines for Best Practice in DNA Analysis*" and "*DNA Database Management*"). |
 | **INTERPOL** | Reference for the design of interoperability between national/regional genetic databases. |
 | **NRC II** (National Research Council, USA) | Recommendations 4.1 and 4.10 for calculating genotype probabilities from population allele frequencies. |
 
 ## Information security standards
 
-According to **Annex V** of the User Manual ("Security Framework and Personal Data Protection"):
+According to [Annex V: Security and personal data protection framework](../28_anexo_v_marco_de_seguridad_y_proteccion_de_datos_personales.md):
 
 - **ISO/IEC 27001** — Information security management system (reference framework for institutional deployment policies).
 - **OWASP ASVS** (Application Security Verification Standard) — Application security verification standard.
-- **AGPL-3.0** — License that guarantees independent auditability of the source code (see [[Licencia del software]]).
+- **AGPL-3.0** — License that guarantees independent auditability of the source code (see [Annex V: License](../28_anexo_v_marco_de_seguridad_y_proteccion_de_datos_personales.md#7-license)).
 
 ### "Security by design" principles applied
 
@@ -25,9 +25,9 @@ According to **Annex V** of the User Manual ("Security Framework and Personal Da
 - **Role-based access control** with granularity to separate administrative, operational and review functions.
 - **Auditing with cryptographic integrity**, aimed at upholding the forensic chain of custody.
 - **Application-level encryption**, complementary to transport encryption (TLS).
-- Optional **blockchain logging** to reinforce the integrity of genetic profiles (see [[Arquitectura del software]]).
+- Optional **blockchain logging** to reinforce the integrity of genetic profiles.
 
-### Deployment recommendations (summary of Annex V)
+### Deployment recommendations
 
 | Area | Recommendation |
 |---|---|
@@ -50,7 +50,7 @@ GENis's development cycle was explicitly guided by:
 ## Software engineering best practices
 
 - Agile development methodologies, with a multidisciplinary team of more than 100 experts since 2014 (academia, industry and government).
-- Automated test coverage with a target threshold of 80% (`sbt test`, `sbt coverage`) and style linting (`sbt scalastyle`) — see [[Tests y validaciones]].
+- Automated test coverage with a target threshold of 80% (`sbt test`, `sbt coverage`) and style linting (`sbt scalastyle`).
 - Strict separation between the business engine (`app/` / `modules/core`) and the frontend, with stable API contracts between the two.
 - Algorithmic transparency: the LR calculation models are publicly documented in the User Manual (Annexes I–III) to allow independent reproduction by party experts.
 

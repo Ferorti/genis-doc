@@ -1,7 +1,5 @@
 # Anexo I - Algoritmo de búsqueda de coincidencias de STR
 
-## Anexo I – Algoritmo de búsqueda de coincidencias de STR
-
 GENis integra **dos motores de búsqueda conceptualmente distintos**, diseñados para responder a problemas forenses diferentes:
 
 - El **motor Forense (STR)** está orientado a la **detección de coincidencias operativas** entre perfiles (referencias y evidencias), utilizando reglas de comparación por locus y criterios de búsqueda inspirados en estándares internacionales (p. ej., ENFSI).
@@ -52,7 +50,7 @@ Un alelo es un valor de alguna de las siguientes formas:
 ![](images/sec23/p261_f01.png)
 ![](images/sec23/p261_f02.png)
 N)
-- [x] dónde x es un número como en el ítem anterior obligatorio para el matching
+- `[x]` dónde x es un número como en el ítem anterior obligatorio para el matching
 
 ## Genotipo
 

@@ -4,7 +4,7 @@
 
 Es altamente recomendado deshabilitar el acceso del usuario privilegiado mediante SSH, para esto es necesario editar el archivo de configuración localizado en **/etc/ssh/sshd.conf** y alterar el siguiente valor:
 
-```
+```text
 #PermitRootLogin no
 ```
 
@@ -12,7 +12,7 @@ Es altamente recomendado deshabilitar el acceso del usuario privilegiado mediant
 
 Para que se apliquen los cambios se debe ingresar el siguiente comando:
 
-```
+```bash
 sudo service ssh restart
 ```
 
@@ -20,7 +20,7 @@ sudo service ssh restart
 
 Es recomendable configurar una contraseña no trivial y lo suficientemente fuerte para el usuario root, para hacer esto se debe tener permisos de sudo desde el usuario que se realizara esta configuración y este es el comando:
 
-```
+```bash
 sudo passwd root
 ```
 
@@ -40,7 +40,7 @@ Nota: Este archivo se provee como parte de los scripts de instalacion
 
 Para instalar estas reglas, primero se debe copiar el archivo por SFTP al Servidor donde se encuentra GENis y luego importarlas con el siguiente comando:
 
-```
+```bash
 sudo iptables-restore < /home/genis-user/iptables-genis
 ```
 
@@ -48,7 +48,7 @@ sudo iptables-restore < /home/genis-user/iptables-genis
 
 Desafortunadamente IPTABLES no guarda estas reglas de forma persistente, esto significa que cuando se reinicia el equipo estas se pierden. Para hacer que estos cambios sean persistentes se debe instalar el paquete iptables-persistent mediante el siguiente comando:
 
-```
+```bash
 sudo apt-get install iptables-persistent
 ```
 
@@ -60,6 +60,6 @@ Durante la instalacion de los paquetes el asistente nos pregunta si queremos gua
 
 Con esto ya se encuentran persistentes la reglas de IPTABLES, si se hacen modificaciones a futuro sobre las reglas se pueden guardar permanente con el siguiente comando:
 
-```
+```bash
 sudo iptables-save > /etc/iptables/rules.v4
 ```

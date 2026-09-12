@@ -38,7 +38,7 @@ The harmonization conditions include:
 - **Uniformly defined markers:** GENis does not interpret equivalences (Penta E ≠ PentaE).
 - **Matching kit aliases:** if one laboratory uses "GF6C" and the other "GlobalFiler6C," the profile will be rejected.
 - **Equivalent matching rules:** the stringency levels (high, medium, low) must be defined symmetrically.
-- **Compatible population frequency databases:** this point has direct implications for LR calculations (see the next section).
+- **Compatible population frequency databases:** this point has direct implications for LR calculations (see [Implications of frequency databases](#note-implications-of-frequency-databases-and-the-international-recommendation)).
 
 These conditions do not stem from a whim of the system, but from the need to preserve scientific consistency. Otherwise, the higher-level instance could interpret the same profile differently from the lower-level instance, generating false dismissals or false hits.
 
@@ -174,7 +174,7 @@ Once the profiles are approved, they become part of the higher-level instance, a
 
 The GENis Code tells me which laboratory the profile belongs to.
 
-The higher-level instance and the laboratories receive the notification that a match was generated (see the details of Instance Interconnection notifications in section 18. Notifications):
+The higher-level instance and the laboratories receive the notification that a match was generated (see the details of Instance Interconnection notifications in [Notifications](18_notificaciones.md)):
 
 ![](images/sec21/p250_f02.png)
 
@@ -206,7 +206,7 @@ Profiles belonging to other laboratories cannot be edited; this means it will no
 
 ## Propagating hits and dismissals between instances
 
-When a match is turned into a hit or a dismissal, the event is replicated to the instances involved. This will be reported in the inbox of the responsible geneticists and of users with permissions to receive interconnection notifications. The status of the partial hit/dismissal and of the complete hit/dismissal is recorded (see the notification details in section 18. Notifications).
+When a match is turned into a hit or a dismissal, the event is replicated to the instances involved. This will be reported in the inbox of the responsible geneticists and of users with permissions to receive interconnection notifications. The status of the partial hit/dismissal and of the complete hit/dismissal is recorded (see the notification details in [Notifications](18_notificaciones.md)).
 
 ![](images/sec21/p253_f01.png)
 

@@ -1,7 +1,5 @@
 # Annex I - STR match search algorithm
 
-## Annex I – STR match search algorithm
-
 GENis integrates **two conceptually distinct search engines**, designed to address different forensic problems:
 
 - The **Forensic engine (STR)** is oriented toward the **detection of operational matches** between profiles (references and evidence), using per-locus comparison rules and search criteria inspired by international standards (e.g., ENFSI).
@@ -52,7 +50,7 @@ An allele is a value of one of the following forms:
 ![](images/sec23/p261_f01.png)
 ![](images/sec23/p261_f02.png)
 N)
-- [x] where x is a number as in the previous item, mandatory for matching
+- `[x]` where x is a number as in the previous item, mandatory for matching
 
 ## Genotype
 

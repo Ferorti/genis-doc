@@ -18,7 +18,7 @@ La contraseña consta de 6 dígitos y se regenera cada 30 segundos. Para comenza
 
 Antes de acceder a GENis, el usuario deberá solicitar al administrador o personal de instalacion, la creación de una cuenta con determinados roles definidos por un administrador.
 
-Como se ha dicho, GENis provee un mecanismo de autenticación de doble factor, por lo que para su ingreso se debe introducir además del nombre de usuario y su clave, el código token provisto por la aplicación Google Authenticator (descripta en la sección anterior) .
+Como se ha dicho, GENis provee un mecanismo de autenticación de doble factor, por lo que para su ingreso se debe introducir además del nombre de usuario y su clave, el código token provisto por la aplicación Google Authenticator (descripta en [Previo a solicitar una cuenta](#previo-a-solicitar-una-cuenta)).
 
 ![](images/sec02/p018_f01.png)
 
@@ -119,7 +119,7 @@ El menú del GENis se adapta a los permisos que posee el usuario que accede. Sob
 ![](images/sec02/p026_f02.png)
 
 ![](images/sec02/p026_f03.png)
-Indica las notificaciones pendientes (Ver detalle de las notificaciones en la sección **18. Notificaciones**).
+Indica las notificaciones pendientes (ver detalle en [Notificaciones](18_notificaciones.md)).
 
 ![](images/sec02/p026_f04.png)
 Indicador de búsquedas de coincidencias en proceso

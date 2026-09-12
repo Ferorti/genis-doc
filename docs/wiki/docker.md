@@ -4,7 +4,7 @@ Con la finalidad de facilitar la instalación de los servicios requeridos por GE
 La configuración del entorno se encuentra en el archivo *docker-compose.yml* donde además se puede consultar la versión utilizada de cada aplicación. El funcionamiento de GENis utilizando los servicios con Docker y el procedimiento de instalación descripto a continuación se ha probado sobre Ubuntu 22.04.
 
 ### Instalación de Docker en Ubuntu 22.04
-Se puede consultar el procedimiento de instalación de Docker en Ubuntu [aquí](https://docs.docker.com/engine/install/ubuntu/). 
+Se puede consultar el procedimiento de instalación de Docker en Ubuntu [aquí](https://docs.docker.com/engine/install/ubuntu/).
 A continuación se resumen los pasos:
 
 ```bash
@@ -28,17 +28,17 @@ sudo apt-get update
 # Instalar
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-# Agregar el usuario genis-user al grupo docker y reiniciar el sistema 
+# Agregar el usuario genis-user al grupo docker y reiniciar el sistema
 sudo usermod -a -G docker genis-user
-reboot 
+reboot
 ```
 
 ### Creación de los contenedores:
 
-En el archivo *docker-compose.yml* se puede inspeccionar la configuración de cada contenedor y en particular para instalaciones de producción se recomienda modificar los passwords utilizados. Durante la creación de los contenedores se ejecutan scripts de configuración que se encuentran en las carpetas que finalizan con *_init* y realizan las siguientes tareas: 
+En el archivo *docker-compose.yml* se puede inspeccionar la configuración de cada contenedor y en particular para instalaciones de producción se recomienda modificar los passwords utilizados. Durante la creación de los contenedores se ejecutan scripts de configuración que se encuentran en las carpetas que finalizan con *_init* y realizan las siguientes tareas:
 
-- En Postgresql se crea el usuario **genissqladmin** con password **genissqladminp** y las bases **genisdb** y **genislogdb** con owner **genissqladmin** (se recomienda modificar los passwords en instalaciones de producción) 
-- En LDAP se crean la estructura inicial y el usuario de primer acceso **setup** 
+- En Postgresql se crea el usuario **genissqladmin** con password **genissqladminp** y las bases **genisdb** y **genislogdb** con owner **genissqladmin** (se recomienda modificar los passwords en instalaciones de producción)
+- En LDAP se crean la estructura inicial y el usuario de primer acceso **setup**
 - En MongoDB se crea la base de datos **pdgdb** con las colecciones necesarias
 
 Suponiendo que ha descargado la carpeta docker en el directorio genis-user, los pasos para crear los contenedores son:
@@ -76,7 +76,7 @@ Para conectarse a los contenedores se puede utilizar el nombre de host, **localh
 127.0.0.1 genis_mongo-express
 ```
 
-Una vez creados los contenedores se pueden consultar con aplicaciones cliente para revisar la correcta carga de los datos iniciales: 
+Una vez creados los contenedores se pueden consultar con aplicaciones cliente para revisar la correcta carga de los datos iniciales:
 
 - Para Postgresql se puede utilizar [DataGrip](https://www.jetbrains.com/datagrip/) o bien el cliente `psql` dentro del contenedor:
 
@@ -92,14 +92,14 @@ Dentro del contenedor:
 su - postgres
 psql
 # listado de bases de datos, se esperan genisdb y genislogdb
-\l	
+\l
 # listado de usuarios, se espera genissqladmin
 \dg
 # chequeo de configuración md5
 select * from  pg_settings where name ilike '%encr%';
-table pg_hba_file_rules ;	
+table pg_hba_file_rules ;
 # salida del cliente psql
-\q	
+\q
 ```
 
 Salir del contenedor con `CTRL+D`
@@ -133,7 +133,7 @@ docker volume rm docker_pgsql_data
 
 ### Ejecución de GENis en ambiente de producción
 
-En una instalación con fines de producción se debe consultar el [manual de instalación de GENis](https://github.com/fundacion-sadosky/genis/files/9739746/instalacion.pdf) para la correcta configuración de la cuenta de usuario del sistema y otros servicios necesarios como NTP el entorno de ejecución de Java 8. Se debe descargar el [último release de GENis](https://github.com/fundacion-sadosky/genis/releases/latest) desde el repositorio en formato zip, descomprimirlo bajo */usr/share* y otorgar permisos de ejecución a la aplicación.
+En una instalación con fines de producción se debe consultar el [manual de instalación de GENis](https://raw.githubusercontent.com/wiki/fundacion-sadosky/genis/files/instalacion.pdf) para la correcta configuración de la cuenta de usuario del sistema y otros servicios necesarios como NTP el entorno de ejecución de Java 8. Se debe descargar el [último release de GENis](https://github.com/fundacion-sadosky/genis/releases/latest) desde el repositorio en formato zip, descomprimirlo bajo */usr/share* y otorgar permisos de ejecución a la aplicación.
 
 ```bash
 unzip genis-5.1.9.zip
@@ -144,7 +144,7 @@ chmod +x ./bin/genis
 Adecuar los parámetros de conexión a los servicios editando el archivo *./conf/storage.conf*.
 
 ```properties
-# LDAP 
+# LDAP
 ldap {
   default {
     url = "genis_ldap"
@@ -191,12 +191,12 @@ laboratory {
 Correr la aplicación.
 
 ```bash
-sudo ./bin/genis -v 
+sudo ./bin/genis -v
 -DapplyEvolutions.default=true
 -DapplyDownEvolutions.default=true
 -DapplyEvolutions.logDb=true
 -DapplyDownEvolutions.logDb=true
--Dhttp.port=9000 -Dhttps.port=9443 
+-Dhttp.port=9000 -Dhttps.port=9443
 -Dconfig.file=./conf/application.conf &
 ```
 
@@ -229,7 +229,7 @@ Cargar los datos iniciales del sistema y configurar los usuarios como se indica 
 
 ### Datos inciales de GENis
 
-Al ingresar a la aplicación desde el browser por primera vez van a correr los scripts de evolutions que definen el modelo de datos. Para finalizar la instalación debemos cargar los datos iniciales de GENis y los datos propios de la región de instalación (si el país no es Argentina). Los archivos de datos iniciales de GENis y de información local se encuentran bajo la carpeta *utils* en el directorio raíz del código fuente de GENis. 
+Al ingresar a la aplicación desde el browser por primera vez van a correr los scripts de evolutions que definen el modelo de datos. Para finalizar la instalación debemos cargar los datos iniciales de GENis y los datos propios de la región de instalación (si el país no es Argentina). Los archivos de datos iniciales de GENis y de información local se encuentran bajo la carpeta *utils* en el directorio raíz del código fuente de GENis.
 Se deben copiar los scripts al contenedor **genis_postgres** para luego ejecutarlos:
 
 
@@ -256,7 +256,7 @@ Salir del contenedor con `CTRL+D`
 
 Durante la configuración del sistema se crea el usuario **setup**, con password **pass** y secret para TOPT '*ETZK6M66LFH3PHIG*'.
 Se puede utilizar libremente para propósitos de desarrollo pero en producción solicite una nueva cuenta de administrador en la pantalla de login, luego ingrese con el usuario **setup** para habilitarla y finalmente inactive el usuario **setup**.
-Si tuviera problemas para ingresar al sistema puede que precise instalar el servicio NTP como se indica en el [manual de instalación de GENis](https://github.com/fundacion-sadosky/genis/files/9739746/instalacion.pdf).
+Si tuviera problemas para ingresar al sistema puede que precise instalar el servicio NTP como se indica en el [manual de instalación de GENis](https://raw.githubusercontent.com/wiki/fundacion-sadosky/genis/files/instalacion.pdf).
 Para obtener el password a partir del TOPT puede utilizar https://gauth.apps.gbraad.nl/
 
 ### Resguardo y recuperación de las bases de datos
@@ -350,7 +350,7 @@ fi
 echo "Restore process completed."
 ```
 
-### Otras utilidades y ejemplos 
+### Otras utilidades y ejemplos
 
 Se incluyen dos scripts útiles para desarrollo que borran los contenidos de las tablas de perfiles y matches en las bases de datos, se pueden correr con:
 

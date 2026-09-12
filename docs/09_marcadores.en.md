@@ -54,7 +54,7 @@ If the allelic value entered for the marker falls outside the defined allelic la
 
 ## Adding standalone markers
 
-Standalone markers can be added to an existing profile. Note that to be able to add standalone markers, the role must have this option configured (see section **3.2 Role Configuration**).
+Standalone markers can be added to an existing profile. Note that to be able to add standalone markers, the role must have this option configured (see [Role configuration](03_roles.md#role-configuration)).
 
 To add a standalone marker, go to the profile where the marker is to be added and select **Add Analysis**. In the menu at the bottom left, **Add a marker**, select the marker you want to add:
 

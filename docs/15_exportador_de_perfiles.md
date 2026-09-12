@@ -12,7 +12,7 @@ Los filtros no son obligatorios, en caso de que no se seleccione ningún filtro,
 
 Una vez cargados los filtros deseados, se debe presionar el botón Exportar, lo cual producirá la exportación de los perfiles.
 
-Se exportarán todos los tipos de análisis. Se generará un archivo .zip que contendrá un archivo .csv por cada tipo de análisis, y estarán paginados cada 1000 perfiles.
+Se exportarán todos los tipos de análisis. Se generará un archivo `.zip` que contendrá un archivo `.csv` por cada tipo de análisis, y estarán paginados cada 1000 perfiles.
 
 En caso de que un perfil tenga más de un análisis de un mismo tipo, los mismos se exportarán en distintos archivos.
 

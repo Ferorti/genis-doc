@@ -191,6 +191,7 @@ Para poder ver del detalle de las coincidencias y poder confirmarlas o descartar
 ![](images/sec16/p142_f01.png)
 
 En la agrupación de las evidencias, para cada perfil podemos ver:
+
 1. Código de Laboratorio.
 2. Categoría.
 3. Sistemas compartidos.
@@ -207,6 +208,7 @@ En la agrupación de las evidencias, para cada perfil podemos ver:
 ![](images/sec16/p143_f01.png)
 
 En la agrupación de las evidencias, para cada perfil podemos ver:
+
 1. Código de Laboratorio.
 2. Categoría.
 3. Sistemas compartidos.
@@ -215,15 +217,9 @@ En la agrupación de las evidencias, para cada perfil podemos ver:
 6. Cantidad máxima de marcadores no coincidentes
 7. Valoración del estado del perfil agrupador
 8. Valoración del estado del perfil coincidente
-9.
-![](images/sec16/p144_f01.png)
-Ver escenarios
-10.
-![](images/sec16/p144_f02.png)
-Agregar un nuevo escenario
-11.
-![](images/sec16/p144_f03.png)
-Descartar
+9. ![](images/sec16/p144_f01.png) Ver escenarios
+10. ![](images/sec16/p144_f02.png) Agregar un nuevo escenario
+11. ![](images/sec16/p144_f03.png) Descartar
 12. Acceder a la ventana de comparación.
 13. Replicar estado de coincidencia a instancia superior.
 
@@ -280,15 +276,11 @@ En la agrupación de las evidencias, para cada perfil podemos ver:
 6. Numero de no coincidencias
 7. Validación del estado del perfil agrupador
 8. Validación del estado del perfil coincidente
-9.
-![](images/sec16/p148_f02.png)
-Acceder a la ventana de comparación.
+9. ![](images/sec16/p148_f02.png) Acceder a la ventana de comparación.
 
 En este caso, para valorar las coincidencias estadísticamente hay dos opciones:
 
-1. **Presionando**
-![](images/sec16/p148_f03.png)
-**a la derecha del perfil coincidente**: en esta opción el usuario accederá a la comparación únicamente entre el perfil agrupador y el coincidente. Llamamos a esta pantalla **ventana de comparación**:
+1. **Presionando** ![](images/sec16/p148_f03.png) **a la derecha del perfil coincidente**: en esta opción el usuario accederá a la comparación únicamente entre el perfil agrupador y el coincidente. Llamamos a esta pantalla **ventana de comparación**:
 
 ![](images/sec16/p149_f01.png)
 
@@ -304,9 +296,7 @@ El botón **Ver escenarios** permite acceder a escenarios de cálculo previament
 
 ![](images/sec16/p150_f02.png)
 
-Presionando el botón
-![](images/sec16/p150_f03.png)
-puede editarse el escenario.
+Presionando el botón ![](images/sec16/p150_f03.png) puede editarse el escenario.
 
 **Perfil agrupador con aportantes inferidos = 2 y sus coincidencias con Evidencias Cantidad de Aportantes Inferidos = 2**
 
@@ -314,15 +304,11 @@ Desplegando esta agrupación de perfiles coincidentes con el agrupador podremos 
 
 ![](images/sec16/p151_f01.png)
 
-Presionando en el botón se
-![](images/sec16/p151_f02.png)
-accede a la ventana de comparación:
+Presionando el botón ![](images/sec16/p151_f02.png) se accede a la ventana de comparación:
 
 ![](images/sec16/p151_f03.png)
 
-Las opciones estadísticas pueden modificarse presionando
-![](images/sec16/p151_f04.png)
-, a la derecha del LR.
+Las opciones estadísticas pueden modificarse presionando ![](images/sec16/p151_f04.png), a la derecha del LR.
 
 En el caso de las coincidencias entre dos evidencias de dos aportantes cada una, lo único que puede modificarse es la base de datos de frecuencia utilizada para el cálculo.
 
@@ -342,7 +328,7 @@ En estos casos se puede acceder a la ventana de coincidencias pero no es posible
 
 ### 1. Naturaleza del cálculo de LR en GENis
 
-El módulo forense de GENis utiliza un motor de coincidencias que e**valúa la compatibilidad probabilística entre dos perfiles genéticos**, modelando la presencia, ausencia y aparición inesperada de alelos a través de parámetros de **drop-out** y **drop-in** definidos por el laboratorio.
+El módulo forense de GENis utiliza un motor de coincidencias que **evalúa la compatibilidad probabilística entre dos perfiles genéticos**, modelando la presencia, ausencia y aparición inesperada de alelos a través de parámetros de **drop-out** y **drop-in** definidos por el laboratorio.
 
 Sin embargo, el LR que produce GENis **no es el mismo LR** que se obtiene en software periciales como **LRmix**, **EuroForMix** o **STRmix**, los cuales implementan modelos *semicontinuos* o *continuos* basados en hipótesis formales del tipo:
 
@@ -365,7 +351,7 @@ En términos simples:
 
 ### 2. Cómo funciona el LR operativo de GENis según el tipo de comparación
 
-A continuación se explica cómo interpretar el valor de LR en los distintos escenarios presentados en la Sección 16.
+A continuación se explica cómo interpretar el valor de LR en los distintos escenarios presentados en este capítulo.
 
 **A. Perfil Agrupador = Referencia**
 Coincidencia = Evidencia

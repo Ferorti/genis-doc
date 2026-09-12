@@ -214,7 +214,7 @@ To do this, the sample's internal code must match the **Sample Name** in the bat
 
 ## Generating the batch upload file from GeneMapper / GeneMapper ID-X
 
-Batch profile upload in GENis requires a **tab-delimited .txt file** with a specific structure. To do this, it is necessary to configure a **Table Setting dedicated to the batch upload file** in GeneMapper / GeneMapper ID-X and correctly fill in the fields that GENis validates at the time of import.
+Batch profile upload in GENis requires a **tab-delimited `.txt` file** with a specific structure. To do this, it is necessary to configure a **Table Setting dedicated to the batch upload file** in GeneMapper / GeneMapper ID-X and correctly fill in the fields that GENis validates at the time of import.
 
 The recommended steps for correctly generating the file are described below.
 
@@ -298,21 +298,23 @@ To generate the file:
 - **One line per marker**
 - **Include all marker information** (mandatory option; ensures the format is compatible with GENis)
 
-5. Save the file in **tab-delimited .txt** format.
+5. Save the file in **tab-delimited `.txt`** format.
 
 The generated header must have, at minimum, the following structure:
 
-**Sample Name Specimen Category UD1 UD2 Marker Allele 1 Allele 2 ... Allele 8**
+```text
+Sample Name  Specimen Category  UD1  UD2  Marker  Allele 1  Allele 2  ...  Allele 8
+```
 
 If the header contains fewer than 8 allele columns, the following message will appear even if the genetic profile does not have 8 alleles:
 
-**E0305 – Missing parameters in the file header.**
+**`E0305` – Missing parameters in the file header.**
 
 ![](images/sec12/p098_f01.png)
 
 ### 5. Pre-upload check before batch loading in GENis
 
-It is recommended to review the .txt file before uploading it, checking:
+It is recommended to review the `.txt` file before uploading it, checking:
 
 - The presence and correct order of the columns.
 - That all categories in **Specimen Category** match GENis.
@@ -359,7 +361,7 @@ When clicking **New Batch**, the following screen appears, in which the followin
 
 - Analysis type: select whether the analysis is Autosomal or Mitochondrial.
 - File: clicking the Choose file button allows me to select the desired file.
-- Batch name: an optional field that lets me identify a batch by name when it needs to be associated with an MPI/DVI case (see section 20.7 Associate Batch)
+- Batch name: an optional field that lets me identify a batch by name when it needs to be associated with an MPI/DVI case (see [Associating a batch](20_busqueda_de_personas.md#associating-a-batch))
 
 ![](images/sec12/p102_f01.png)
 
@@ -387,11 +389,7 @@ It is also possible to approve all, delete all, and approve the selected ones.
 
 **Note:**
 
-- The symbol may appear
-
-![](images/sec12/p103_f02.png)
-
-to the right of the sample's internal code, indicating that the metadata of the profile to be incorporated was previously loaded and has been automatically associated.
+- The symbol may appear ![](images/sec12/p103_f02.png) to the right of the sample's internal code, indicating that the metadata of the profile to be incorporated was previously loaded and has been automatically associated.
 - If the subcategory is not included, the profile will remain in Incomplete status until a subcategory is entered.
 
 ![](images/sec12/p103_f03.png)
@@ -410,7 +408,7 @@ in case they detect that the category was entered incorrectly.
 
 To proceed with the effective registration, press the thumbs-up button on each analysis, or select them individually or as a group and press **Accept Selected**, or directly press the **Accept All** button.
 
-There is a **Replicate to higher-level instance** checkbox so that the profile is replicated if it is checked (see details in section 21. Interconnection of instances)
+There is a **Replicate to higher-level instance** checkbox so that the profile is replicated if it is checked (see details in [Instance interconnection](21_interconexion_de_instancias.md))
 
 The icon
 
@@ -443,9 +441,9 @@ The most common errors that prevent acceptance are:
 
 If the kit alias (UD2 field) does not match exactly the kit configured in GENis, the system does not accept the markers and reports errors such as:
 
-**E0686: Invalid marker**
+**`E0686`: Invalid marker**
 
-**E0400: Allele values cannot be changed**
+**`E0400`: Allele values cannot be changed**
 
 2. Non-matching marker names
 

@@ -191,6 +191,7 @@ Expanding the Evidence group shows the profiles against which the reference obta
 ![](images/sec16/p142_f01.png)
 
 In the evidence grouping, for each profile we can see:
+
 1. Laboratory Code.
 2. Category.
 3. Shared systems.
@@ -207,6 +208,7 @@ Expanding the Evidence group shows the profiles against which the reference obta
 ![](images/sec16/p143_f01.png)
 
 In the evidence grouping, for each profile we can see:
+
 1. Laboratory Code.
 2. Category.
 3. Shared systems.
@@ -215,15 +217,9 @@ In the evidence grouping, for each profile we can see:
 6. Maximum number of non-matching markers
 7. Assessment of the grouping profile's status
 8. Assessment of the matching profile's status
-9.
-![](images/sec16/p144_f01.png)
-View scenarios
-10.
-![](images/sec16/p144_f02.png)
-Add a new scenario
-11.
-![](images/sec16/p144_f03.png)
-Dismiss
+9. ![](images/sec16/p144_f01.png) View scenarios
+10. ![](images/sec16/p144_f02.png) Add a new scenario
+11. ![](images/sec16/p144_f03.png) Dismiss
 12. Access the comparison window.
 13. Replicate match status to a higher-level instance.
 
@@ -280,15 +276,11 @@ In the evidence grouping, for each profile we can see:
 6. Number of non-matches
 7. Validation of the grouping profile's status
 8. Validation of the matching profile's status
-9.
-![](images/sec16/p148_f02.png)
-Access the comparison window.
+9. ![](images/sec16/p148_f02.png) Access the comparison window.
 
 In this case, there are two options for statistically assessing the matches:
 
-1. **Pressing**
-![](images/sec16/p148_f03.png)
-**to the right of the matching profile**: with this option, the user accesses the comparison only between the grouping profile and the matching one. We call this screen the **comparison window**:
+1. **Pressing** ![](images/sec16/p148_f03.png) **to the right of the matching profile**: with this option, the user accesses the comparison only between the grouping profile and the matching one. We call this screen the **comparison window**:
 
 ![](images/sec16/p149_f01.png)
 
@@ -304,9 +296,7 @@ The **View scenarios** button allows access to previously saved calculation scen
 
 ![](images/sec16/p150_f02.png)
 
-Pressing the button
-![](images/sec16/p150_f03.png)
-allows the scenario to be edited.
+Pressing the button ![](images/sec16/p150_f03.png) allows the scenario to be edited.
 
 **Grouping profile with inferred contributors = 2 and its matches with Evidence with Inferred Number of Contributors = 2**
 
@@ -314,15 +304,11 @@ Expanding this grouping of profiles matching the grouping profile, we can observ
 
 ![](images/sec16/p151_f01.png)
 
-Pressing the button
-![](images/sec16/p151_f02.png)
-opens the comparison window:
+Pressing the button ![](images/sec16/p151_f02.png) opens the comparison window:
 
 ![](images/sec16/p151_f03.png)
 
-The statistical options can be modified by pressing
-![](images/sec16/p151_f04.png)
-, to the right of the LR.
+The statistical options can be modified by pressing ![](images/sec16/p151_f04.png), to the right of the LR.
 
 In the case of matches between two evidence profiles with two contributors each, the only thing that can be modified is the frequency database used for the calculation.
 
@@ -365,7 +351,7 @@ In simple terms:
 
 ### 2. How GENis's operative LR works according to comparison type
 
-The following explains how to interpret the LR value in the different scenarios presented in Section 16.
+The following explains how to interpret the LR value in the different scenarios presented in this chapter.
 
 **A. Grouping Profile = Reference**
 Match = Evidence

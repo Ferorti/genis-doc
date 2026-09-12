@@ -1,8 +1,6 @@
 # Anexo II - Gestor de coincidencias y cálculos estadísticos por default
 
-## Anexo II – Gestor de coincidencias y cálculos estadísticos por default
-
-### Introducción
+## Introducción
 
 GENis permite el ingreso y la gestión de perfiles genéticos provenientes tanto de referencias como de evidencias forenses, incluyendo evidencias en las que no es posible determinar a priori el número de individuos que contribuyeron al material genético analizado. Esta situación es habitual en el trabajo pericial, particularmente en muestras complejas o de baja calidad, donde el genetista no puede establecer con certeza el número de aportantes únicamente a partir del electroferograma.
 

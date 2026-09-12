@@ -1,7 +1,5 @@
 # Anexo V: Marco de seguridad y protección de datos personales
 
-## Marco de Seguridad y Protección de Datos Personales
-
 Este anexo reúne las recomendaciones de seguridad y protección de datos personales aplicables al despliegue y operación de GENis. Está dirigido tanto al equipo técnico responsable de la instalación como a las autoridades institucionales y usuarios finales, y describe las condiciones bajo las cuales el sistema fue concebido para operar y las prácticas que toda institución usuaria implementa para que su despliegue concreto se ajuste a esas condiciones.
 
 ## 1. Introducción

@@ -174,7 +174,7 @@ Se puede desasociar un perfil especifico, haciendo click sobre el ícono de la p
 Validaciones
 
 - No se puede desasociar un perfil que este asociado a un pedigrí
-- Tener en cuenta que si se quiere desasociar un perfil que es padre (Ver sección **20.22 Agrupaciones de Restos**), los hijos asociados al perfil agrupador pasarán al estado **Activo**.
+- Tener en cuenta que si se quiere desasociar un perfil que es padre (ver [Agrupaciones de restos](#agrupaciones-de-restos-collapsing)), los hijos asociados al perfil agrupador pasarán al estado **Activo**.
 
 ## Creación del genograma o pedigrí
 
@@ -199,7 +199,7 @@ La asociación de nodos dentro del pedigrí permite asignar perfiles que estén 
 
 **Para DVI:**
 
-- Se pueden asociar perfiles tanto de la solapa **Perfiles de Referencia** (IR_DVI), como de la solapa Perfiles NN Post Mortem (PFNI_DVI, ENN_DVI, RNN_DVI, INN_DVI) que estén dentro del caso. Tener en cuenta que solo se podrán asociar perfiles en el estado Activo (Ver sección **20.22 Agrupaciones de Restos**)
+- Se pueden asociar perfiles tanto de la solapa **Perfiles de Referencia** (IR_DVI), como de la solapa Perfiles NN Post Mortem (PFNI_DVI, ENN_DVI, RNN_DVI, INN_DVI) que estén dentro del caso. Tener en cuenta que solo se podrán asociar perfiles en el estado Activo (ver [Agrupaciones de restos](#agrupaciones-de-restos-collapsing))
 
 **Para MPI:**
 
@@ -242,7 +242,7 @@ Un pedigrí puede pasar por los siguientes estados:
 | --- | --- | --- | --- | --- | --- | --- |
 | Crear pedigrí | - | En construcción | SI | NO | SI | Primer estado en que se crea el pedigrí |
 | Botón Dar de baja | En construcción | Borrado | NO | NO | SI | Solo se puede realizar si el pedigrí no paso por el estado Activado. Si ya se activó una vez, no se podrá realizar esta acción y saldrá el siguiente mensaje: "El pedigrí no se puede borrar dado fue activado al menos una vez." |
-| Botón Activar | En construcción | Activo | NO | SI | SI | Activo en búsquedas. Antes de activar el pedigrí me aparece una pantalla con determinada información que se debe completar (Ver sección 20.15 Búsqueda: Activación del Pedigrí) |
+| Botón Activar | En construcción | Activo | NO | SI | SI | Activo en búsquedas. Antes de activar el pedigrí me aparece una pantalla con determinada información que se debe completar (ver [Búsqueda: activación del pedigrí](#busqueda-activacion-del-pedigri)) |
 | Botón Editar | Activo | En construcción | SI | NO | SI | Se puede realizar esta acción si no hay HIT. Solo se puede volver a este estado si tengo matchs descartados. Si tengo matchs pendientes aparecerá el siguiente mensaje: "El pedigrí no se puede editar dado que tiene matches sin descartar" |
 | Botón Cerrar | Activo | Cerrar | NO | NO | NO | Se pasa al estado cerrado si se cumplen las siguientes condiciones: No hay match pendientes No tiene Hits |
 | Crear pedigrí | Activo | Confirmado | NO | NO | SI | Se pasa al estado confirmado cuando se valida un escenario de un match. Al validar el escenario me sale un mensaje de advertencia con la siguiente confirmación: Pedigrí sigue activo en búsquedas? Si: el pedigrí pasa al estado Confirmado y se crea una copia del pedigrí actual en el estado Activo poniendo como nombre "Copia nombre pedigrí original". No: pasa al estado Confirmado. El pedi-grí pasa automáticamente al estado Confirmado y el match también. Un pedigrí solo puede tener un solo escenario validado. No se pueden validar los escenarios que se generan desde el pedigrí. |
@@ -326,7 +326,7 @@ Antes de activar el pedigrí, se deben indicar los siguientes parámetros:
 
 ![](images/sec20/p204_f01.png)
 
-- **Correr screening mitocondrial:** permite activar la búsqueda por el análisis mitocondrial (Ver detalle en la proxima seccion 20.16 Screening Mitocondrial)
+- **Correr screening mitocondrial:** permite activar la búsqueda por el análisis mitocondrial (ver detalle en [Screening mitocondrial](#screening-mitocondrial))
 
 - **Cantidad de no coincidencias para mitocondrial:** esté parametro se activa cuando se chequea el campo Correr screening mitocondrial.
 
@@ -466,7 +466,7 @@ Desde el caso, en la solapa de Gestor de Coincidencias, muestra solamente las co
 
 Los matches de pedigrí no tienen hit, solo tienen descarte. Esto es porque la validación en los pedigrís se hace a nivel de escenario.
 
-A partir de cada match permite crear un escenario (Ver detalle de cómo crear un escenario en la sección siguiente).
+A partir de cada match permite crear un escenario (ver detalle de cómo crear un escenario en [Escenarios](#escenarios)).
 
 ### Coincidencias para DVI
 
@@ -509,7 +509,7 @@ Se tiene tambien la opción de eliminar el escenario, presionando sobre el botó
 
 - Para DVI:
     - Me permite asociar a la incógnita solamente los perfiles de la solapa Perfiles NN Post Mortem dentro del caso.
-    - Se pueden asociar tanto perfiles en estado Activo como en estado Agrupado (Ver detalle en la sección 20.22 Agrupaciones de Restos)
+    - Se pueden asociar tanto perfiles en estado Activo como en estado Agrupado (ver detalle en [Agrupaciones de restos](#agrupaciones-de-restos-collapsing))
 - Para MPI
     - Me permite asociar a la incognita cualquier perfil de las categorías de MPI, menos la categoría IR.
 
@@ -712,7 +712,7 @@ Tener en cuenta las siguientes premisas al confirmar/descartar un collapsing:
 De esta manera un perfil pasa a tener dos estados posibles:
 
 - **Activo:** estado que tienen los perfiles que son agrupadores/padres (tiene perfiles hijos asociados) o perfiles que no tienen perfiles asociados.
-- **Agrupado:** estado que tienen los perfiles hijos que fueron agrupados (colapasados), es decir, tienen un perfil padre. Un perfil agrupado se comporta como un perfil que está inhabilitado como si estuviera dado de baja. Aparecerá grisado y no se puede realizar ninguna acción sobre ellos, a excepción de pasarlo al estado Activo (Ver seccion 20.22.3 Desagrupar perfiles) y asociarlo a un escenario.
+- **Agrupado:** estado que tienen los perfiles hijos que fueron agrupados (colapasados), es decir, tienen un perfil padre. Un perfil agrupado se comporta como un perfil que está inhabilitado como si estuviera dado de baja. Aparecerá grisado y no se puede realizar ninguna acción sobre ellos, a excepción de pasarlo al estado Activo (ver [Desagrupar perfiles](#desagrupar-perfiles)) y asociarlo a un escenario.
 
 Precionando sobre el ícono del ojo dentro de la columna **Ver perfiles asociados**, me aparecen los perfiles asociados al perfil agrupador:
 
@@ -761,7 +761,7 @@ Eliminar el resto de los perfiles padres, haciendo click en la cruz "X". En el c
 
 - Al confirmar una agrupación (tanto manual como automático), los perfiles hijos no deben estar asociados a un pedigrí activo o en construcción, es decir, no puedo inactivar un perfil que esta asociado a un pedigrí.
 - No se puede realizar una agrupación con un perfil que tiene coincidencia pendiente.
-- Al desagrupar un perfil de un grupo (Ver seccion siguiente), o agregar un nuevo perfil de resto, el perfil no podrá estar en ningún pedigrí activo.
+- Al desagrupar un perfil de un grupo (ver [Desagrupar perfiles](#desagrupar-perfiles)), o agregar un nuevo perfil de resto, el perfil no podrá estar en ningún pedigrí activo.
 
 ## Desagrupar perfiles
 

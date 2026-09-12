@@ -22,7 +22,7 @@ El ID debe contener al menos 4 caracteres, no debe contener espacios ni acentos:
 
 ![](images/sec03/p030_f01.png)
 
-A cada rol se le asignan una serie de permisos que a su vez agrupan un conjunto de operaciones que estarán habilitadas para el o los usuarios a los que se les asigne ese rol (ver próxima sección: Configuración de roles).
+A cada rol se le asignan una serie de permisos que a su vez agrupan un conjunto de operaciones que estarán habilitadas para el o los usuarios a los que se les asigne ese rol (ver [Configuración de roles](#configuracion-de-roles)).
 
 ## Configuración de roles
 

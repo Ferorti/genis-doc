@@ -1,7 +1,5 @@
 # Annex III - Interpretation of evidence statistics
 
-## Annex III – Interpretation of evidence statistics
-
 This annex describes the **statistical and probabilistic** framework used by GENis for the quantitative assessment of genetic evidence, particularly in contexts involving **DNA mixtures and multiple contribution hypotheses**. Its purpose is to give the user a conceptual understanding of the calculations performed by the system, without intending to replace specialized statistical training or formal expert interpretation.
 
 GENis implements an approach based on the **Likelihood Ratio (LR)**, widely accepted in forensic genetics, which allows comparing the relative plausibility of two alternative hypotheses given the same genetic evidence.

@@ -34,7 +34,7 @@ As we will see later, due to the operating logic of the GENis system, it is alwa
 
 For greater clarity and ease in administering categories, they are created as belonging to groups. For example, a group called "Known-source reference samples" can be defined, into which the categories that will store profiles from reference samples will be incorporated; and another group called "Evidence" can be defined, into which the categories holding genetic profiles from evidence obtained at crime scenes will be incorporated.
 
-**Note:** Keep in mind that for the MPI/DVI groupings, categories and groups cannot be added, deleted, or edited (see details in the following section). To access category administration, select the Settings/Categories menu:
+**Note:** Keep in mind that for the MPI/DVI groupings, categories and groups cannot be added, deleted, or edited (see details in [Category definition](#category-definition)). To access category administration, select the Settings/Categories menu:
 
 ![](images/sec07/p048_f01.png)
 
@@ -60,6 +60,7 @@ For the person-search modules (MPI / DVI), fixed categories were defined that ca
    - a. Reference Individuals (IR): Relative(s) of the missing person(s).
 
      Profiles that will be associated with a pedigree are entered in this category (IR_DVI).
+
 2. **Post Mortem Samples (PM)**
    - a. Personal Items found belonging to the missing person (ENN_DVI).
    - b. Unidentified Biological Remains (RNN_DVI).

@@ -6,7 +6,7 @@ Nota: la aplicación es proporcionada por el equipo de desarrollo y su version p
 
 2.- Se debe otorgar permisos de ejecución al archivo **genis** ubicado en la ruta **/usr/share/genis/bin**, esto se realiza con el siguiente comando:
 
-```
+```bash
 sudo chmod +x genis
 ```
 
@@ -30,20 +30,30 @@ sudo chmod +x genis
 
 Ejecución en primer plano:
 
-```
-sudo ./bin/genis -v -DapplyEvolutions.default=true -DapplyDownEvolutions.default=true                 -
-DapplyEvolutions.logDb=true        -DapplyDownEvolutions.logDb=true   -Dhttp.port=9000                -
-Dhttps.port=9443 -Dconfig.file=/usr/share/genis/conf/application.conf
+```bash
+sudo ./bin/genis -v \
+  -DapplyEvolutions.default=true \
+  -DapplyDownEvolutions.default=true \
+  -DapplyEvolutions.logDb=true \
+  -DapplyDownEvolutions.logDb=true \
+  -Dhttp.port=9000 \
+  -Dhttps.port=9443 \
+  -Dconfig.file=/usr/share/genis/conf/application.conf
 ```
 
 ![](images/sec04/p044_f02.png)
 
 Ejecución en Segundo plano:
 
-```
-sudo ./bin/genis -v -DapplyEvolutions.default=true -DapplyDownEvolutions.default=true                 -
-DapplyEvolutions.logDb=true        -DapplyDownEvolutions.logDb=true     -Dhttp.port=9000              -
-Dhttps.port=9443 -Dconfig.file=/usr/share/genis/conf/application.conf &
+```bash
+sudo ./bin/genis -v \
+  -DapplyEvolutions.default=true \
+  -DapplyDownEvolutions.default=true \
+  -DapplyEvolutions.logDb=true \
+  -DapplyDownEvolutions.logDb=true \
+  -Dhttp.port=9000 \
+  -Dhttps.port=9443 \
+  -Dconfig.file=/usr/share/genis/conf/application.conf &
 ```
 
 ![](images/sec04/p044_f03.png)

@@ -1,8 +1,6 @@
 # Annex II - Match manager and default statistical calculations
 
-## Annex II – Match manager and default statistical calculations
-
-### Introduction
+## Introduction
 
 GENis allows the entry and management of genetic profiles from both reference samples and forensic evidence, including evidence for which it is not possible to determine a priori the number of individuals who contributed to the analyzed genetic material. This situation is common in forensic casework, particularly in complex or low-quality samples, where the geneticist cannot establish with certainty the number of contributors based solely on the electropherogram.
 
