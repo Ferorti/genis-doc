@@ -173,46 +173,46 @@ copyright: >
 nav:
   - GENis:
       - GENis: index.md
-      - Funcionalidades del sistema: wiki/Funcionalidades-del-sistema-GENis.md
-      - Genética Forense: wiki/GeneticaForense.md
-      - Estándares y mejores prácticas: wiki/Estándares-y-mejores-prácticas.md
-      - Declaración de principios: 00_declaracion_de_principios.md
+      - Funcionalidades del sistema: genis/funcionalidades_del_sistema.md
+      - Genética Forense: genis/genetica_forense.md
+      - Estándares y mejores prácticas: genis/estandares_y_mejores_practicas.md
+      - Declaración de principios: genis/declaracion_de_principios.md
   - Instalación:
-      - Requerimientos del sistema: instalacion/02_requerimientos_del_sistema.md
-      - Instalación con Docker: wiki/docker.md
+      - Requerimientos del sistema: instalacion/requerimientos_del_sistema.md
+      - Instalación con Docker: instalacion/instalacion_con_docker.md
       - Instalación manual:
-          - Instalación de sistema base: instalacion/03_instalacion_de_sistema_base.md
-          - Instalación de GENis: instalacion/04_instalacion_de_genis.md
-      - Configuración de RAID: instalacion/05_configuracion_de_raid.md
-      - Hardening de seguridad: instalacion/06_hardening_de_seguridad.md
-      - Registro de control de cambios: instalacion/07_registro_de_control_de_cambios.md
+          - Instalación de sistema base: instalacion/instalacion_de_sistema_base.md
+          - Instalación de GENis: instalacion/instalacion_de_genis.md
+      - Configuración de RAID: instalacion/configuracion_de_raid.md
+      - Hardening de seguridad: instalacion/hardening_de_seguridad.md
+      - Registro de control de cambios: instalacion/registro_de_control_de_cambios.md
   - Administración:
-      - Solicitar una cuenta: 02_solicitar_una_cuenta.md
-      - Roles: 03_roles.md
-      - Laboratorios: 04_laboratorios.md
-      - Genetistas: 05_genetistas.md
-      - Tipos de materiales biológicos: 06_tipos_de_materiales_biologicos.md
-      - Categorías: 07_categorias.md
-      - Kits: 08_kits.md
-      - Marcadores: 09_marcadores.md
-      - Bases de datos de frecuencias: 10_bases_de_datos_de_frecuencias.md
-      - Mitocondrial: 11_mitocondrial.md
-      - Auditoría: 17_auditoria.md
-      - Notificaciones: 18_notificaciones.md
-      - Tipificación de motivos: 19_tipificacion_de_motivos.md
-      - Reportes: 22_reportes.md
+      - Solicitar una cuenta: administracion/solicitar_una_cuenta.md
+      - Roles: administracion/roles.md
+      - Laboratorios: administracion/laboratorios.md
+      - Genetistas: administracion/genetistas.md
+      - Tipos de materiales biológicos: administracion/tipos_de_materiales_biologicos.md
+      - Categorías: administracion/categorias.md
+      - Kits: administracion/kits.md
+      - Marcadores: administracion/marcadores.md
+      - Bases de datos de frecuencias: administracion/bases_de_datos_de_frecuencias.md
+      - Mitocondrial: administracion/mitocondrial.md
+      - Auditoría: administracion/auditoria.md
+      - Notificaciones: administracion/notificaciones.md
+      - Tipificación de motivos: administracion/tipificacion_de_motivos.md
+      - Reportes: administracion/reportes.md
   - Búsqueda de perfiles:
-      - Alta de perfiles: 12_alta_de_perfiles.md
-      - Baja de perfiles: 13_baja_de_perfiles.md
-      - Comparador de perfiles: 14_comparador_de_perfiles.md
-      - Exportador de perfiles: 15_exportador_de_perfiles.md
-      - Gestor de coincidencias y cálculos forense: 16_gestor_de_coincidencias_y_calculos_forense.md
-      - Coincidencia de perfiles: 24_coincidencia_de_perfiles.md
-      - Búsqueda de personas: 20_busqueda_de_personas.md
-      - Interconexión de instancias: 21_interconexion_de_instancias.md
+      - Alta de perfiles: busqueda_de_perfiles/alta_de_perfiles.md
+      - Baja de perfiles: busqueda_de_perfiles/baja_de_perfiles.md
+      - Comparador de perfiles: busqueda_de_perfiles/comparador_de_perfiles.md
+      - Exportador de perfiles: busqueda_de_perfiles/exportador_de_perfiles.md
+      - Gestor de coincidencias y cálculos forense: busqueda_de_perfiles/gestor_de_coincidencias_y_calculos_forense.md
+      - Coincidencia de perfiles: busqueda_de_perfiles/coincidencia_de_perfiles.md
+      - Búsqueda de personas: busqueda_de_perfiles/busqueda_de_personas.md
+      - Interconexión de instancias: busqueda_de_perfiles/interconexion_de_instancias.md
   - Anexos técnicos:
-      - Anexo I - Algoritmo de búsqueda de coincidencias de STR: 23_anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md
-      - Anexo II - Gestor de coincidencias y cálculos estadísticos por default: 25_anexo_ii_gestor_de_coincidencias_y_calculos_estadisticos_por_default.md
-      - Anexo III - Interpretación de estadísticas de evidencias: 26_anexo_iii_interpretacion_de_estadisticas_de_evidencias.md
-      - Anexo IV - Errores frecuentes y diccionario de errores: 27_anexo_iv_errores_frecuentes_y_diccionario_de_errores.md
-      - Anexo V - Marco de seguridad y protección de datos personales: 28_anexo_v_marco_de_seguridad_y_proteccion_de_datos_personales.md
+      - Anexo I - Algoritmo de búsqueda de coincidencias de STR: anexos/anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md
+      - Anexo II - Gestor de coincidencias y cálculos estadísticos por default: anexos/anexo_ii_gestor_de_coincidencias_y_calculos_estadisticos_por_default.md
+      - Anexo III - Interpretación de estadísticas de evidencias: anexos/anexo_iii_interpretacion_de_estadisticas_de_evidencias.md
+      - Anexo IV - Errores frecuentes y diccionario de errores: anexos/anexo_iv_errores_frecuentes_y_diccionario_de_errores.md
+      - Anexo V - Marco de seguridad y protección de datos personales: anexos/anexo_v_marco_de_seguridad_y_proteccion_de_datos_personales.md
