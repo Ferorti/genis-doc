@@ -8,7 +8,11 @@ La configuración del entorno se encuentra en el archivo *docker-compose.yml* do
 - Servidor con Ubuntu 22.04 y un usuario `genis-user` con permisos de `sudo` (es el usuario que se utiliza en los comandos de esta guía).
 - Reloj del sistema sincronizado mediante NTP: el segundo factor de autenticación (TOTP) depende de la hora correcta.
 - Java 8, necesario para ejecutar GENis (ver [Despliegue en producción](despliegue_en_produccion.md)).
-- Los requisitos de hardware se detallan en [Requerimientos del sistema](requerimientos_del_sistema.md).
+- Hardware:
+    - Procesador: mínimo 64 bits quad-core a 3 GHz (Intel Core i5/i7, Xeon E o AMD equivalente); recomendado 8 núcleos o más.
+    - Memoria: mínimo requerido 8 GB RAM; mínimo recomendado 16 GB RAM.
+    - Almacenamiento: 64 GB SSD para el sistema operativo y aplicaciones de base, y 500 GB para datos (SSD recomendado).
+    - Conectividad: placa de red Gigabit Ethernet (1 Gbps) o superior.
 
 !!! warning "Contraseñas por defecto"
     Las contraseñas que aparecen en esta guía (por ejemplo **genissqladminp**, **adminp** o **pass**) son valores por defecto pensados para pruebas y desarrollo. En instalaciones de producción deben modificarse.

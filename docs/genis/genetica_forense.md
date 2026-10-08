@@ -1,22 +1,29 @@
-GENis está organizado en **tres módulos forenses**, cada uno pensado para un problema distinto:
+Esta página resume los fundamentos científicos con los que GENis compara perfiles y valora coincidencias. Sigue el recorrido de un perfil: cómo se describe, cómo se clasifica, contra qué se compara y cómo se valora el resultado.
 
-| Módulo | Pregunta que responde |
-|---|---|
-| **Identificación forense de personas** | ¿Este perfil (sospechoso, condenado) coincide con evidencia de una escena, o con otro perfil de referencia? |
-| **MPI** (búsqueda de personas desaparecidas) | ¿Alguno de estos individuos no identificados es el pariente buscado en este árbol familiar? |
-| **DVI** (identificación de víctimas de desastre) | Igual que MPI, aplicado a la identificación de restos en contextos de desastre. |
+Los tres [usos forenses](../usos_forenses/index.md) comparten la descripción y la clasificación del perfil, y se diferencian en el tipo de comparación: **directa** (perfil contra perfil) en investigación criminal y **por parentesco** (pedigrí contra perfil) en MPI y DVI. El desarrollo formal de cada tema se encuentra en los Anexos técnicos.
 
-Esta página describe el motor de genética forense que sostiene a los tres: el modelo de kits y marcadores, las categorías de perfiles, el motor de coincidencias STR, el cálculo de likelihood ratio, el soporte de ADN mitocondrial y el motor de parentesco por redes bayesianas de MPI/DVI.
+## El perfil genético
 
----
+Cada perfil se describe por los marcadores que se tipificaron en el laboratorio. GENis trabaja principalmente con marcadores STR autosomales y admite, como complemento, haplotipos de ADN mitocondrial.
 
-## Kits y marcadores
+### Kits y marcadores
 
 Cada perfil genético se genotipa con uno o más **kits** comerciales, y cada kit define un conjunto de **marcadores** (loci).
 
 - Cada kit tiene asociado un **parámetro representativo K**: la cantidad de marcadores que ese kit aporta para evaluar admisibilidad.
 - Cada marcador se carga indicando cromosoma, rango alélico válido, y si es **requerido** o solo **aceptado** para el matching.
 - El sistema interpreta **microvariantes** (alelos con sufijo `.x`, que actúan como comodín dentro de un rango) y **valores fuera de la escalera alélica** del marcador, conservando en el resultado tanto el valor cargado como el usado para comparar.
+
+### ADN mitocondrial (mtDNA)
+
+GENis admite perfiles de ADN mitocondrial como complemento a los marcadores STR autosomales, útil cuando el material genético está muy degradado (huesos antiguos, cabello sin raíz) o cuando interesa la línea materna, como en MPI/DVI.
+
+- Los haplotipos se cargan como diferencias respecto de la secuencia de referencia **rCRS**, ya determinadas externamente por el analista: GENis no alinea secuencias ni interpreta cromatogramas.
+- Se admiten hasta 4 rangos de posiciones por haplotipo, dentro de las regiones 16024–16569 y 1–576.
+- Ciertas posiciones altamente mutables o inestables entre tejidos (16193, 309, 455, 463, 573) se excluyen del cálculo de exclusión, por no aportar valor discriminante confiable.
+- El match mitocondrial se calcula siempre en modo de **alta exigencia**: se suman los mismatches entre haplotipos y se comparan contra el umbral máximo configurado en la categoría del perfil.
+
+Detalle: [Kits](../administracion/kits.md), [Marcadores](../administracion/marcadores.md), [Mitocondrial](../administracion/mitocondrial.md) y [Alta de perfiles](../busqueda_de_perfiles/alta_de_perfiles.md).
 
 ## Categorías y clasificación de perfiles
 
@@ -26,7 +33,9 @@ Todo perfil pertenece a una **categoría**, que es el mecanismo central de confi
 - **Reglas de asociación**: por ejemplo, vincular el perfil de una víctima con la evidencia de una mezcla en la que es aportante conocido, para optimizar la búsqueda.
 - **Reglas de búsqueda**: contra qué otras categorías se compara automáticamente un perfil nuevo, y con qué nivel de exigencia.
 
-Los módulos **MPI** y **DVI** trabajan con un conjunto de categorías fijas que no pueden editarse ni eliminarse, organizadas en dos grupos — **Ante Mortem** (perfiles de referencia de la persona buscada: individuos de referencia, elementos personales, personas que buscan su identidad biológica) y **Post Mortem** (restos y personas fallecidas no identificadas) — con subtipos como IR, ER, INN, RNN, ENN y PFNI.
+Los módulos **MPI** y **DVI** trabajan con un conjunto de categorías fijas que no pueden editarse ni eliminarse, organizadas en dos grupos: **Ante Mortem** (perfiles de referencia de la persona buscada: individuos de referencia, elementos personales, personas que buscan su identidad biológica) y **Post Mortem** (restos y personas fallecidas no identificadas), con subtipos como IR, ER, INN, RNN, ENN y PFNI.
+
+Detalle: [Categorías](../administracion/categorias.md).
 
 ## Bases de datos de frecuencias alélicas
 
@@ -36,12 +45,14 @@ Cuando la tabla no trae frecuencias mínimas para alelos poco muestreados, GENis
 
 | Método | Fórmula de f-mínima | Depende de |
 |---|---|---|
-| Manual | valor fijo | — |
+| Manual | valor fijo | (ninguno) |
 | NRC II | 5 / (2N) | N (tamaño muestral) |
 | Weir | α / (N + α) | N, α (heterogeneidad poblacional) |
 | Budowle–Monson–Chakraborty | (C + α) / (2N + α + C) | N, α, C (el más conservador) |
 
-## Motor de coincidencias STR: niveles de exigencia
+Detalle: [Bases de datos de frecuencias](../administracion/bases_de_datos_de_frecuencias.md).
+
+## Comparación directa: motor de coincidencias STR
 
 GENis compara perfiles marcador por marcador usando un esquema de **tres niveles de exigencia (stringency)** recomendado por ENFSI:
 
@@ -52,6 +63,8 @@ GENis compara perfiles marcador por marcador usando un esquema de **tres niveles
 El nivel de exigencia debe elegirse según el objetivo de la búsqueda: cuanto más baja la exigencia, más coincidencias fortuitas ("adventicias") produce, sin relación con parentesco real.
 
 Adicionalmente, GENis implementa un **algoritmo Mezcla–Mezcla**, que evalúa si dos evidencias de dos aportantes cada una podrían compartir un aportante en común, como herramienta de vinculación investigativa entre hechos distintos. Este algoritmo no es un software de interpretación probabilística de mezclas: no hace deconvolución ni asigna aportantes, solo prioriza vínculos dentro del motor de búsqueda.
+
+Detalle: [Anexo I](../anexos/anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md) (definición formal) y [Coincidencia de perfiles](../busqueda_de_perfiles/coincidencia_de_perfiles.md) (ejemplos).
 
 ## Valoración estadística: el Likelihood Ratio (LR)
 
@@ -71,22 +84,17 @@ Cuando se comparan dos evidencias de mezcla, GENis puede estimar la probabilidad
 
 El LR que informa GENis no equivale al LR de software periciales especializados (LRmix Studio, EuroForMix, STRmix), que implementan modelos semicontinuos o continuos con hipótesis formales de acusación/defensa y modelan intensidad de picos (RFU). A diferencia de esos modelos, GENis no requiere necesariamente un perfil de referencia para plantear una hipótesis, no distingue formalmente hipótesis de fiscalía/defensa como un modelo pericial, y produce un **LR operativo** cuyo propósito es ordenar y priorizar coincidencias dentro del sistema, no expresar peso probatorio en sentido judicial. Toda valoración probatoria formal debe hacerse con software validado para uso pericial, dado que GENis no incorpora información de RFU, variación de drop-out por marcador, cuantificación continua de mezcla ni modelado de stutter, degradación o inhibición.
 
-## ADN mitocondrial (mtDNA)
+Detalle: [Anexo II](../anexos/anexo_ii_gestor_de_coincidencias_y_calculos_estadisticos_por_default.md), [Anexo III](../anexos/anexo_iii_interpretacion_de_estadisticas_de_evidencias.md) y [Interpretación del LR en el gestor de coincidencias](../busqueda_de_perfiles/gestor_de_coincidencias_y_calculos_forense.md#interpretacion-del-lr-en-genis-segun-el-tipo-de-comparacion).
 
-GENis admite perfiles de ADN mitocondrial como complemento a los marcadores STR autosomales, útil cuando el material genético está muy degradado (huesos antiguos, cabello sin raíz) o cuando interesa la línea materna, como en MPI/DVI.
+## Comparación por parentesco: redes bayesianas
 
-- Los haplotipos se cargan como diferencias respecto de la secuencia de referencia **rCRS**, ya determinadas externamente por el analista — GENis no alinea secuencias ni interpreta cromatogramas.
-- Se admiten hasta 4 rangos de posiciones por haplotipo, dentro de las regiones 16024–16569 y 1–576.
-- Ciertas posiciones altamente mutables o inestables entre tejidos (16193, 309, 455, 463, 573) se excluyen del cálculo de exclusión, por no aportar valor discriminante confiable.
-- El match mitocondrial se calcula siempre en modo de **alta exigencia**: se suman los mismatches entre haplotipos y se comparan contra el umbral máximo configurado en la categoría del perfil.
-
-## Módulo MPI/DVI: identificación por parentesco con redes bayesianas
-
-El motor de búsqueda de personas resuelve un problema distinto al de coincidencia STR directa: en vez de comparar "perfil contra perfil", compara un **pedigrí familiar** (con genotipos parcialmente conocidos) contra candidatos no identificados.
+El motor de parentesco, usado por MPI y DVI, resuelve un problema distinto al de coincidencia STR directa: en vez de comparar "perfil contra perfil", compara un **pedigrí familiar** (con genotipos parcialmente conocidos) contra candidatos no identificados.
 
 GENis modela cada familia como una **red bayesiana**, que integra la estructura del pedigrí y los genotipos disponibles para inferir la tabla de probabilidad condicional del genotipo de la persona buscada; esto permite calcular el LR de forma eficiente incluso para bases de personas no identificadas muy grandes, porque las probabilidades del genotipo buscado se calculan una sola vez por familia.
 
 El mismo fundamento fue validado de forma independiente en el paquete R **`fbnet`**, contrastando sus LR contra los paquetes de referencia *Familias* y *forrel* sobre 24 pedigríes reales del Banco Nacional de Datos Genéticos argentino, con errores medios por debajo del 0,2% en la mayoría de los casos. Un trabajo posterior propone métricas de teoría de la información (divergencia de Kullback-Leibler, entropía) para cuantificar cuánto aporta un pariente disponible a la identificación de la persona buscada, implementadas en el paquete R **`forensIT`**; esto permite, por ejemplo, priorizar a qué pariente conviene genotipar cuando hay varias opciones con igual poder de exclusión.
+
+Detalle: [Anexo I](../anexos/anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md) y [Búsqueda de personas](../busqueda_de_perfiles/busqueda_de_personas.md). Usos: [MPI](../usos_forenses/busqueda_de_personas_mpi.md) y [DVI](../usos_forenses/identificacion_de_victimas_dvi.md).
 
 ## Referencias
 

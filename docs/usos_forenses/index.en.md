@@ -10,17 +10,24 @@ The workflow is organized in two complementary stages:
 
 | Stage | What happens | Where |
 |---|---|---|
-| **Sequencing** | From biological material (hair, blood, fluids, bone tissue, among others) the genetic profile is obtained with laboratory equipment, which translates it into digital data. | Laboratory, outside GENis |
+| **Profile generation** (labeled *secuenciación* in the figure) | From biological material (hair, blood, fluids, bone tissue, among others) the laboratory obtains the genetic profile and translates it into digital data. | Laboratory, outside GENis |
 | **Storage and comparison** | The profile is loaded onto a server, stored and automatically compared against the rest of the profiles in the database. | GENis |
 
-GENis does not interpret laboratory signals or perform sequencing: it receives already determined profiles, manages them and matches them. The compared profiles fall into two large groups: **reference samples** from known subjects and **evidence** found at crime scenes, whose contributor is unknown. This distinction is detailed in [Forensic genetics](../genis/genetica_forense.md#profile-categories-and-classification).
+GENis does not interpret laboratory signals or analyze the samples: it receives already determined profiles, manages them and matches them.
 
-## Modules that support cooperation
+## Profiles of known and unknown origin
 
-Regional cooperation relies on two GENis modules, each aimed at a different type of problem:
+In every use of GENis two kinds of profiles are compared: those of **known origin** (reference samples) and those of **unknown origin** (evidence, remains or unidentified persons). Which kind a profile belongs to is determined by its [category](../genis/genetica_forense.md#profile-categories-and-classification).
 
-- [**Forensic module**](modulo_forense.md): links evidence to other evidence and to reference subjects in order to identify repeat offenders and unify investigations.
-- [**Missing persons search module (MPI)**](modulo_mpi.md): matching of relatives against traces and remains in cases of child abduction, human trafficking and missing persons.
+## Three uses, three questions
+
+| Use | Known origin | Unknown origin | Question it answers |
+|---|---|---|---|
+| [**Criminal investigation**](investigacion_criminal.md) | References from identified subjects (suspects, convicts) | Evidence found at crime scenes | Were two events committed by the same person? Is that person already known? |
+| [**Missing persons search (MPI)**](busqueda_de_personas_mpi.md) | Relatives of the sought person and their personal belongings | Traces, remains, unidentified deceased persons and people seeking their biological identity | Does any of these profiles belong to the relative sought in this family tree? |
+| [**Disaster victim identification (DVI)**](identificacion_de_victimas_dvi.md) | Relatives of the victims | Remains and unidentified victims of the event | Which family does each recovered remain belong to? |
+
+The underlying difference lies in the type of comparison. In criminal investigation the comparison is **direct**: one profile against another. In MPI and DVI the sought person has no profile of their own, so the comparison is **kinship-based**: a family tree (pedigree) against the unidentified profiles. Both mechanisms are explained in [Forensic genetics foundations](../genis/genetica_forense.md).
 
 ## Exchange between instances
 

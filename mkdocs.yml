@@ -1,4 +1,4 @@
-site_name: Documentación GENis
+site_name: GENis
 site_description: Documentación funcional del sistema GENis
 site_url: https://ferorti.github.io/genis-doc/
 repo_url: https://github.com/fundacion-sadosky/genis
@@ -14,9 +14,9 @@ extra_javascript:
 
 theme:
   name: material
+  logo: images/assets/icono.svg
   language: es
   icon:
-    logo: material/dna
     repo: fontawesome/brands/github
   font:
     text: Roboto
@@ -75,12 +75,13 @@ plugins:
           nav_translations:
             GENis: GENis
             Funcionalidades del sistema: System functionalities
-            Genética Forense: Forensic genetics
+            Fundamentos de genética forense: Forensic genetics foundations
             Estándares y mejores prácticas: Standards and best practices
             Declaración de principios: Declaration of principles
             Usos forenses: Forensic uses
-            Módulo forense: Forensic module
-            Módulo de búsqueda de personas (MPI): Missing persons search module (MPI)
+            Investigación criminal: Criminal investigation
+            Búsqueda de personas (MPI): Missing persons search (MPI)
+            Identificación de víctimas de desastres (DVI): Disaster victim identification (DVI)
             Instalación: Installation
             Requerimientos del sistema: System requirements
             Instalación con Docker: Installation with Docker
@@ -176,14 +177,15 @@ copyright: >
 nav:
   - GENis:
       - GENis: index.md
-      - Funcionalidades del sistema: genis/funcionalidades_del_sistema.md
-      - Genética Forense: genis/genetica_forense.md
-      - Estándares y mejores prácticas: genis/estandares_y_mejores_practicas.md
-      - Declaración de principios: genis/declaracion_de_principios.md
       - Usos forenses:
           - Usos forenses: usos_forenses/index.md
-          - Módulo forense: usos_forenses/modulo_forense.md
-          - Módulo de búsqueda de personas (MPI): usos_forenses/modulo_mpi.md
+          - Investigación criminal: usos_forenses/investigacion_criminal.md
+          - Búsqueda de personas (MPI): usos_forenses/busqueda_de_personas_mpi.md
+          - Identificación de víctimas de desastres (DVI): usos_forenses/identificacion_de_victimas_dvi.md
+      - Funcionalidades del sistema: genis/funcionalidades_del_sistema.md
+      - Fundamentos de genética forense: genis/genetica_forense.md
+      - Declaración de principios: genis/declaracion_de_principios.md
+      - Estándares y mejores prácticas: genis/estandares_y_mejores_practicas.md
   - Instalación:
       - Instalación de contenedores: instalacion/instalacion_de_contenedores.md
       - Datos iniciales de GENis: instalacion/datos_iniciales.md

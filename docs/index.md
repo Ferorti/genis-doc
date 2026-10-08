@@ -4,153 +4,34 @@
 # GENis { .sr-only }
 
 
-El software GENis es una herramienta informática desarrollada por la [Fundación Dr. Manuel Sadosky](https://www.fundacionsadosky.org.ar) que permite contrastar perfiles genéticos provenientes de muestras biológicas obtenidas en distintas escenas de crimen o de desastres, vinculando así eventos ocurridos en diferente tiempo y lugar, aumentando las probabilidades de individualización de delincuentes, personas desaparecidas o víctimas de siniestros.
+GENis es un sistema informático abierto, desarrollado por la [Fundación Dr. Manuel Sadosky](https://www.fundacionsadosky.org.ar), para el almacenamiento, intercambio y comparación de perfiles genéticos con fines forenses. Permite contrastar perfiles provenientes de muestras biológicas obtenidas en distintas escenas de crimen o de desastres, vinculando eventos ocurridos en diferente tiempo y lugar y aumentando las probabilidades de individualización de delincuentes, personas desaparecidas o víctimas de siniestros.
 
-Para una explicación detallada sobre como instalar GENis y configurar el software necesario consulte el [manual de instalación de GENis](https://raw.githubusercontent.com/wiki/fundacion-sadosky/genis/files/instalacion.pdf). A continuación se resumen los pasos para una configuración básica y se indica como correr el sistema en entornos de desarrollo y producción. Los archivos a los que se haga referencia pueden encontrarse bajo el directorio */utils*.
+El sistema integra herramientas de genética forense y bioinformática con el objetivo de facilitar el cotejo sistemático de perfiles genéticos, asegurar la trazabilidad de la información y fortalecer la calidad técnica y probatoria de los resultados obtenidos.
 
-Para informarse sobre el funcionamiento del sistema consulte el [manual de usuario de GENis](https://raw.githubusercontent.com/wiki/fundacion-sadosky/genis/files/manual.pdf).
+## Origen
 
-## Requerimientos de Hardware
+El desarrollo de GENis se inscribe en un proceso institucional de articulación entre organismos judiciales, la comunidad científica y el sector tecnológico de América Latina, orientado a dotar a los países de una herramienta propia para la gestión de bases de datos genéticos forenses. Desde su concepción, el sistema fue diseñado a partir de requerimientos operativos reales de laboratorios forenses y organismos judiciales, y tomando como referencia estándares y recomendaciones internacionales vigentes en la materia.
 
-### Procesador
-- Mínimo: procesador de 64 bits quad-core a 3 GHz (Intel Core i5/i7, Xeon E o AMD equivalente)
-- Recomendado: 8 núcleos o más
+En particular, la arquitectura y el funcionamiento de GENis se encuentran alineados con las recomendaciones de la **Sociedad Internacional de Genética Forense (ISFG)**, la **European Network of Forensic Science Institutes (ENFSI)** e **INTERPOL**, entre otros organismos de referencia. Estos lineamientos se reflejan tanto en los criterios de admisibilidad y búsqueda de coincidencias como en la transparencia de los modelos de cálculo, la auditabilidad del sistema y la protección de la información genética almacenada.
 
-### Memoria
-- Mínimo requerido: 8 GB RAM
-- Mínimo recomendado: 16 GB RAM
+**Un principio rector en el diseño de GENis es la transparencia de los modelos estadísticos y algoritmos de búsqueda, entendida como una condición necesaria para la reproducibilidad independiente de los resultados y su adecuada evaluación en el ámbito pericial y judicial. En este sentido, GENis adopta una arquitectura de código abierto**, lo que permite el acceso a sus modelos conceptuales, facilita auditorías técnicas y habilita su adaptación a distintos marcos normativos y organizacionales.
 
-### Almacenamiento
-- 64 GB SSD reservados para el sistema operativo y aplicaciones de base
-- 500 GB para almacenamiento de datos (SSD recomendado para mejor rendimiento)
+## Qué hace GENis
 
-### Conectividad
-- Placa de red Gigabit Ethernet (1 Gbps) o superior
+GENis permite el ingreso y la gestión de perfiles genéticos autosomales STR, cromosoma Y, cromosoma X y ADN mitocondrial. El sistema es altamente configurable, posibilitando la definición de categorías de perfiles, reglas de admisión, parámetros de búsqueda y criterios de comparación acordes a la normativa y a las políticas de cada jurisdicción o laboratorio.
 
----
+Su eje central es un **motor de búsqueda de coincidencias** que da soporte a tres usos forenses: la investigación criminal, la búsqueda de personas desaparecidas (MPI) y la identificación de víctimas de desastres (DVI). Se describen en [Usos forenses](usos_forenses/index.md).
 
-## Configurar un entorno de ejecución de GENis
+Complementariamente, GENis incorpora mecanismos de seguridad, control de accesos, auditoría y trazabilidad, que registran de manera detallada todas las acciones realizadas sobre perfiles, análisis, coincidencias y escenarios. Estas características resultan fundamentales para el cumplimiento de los requisitos de calidad, integridad y control exigidos por las normas y recomendaciones internacionales aplicables a bases de datos genéticas forenses.
 
-GENis está desarrollado en Scala, para correr la aplicación se requiere JRE 8 y para continuar su desarrollo JDK 8 y Sbt.
+## Cómo está organizado este manual
 
-### Otros requerimientos
-- PostgreSQL 9.4.4
-- MongoDB 2.6
-- OpenLDAP
+Este manual describe el funcionamiento de GENis, abordando tanto los aspectos conceptuales como los operativos necesarios para su correcta utilización. Está dirigido a genetistas forenses, operadores técnicos, responsables de bases de datos, legisladores, comunidad académica y ONGs.
 
-### Configuración de ldap
-
-Reconfigurar ldap ingresando **genis.local** para el nombre de dominio y de organización:
-
-```bash
-sudo dpkg-reconfigure slapd
-```
-
-Cargar los datos de configuración inicial:
-
-```bash
-ldapadd -x -D cn=admin,dc=genis,dc=local -H ldap://:389 -W -f X-GENIS-LDAPConfig_Base_FULL.ldif -v
-```
-
-Chequear la carga de los datos:
-```bash
-ldapsearch -x -b "dc=genis,dc=local" -H ldap://:389 -D "cn=admin,dc=genis,dc=local" -W "objectclass=*"
-```
-
-### Configuración de postgresql
-Crear un usuario de postgres y las bases de datos de GENis:
-```bash
-sudo adduser genissqladmin
-sudo -u postgres createuser -d -e -S -R genissqladmin
-sudo -u postgres psql -c "ALTER USER genissqladmin PASSWORD '********';"
-sudo -u genissqladmin createdb -e genisdb
-sudo -u genissqladmin createdb -e genislogdb
-```
-### Configuración de mongodb
-Crear las colecciones de configuración inicial:
-```bash
-sh < "MongoSetup.sh"
-```
-### Datos inciales del sistema
-Luego de correr el sistema el esquema de datos ya se encuentra creado y se deben cargar los datos iniciales del sistema y los datos particulares de la región.
-```bash
-sudo -u genissqladmin psql -d genisdb -f dml.sql
-sudo -u genissqladmin psql -d genisdb -f locales/AR.sql
-```
-## Correr GENis en un entorno de desarrollo
-
-### Adecuación de parámetros del sistema
-
-Copiar el archivo *application-dev-template.conf* a *application-dev.conf*. Editar los parámetros de conexión a bases datos y ldap según corresponda y especificar la ruta de exportación de perfiles y archivos lims. Generar además el *application.secret*, con el que se firma la cookie de sesión, y ponerlo en el `application { secret = "..." }` del archivo:
-```bash
-openssl rand -base64 48 | tr -d '\n'
-```
-El valor no está versionado y no debe compartirse entre entornos. En desarrollo, si se deja vacío, Play deriva uno automáticamente; en producción su ausencia aborta el arranque. El archivo *logger-dev-template.xml* también puede copiarse a *logger-dev.xml* para reconfigurar el logger en desarrollo.
-
-### Ejecución de GENis
-
-En el directorio raíz de la aplicación correr (no todos los parámetros son siempre necesarios, se incluyen en forma ilustrativa):
-```bash
-sbt run --java-home /usr/lib/jvm/java-8-openjdk-amd64 \
-  -Xms512M -Xmx10g -Xss1M -XX:+CMSClassUnloadingEnabled \
-  -Dconfig.file=./application-dev.conf \
-  -Dlogger.file=./logger-dev.xml \
-  -Dhttps.port=9443 -Dhttp.port=9000
-```
-
-En el navegador ingresar a http://localhost:9000/.
-Si es la primera vez que corre la aplicación se le preguntará por la ejecución de los scripts de evolutions para crear el esquema de datos. Para detener la aplicación en la consola ingresar `Ctrl + C`
-
-## Descargar, distribuir y correr GENis en producción
-Puede descargar la última versión de GENis ingresando a la sección de releases. Para actualizar el sistema consulte [`UPGRADING.md`](https://github.com/fundacion-sadosky/genis/blob/main/UPGRADING.md).
-Para generar una nueva versión de GENis actualizar el nro. de versión en el archivo *build.sbt*, borrar la carpeta *target* y correr
-
-```bash
-sbt dist
-```
-
-Se generará un zip en la carpeta *target/universal* con todo lo necesario para correr el sistema en producción.
-
-Para correr GENis:
-
-- descomprimir el zip bajo */usr/share*
-- otorgar permiso de ejecución al script `bin/genis`:
-
-    ```bash
-    sudo chmod +x bin/genis
-    ```
-
-- modificar los parámetros de configuración del sistema. Las conexiones a bases de datos ldap se encuentran en */conf/storage.conf* y los datos del laboratorio y rutas de exportación de archivos en */conf/genis-misc.conf*
-- correr el sistema:
-
-    ```bash
-    sudo ./bin/genis -v \
-      -DapplyEvolutions.default=true \
-      -DapplyDownEvolutions.default=true \
-      -DapplyEvolutions.logDb=true \
-      -DapplyDownEvolutions.logDb=true \
-      -Dhttp.port=9000 -Dhttps.port=9443 \
-      -Dconfig.file=./conf/application.conf &
-    ```
-
-En el archivo RUNNING_PID se encuentra el nro. de proceso para detener la ejecución del sistema.
-```bash
-cat RUNNING_PID
-sudo kill -9 pid
-sudo rm -rf RUNNING_PID
-```
-
-## Usuario inicial del sistema
-
-GENis utiliza un mecanismo de autenticación basado en TOPT.
-Durante la configuración del sistema se crea el usuario '*setup*', con password '*pass*' y secret para TOPT '*ETZK6M66LFH3PHIG*'.
-Utilice ésta cuenta libremente para propósitos de desarrollo pero en producción solicite una nueva cuenta de administrador en la pantalla de login, luego ingrese con el usuario '*setup*' para habilitarla y finalmente inactive el usuario '*setup*'.
-Si tuviera problemas para ingresar al sistema puede que precise instalar el servicio NTP como se indica en el [manual de instalación de GENis](https://raw.githubusercontent.com/wiki/fundacion-sadosky/genis/files/instalacion.pdf).
-Para obtener el password a partir del TOPT puede utilizar https://gauth.apps.gbraad.nl/
-
-## Otras utilidades
-Bajo */utils* se encuentran los scripts con las últimas versiones de los datos de configuración del sistema, utilidades para el mantenimiento y archivos con datos de ejemplo para para pruebas.
-El script *cleanDatabases.sh* sirve para borrar datos transaccionales, de perfiles, matches, pedigrís, notificaciones, etc, sin afectar datos de configuración.
-```bash
-sudo sh cleanDatabases.sh
-```
+| Solapa | Contenido |
+|---|---|
+| **GENis** | Qué es el sistema, para qué se usa ([Usos forenses](usos_forenses/index.md)), qué funciones ofrece ([Funcionalidades del sistema](genis/funcionalidades_del_sistema.md)), en qué se basan sus cálculos ([Fundamentos de genética forense](genis/genetica_forense.md)) y bajo qué principios y estándares fue diseñado. |
+| **Instalación** | Puesta en marcha de los servicios con contenedores, despliegue en producción, resguardo y endurecimiento del servidor. Comienza en [Instalación de contenedores](instalacion/instalacion_de_contenedores.md). |
+| **Administración** | Configuración institucional y de catálogos: cuentas, roles, laboratorios, categorías, kits, marcadores y frecuencias. Comienza en [Solicitar una cuenta](administracion/solicitar_una_cuenta.md). |
+| **Búsqueda de perfiles** | Operación diaria: alta y baja de perfiles, coincidencias, búsqueda de personas e interconexión de instancias. Comienza en [Alta de perfiles](busqueda_de_perfiles/alta_de_perfiles.md). |
+| **Anexos técnicos** | Desarrollo formal de los algoritmos y modelos estadísticos, diccionario de errores y marco de seguridad. Comienza en el [Anexo I](anexos/anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md). |

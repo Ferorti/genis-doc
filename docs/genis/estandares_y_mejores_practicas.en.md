@@ -6,7 +6,7 @@ GENis was designed from its inception (2014) based on four pillars set by the **
 
 | Organization | Application in GENis |
 |---|---|
-| **ISFG** (International Society for Forensic Genetics) — DNA Commission | Transparency, availability and reproducibility of forensic biostatistical calculations. Guides the system's four design pillars (see [Declaration of principles](declaracion_de_principios.md)). |
+| **ISFG** (International Society for Forensic Genetics), DNA Commission | Transparency, availability and reproducibility of forensic biostatistical calculations. Guides the system's four design pillars (see [Declaration of principles](declaracion_de_principios.md)). |
 | **ENFSI** (European Network of Forensic Science Institutes) | Matching algorithms at high, medium and low stringency ("*Guidelines for Best Practice in DNA Analysis*" and "*DNA Database Management*"). |
 | **INTERPOL** | Reference for the design of interoperability between national/regional genetic databases. |
 | **NRC II** (National Research Council, USA) | Recommendations 4.1 and 4.10 for calculating genotype probabilities from population allele frequencies. |
@@ -15,9 +15,9 @@ GENis was designed from its inception (2014) based on four pillars set by the **
 
 According to [Annex V: Security and personal data protection framework](../anexos/anexo_v_marco_de_seguridad_y_proteccion_de_datos_personales.md):
 
-- **ISO/IEC 27001** — Information security management system (reference framework for institutional deployment policies).
-- **OWASP ASVS** (Application Security Verification Standard) — Application security verification standard.
-- **AGPL-3.0** — License that guarantees independent auditability of the source code (see [Annex V: License](../anexos/anexo_v_marco_de_seguridad_y_proteccion_de_datos_personales.md#7-license)).
+- **ISO/IEC 27001**: Information security management system (reference framework for institutional deployment policies).
+- **OWASP ASVS** (Application Security Verification Standard): Application security verification standard.
+- **AGPL-3.0**: License that guarantees independent auditability of the source code (see [Annex V: License](../anexos/anexo_v_marco_de_seguridad_y_proteccion_de_datos_personales.md#7-license)).
 
 ### "Security by design" principles applied
 
@@ -27,18 +27,7 @@ According to [Annex V: Security and personal data protection framework](../anexo
 - **Application-level encryption**, complementary to transport encryption (TLS).
 - Optional **blockchain logging** to reinforce the integrity of genetic profiles.
 
-### Deployment recommendations
-
-| Area | Recommendation |
-|---|---|
-| Initial deployment | Regenerate all secrets distributed with the code before production |
-| Service exposure | Institutional reverse proxy with TLS and standard security headers |
-| Network | Segregated segment, with no direct exposure to the Internet |
-| Environment | OS hardening, disk encryption, reliable time synchronization (NTP) |
-| Accounts | Periodic creation/removal and review of the user roster |
-| Backup | Encrypted backup off the main site, with a tested recovery plan |
-| Audit | Periodic external review of deployment and code |
-| People | Annual training, confidentiality agreements, separation of duties |
+Recommendations for institutional deployment (secrets, network, environment, accounts, backup, audit and people) are detailed in [Annex V: Technical recommendations for deployment](../anexos/anexo_v_marco_de_seguridad_y_proteccion_de_datos_personales.md#4-technical-recommendations-for-deployment).
 
 ## Digital public goods standards
 
@@ -52,12 +41,12 @@ GENis's development cycle was explicitly guided by:
 - Agile development methodologies, with a multidisciplinary team of more than 100 experts since 2014 (academia, industry and government).
 - Automated test coverage with a target threshold of 80% (`sbt test`, `sbt coverage`) and style linting (`sbt scalastyle`).
 - Strict separation between the business engine (`app/` / `modules/core`) and the frontend, with stable API contracts between the two.
-- Algorithmic transparency: the LR calculation models are publicly documented in the User Manual (Annexes I–III) to allow independent reproduction by party experts.
+- Algorithmic transparency: the LR calculation models are publicly documented in the [Technical annexes I to III](../anexos/anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md) to allow independent reproduction by party experts.
 
 ## Normative references cited in the documentation
 
 - GNU Affero General Public License, version 3. Free Software Foundation, 2007.
 - OWASP Application Security Verification Standard (ASVS), current version.
-- ISO/IEC 27001: Information security management systems — requirements.
+- ISO/IEC 27001: Information security management systems: requirements.
 - ENFSI, *Guidelines for Best Practice in DNA Analysis* and *DNA Database Management Review and Recommendations* (2023).
-- GENis Statement of Principles — Fundación Sadosky.
+- GENis Statement of Principles. Fundación Sadosky.

@@ -96,6 +96,14 @@
   }
 }
 
+/* A group nested inside a tab (e.g. "Usos forenses" under GENis) is
+   rendered by navigation.sections as a bold section heading, which makes
+   it stand out from its sibling pages. Keep it at the regular weight. */
+.md-nav--primary .md-nav__item--section .md-nav__item--section > .md-nav__link,
+.md-nav--primary .md-nav__item--section .md-nav__item--section > .md-nav__link > .md-nav__link {
+  font-weight: normal;
+}
+
 /* Home page logo: fills the content column (so it scales down on phones).
    Two variants are shipped; Material shows the one matching the color
    scheme via the #only-light / #only-dark URL fragments, which relies on

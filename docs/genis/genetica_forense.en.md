@@ -1,22 +1,29 @@
-GENis is organized into **three forensic modules**, each designed for a distinct problem:
+This page summarizes the scientific foundations GENis uses to compare profiles and assess matches. It follows the path of a profile: how it is described, how it is classified, what it is compared against and how the result is assessed.
 
-| Module | Question it answers |
-|---|---|
-| **Forensic identification of persons** | Does this profile (suspect, convicted person) match evidence from a scene, or another reference profile? |
-| **MPI** (missing persons search) | Is any of these unidentified individuals the relative being sought in this family tree? |
-| **DVI** (disaster victim identification) | Same as MPI, applied to identifying remains in disaster contexts. |
+The three [forensic uses](../usos_forenses/index.md) share the description and classification of the profile, and differ in the type of comparison: **direct** (profile against profile) in criminal investigation and **kinship-based** (pedigree against profile) in MPI and DVI. The formal development of each topic is in the Technical annexes.
 
-This page describes the forensic genetics engine that underpins all three: the kit and marker model, profile categories, the STR matching engine, the likelihood ratio calculation, mitochondrial DNA support, and the MPI/DVI kinship engine based on Bayesian networks.
+## The genetic profile
 
----
+Each profile is described by the markers typed in the laboratory. GENis works mainly with autosomal STR markers and supports, as a complement, mitochondrial DNA haplotypes.
 
-## Kits and markers
+### Kits and markers
 
 Each genetic profile is genotyped with one or more commercial **kits**, and each kit defines a set of **markers** (loci).
 
 - Each kit has an associated **representative parameter K**: the number of markers that kit contributes for evaluating admissibility.
 - Each marker is loaded with its chromosome, valid allelic range, and whether it is **required** or only **accepted** for matching.
 - The system interprets **microvariants** (alleles with a `.x` suffix, which act as a wildcard within a range) and **values outside the marker's allelic ladder**, keeping both the loaded value and the value used for comparison in the result.
+
+### Mitochondrial DNA (mtDNA)
+
+GENis supports mitochondrial DNA profiles as a complement to autosomal STR markers, useful when the genetic material is heavily degraded (old bones, rootless hair) or when the maternal line is of interest, as in MPI/DVI.
+
+- Haplotypes are loaded as differences relative to the **rCRS** reference sequence, already determined externally by the analyst: GENis does not align sequences or interpret chromatograms.
+- Up to 4 position ranges per haplotype are supported, within the regions 16024–16569 and 1–576.
+- Certain highly mutable positions or positions unstable across tissues (16193, 309, 455, 463, 573) are excluded from the exclusion calculation, as they do not provide reliable discriminant value.
+- The mitochondrial match is always calculated in **high-stringency** mode: mismatches between haplotypes are summed and compared against the maximum threshold configured in the profile's category.
+
+Details: [Kits](../administracion/kits.md), [Markers](../administracion/marcadores.md), [Mitochondrial](../administracion/mitocondrial.md) and [Profile registration](../busqueda_de_perfiles/alta_de_perfiles.md).
 
 ## Profile categories and classification
 
@@ -26,7 +33,9 @@ Every profile belongs to a **category**, which is the system's central configura
 - **Association rules**: for example, linking a victim's profile to evidence from a mixture in which they are a known contributor, to optimize the search.
 - **Search rules**: which other categories a new profile is automatically compared against, and at what stringency level.
 
-The **MPI** and **DVI** modules work with a fixed set of categories that cannot be edited or deleted, organized into two groups — **Ante Mortem** (reference profiles of the person being sought: reference individuals, personal items, people searching for their biological identity) and **Post Mortem** (remains and unidentified deceased persons) — with subtypes such as IR, ER, INN, RNN, ENN and PFNI.
+The **MPI** and **DVI** modules work with a fixed set of categories that cannot be edited or deleted, organized into two groups: **Ante Mortem** (reference profiles of the person being sought: reference individuals, personal items, people searching for their biological identity) and **Post Mortem** (remains and unidentified deceased persons), with subtypes such as IR, ER, INN, RNN, ENN and PFNI.
+
+Details: [Categories](../administracion/categorias.md).
 
 ## Allele frequency databases
 
@@ -36,12 +45,14 @@ When the table does not provide minimum frequencies for poorly sampled alleles, 
 
 | Method | Minimum-frequency formula | Depends on |
 |---|---|---|
-| Manual | fixed value | — |
+| Manual | fixed value | (none) |
 | NRC II | 5 / (2N) | N (sample size) |
 | Weir | α / (N + α) | N, α (population heterogeneity) |
 | Budowle–Monson–Chakraborty | (C + α) / (2N + α + C) | N, α, C (the most conservative) |
 
-## STR matching engine: stringency levels
+Details: [Frequency databases](../administracion/bases_de_datos_de_frecuencias.md).
+
+## Direct comparison: STR matching engine
 
 GENis compares profiles marker by marker using a **three-level stringency** scheme recommended by ENFSI:
 
@@ -52,6 +63,8 @@ GENis compares profiles marker by marker using a **three-level stringency** sche
 The stringency level should be chosen according to the search objective: the lower the stringency, the more chance ("adventitious") matches it produces, unrelated to actual kinship.
 
 Additionally, GENis implements a **Mixture–Mixture algorithm**, which evaluates whether two pieces of evidence, each from two contributors, might share a common contributor, as an investigative linkage tool between separate cases. This algorithm is not mixture probabilistic-interpretation software: it does not perform deconvolution or assign contributors, it only prioritizes links within the search engine.
+
+Details: [Annex I](../anexos/anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md) (formal definition) and [Profile matching](../busqueda_de_perfiles/coincidencia_de_perfiles.md) (examples).
 
 ## Statistical evaluation: the Likelihood Ratio (LR)
 
@@ -71,22 +84,17 @@ When two mixture pieces of evidence are compared, GENis can estimate the probabi
 
 The LR reported by GENis is not equivalent to the LR from specialized expert software (LRmix Studio, EuroForMix, STRmix), which implement semi-continuous or continuous models with formal prosecution/defense hypotheses and model peak height intensity (RFU). Unlike those models, GENis does not necessarily require a reference profile to pose a hypothesis, does not formally distinguish prosecution/defense hypotheses the way an expert model does, and produces an **operative LR** whose purpose is to rank and prioritize matches within the system, not to express probative weight in a judicial sense. Any formal evidentiary evaluation must be carried out with software validated for expert use, since GENis does not incorporate RFU information, per-marker drop-out variation, continuous mixture quantification, or modeling of stutter, degradation or inhibition.
 
-## Mitochondrial DNA (mtDNA)
+Details: [Annex II](../anexos/anexo_ii_gestor_de_coincidencias_y_calculos_estadisticos_por_default.md), [Annex III](../anexos/anexo_iii_interpretacion_de_estadisticas_de_evidencias.md) and [LR interpretation in the match manager](../busqueda_de_perfiles/gestor_de_coincidencias_y_calculos_forense.md#interpretation-of-the-lr-in-genis-according-to-comparison-type).
 
-GENis supports mitochondrial DNA profiles as a complement to autosomal STR markers, useful when the genetic material is heavily degraded (old bones, rootless hair) or when the maternal line is of interest, as in MPI/DVI.
+## Kinship comparison: Bayesian networks
 
-- Haplotypes are loaded as differences relative to the **rCRS** reference sequence, already determined externally by the analyst — GENis does not align sequences or interpret chromatograms.
-- Up to 4 position ranges per haplotype are supported, within the regions 16024–16569 and 1–576.
-- Certain highly mutable positions or positions unstable across tissues (16193, 309, 455, 463, 573) are excluded from the exclusion calculation, as they do not provide reliable discriminant value.
-- The mitochondrial match is always calculated in **high-stringency** mode: mismatches between haplotypes are summed and compared against the maximum threshold configured in the profile's category.
-
-## MPI/DVI module: kinship identification with Bayesian networks
-
-The person-search engine solves a problem different from direct STR matching: instead of comparing "profile against profile," it compares a **family pedigree** (with partially known genotypes) against unidentified candidates.
+The kinship engine, used by MPI and DVI, solves a problem different from direct STR matching: instead of comparing "profile against profile," it compares a **family pedigree** (with partially known genotypes) against unidentified candidates.
 
 GENis models each family as a **Bayesian network**, which integrates the pedigree structure and available genotypes to infer the conditional probability table of the sought person's genotype; this allows the LR to be calculated efficiently even for very large databases of unidentified persons, because the probabilities for the sought genotype are calculated only once per family.
 
 The same underlying method was independently validated in the R package **`fbnet`**, comparing its LRs against the reference packages *Familias* and *forrel* over 24 real pedigrees from the Argentine National Genetic Data Bank, with mean errors below 0.2% in most cases. A later work proposes information-theory metrics (Kullback-Leibler divergence, entropy) to quantify how much an available relative contributes to identifying the sought person, implemented in the R package **`forensIT`**; this makes it possible, for example, to prioritize which relative should be genotyped when several options have equal exclusionary power.
+
+Details: [Annex I](../anexos/anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md) and [Missing persons search](../busqueda_de_perfiles/busqueda_de_personas.md). Uses: [MPI](../usos_forenses/busqueda_de_personas_mpi.md) and [DVI](../usos_forenses/identificacion_de_victimas_dvi.md).
 
 ## References
 

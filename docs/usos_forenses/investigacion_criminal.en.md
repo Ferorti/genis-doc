@@ -1,17 +1,12 @@
-# Forensic module
+# Criminal investigation
 
-The GENis forensic module makes it possible to compare the genetic profiles loaded by different institutions in order to answer two investigative questions: whether two events were committed by the same person, and whether that person is already known.
+In criminal investigation, GENis makes it possible to compare the genetic profiles loaded by different institutions in order to answer two investigative questions: whether two events were committed by the same person, and whether that person is already known.
 
 ![](../images/sec22/modulo_forense_f01.png)
 
 ## Profile types
 
-The module works with two types of profiles:
-
-| Type | Origin | Contributor identity |
-|---|---|---|
-| **References** | Samples from identified subjects | Known subject |
-| **Evidence** | Biological material found at a scene | N.N. (unknown) |
+It works with **references**, samples from identified subjects, and **evidence**, biological material found at a scene whose contributor is N.N. (unknown). See [Profiles of known and unknown origin](index.md#profiles-of-known-and-unknown-origin).
 
 ## How it works
 
@@ -39,7 +34,7 @@ When the evidence from a scene matches a reference profile, the contributor is n
 | Evidence with reference | Known individual, repeat offender | Arrest warrant |
 
 !!! note "Scope of a match"
-    A match in GENis is an indication that guides the investigation and must be confirmed and assessed according to each institution's protocols. The criteria used to compare profiles and the associated statistical assessment are explained in [Forensic genetics](../genis/genetica_forense.md) and in [Profile matching](../busqueda_de_perfiles/coincidencia_de_perfiles.md).
+    A match in GENis is an indication that guides the investigation and must be confirmed and assessed according to each institution's protocols. The criteria used to compare profiles and the associated statistical assessment are explained in [Forensic genetics foundations](../genis/genetica_forense.md#direct-comparison-str-matching-engine) and in [Profile matching](../busqueda_de_perfiles/coincidencia_de_perfiles.md).
 
 ## Cross references
 

@@ -8,12 +8,12 @@ Un conjunto de principios ha guiado el diseño del sistema **GENis**, desde su c
 
 - **SEGURIDAD**: en el sistema GENis se aplica el concepto de “seguridad por diseño” que implica comprender a la misma como un proceso dinámico y, por lo tanto, revisable y mejorable en forma permanente. En las versiones vigentes del sistema el concepto queda reflejado a través de un conjunto de atributos: i) autenticación por doble factor; ii) modelo de usuarios y roles; iii) capacidades de trazabilidad y de auditoría sobre las acciones dentro del sistema; iv) utilización de criptografía y tecnologías de registro distribuido (blockchain).
 
-[1] El ciclo de desarrollo del sistema GENis estuvo guiado por el “Estándar de bienes públicos digitales” desarrollado por la Alianza de Bienes Públicos Digitales (DPGA) y por los “Principios de desarrollo digital” propuestos por la Alianza de Impacto Digital (DIA).
-
-- **SOFTWARE LIBRE / ABIERTO**: El sistema GENis nació como un bien público digital y se inspira en sus valores y estándares para proyectar su evolución. La publicación de su código fuente hace efectivos los principios de transparencia, colaboración y seguridad para todos los usuarios directos e indirectos de GENis. El mismo se encuentra en el repositorio público de GitHub de la Fundación Sadosky bajo Licencia GNU Affero General Public License Version 3 (AGPL v3).
+- **SOFTWARE LIBRE / ABIERTO**: El sistema GENis nació como un bien público digital[^1] y se inspira en sus valores y estándares para proyectar su evolución. La publicación de su código fuente hace efectivos los principios de transparencia, colaboración y seguridad para todos los usuarios directos e indirectos de GENis. El mismo se encuentra en el repositorio público de GitHub de la Fundación Sadosky bajo Licencia GNU Affero General Public License Version 3 (AGPL v3).
 
 Todas las herramientas utilizadas para la creación del código del sistema GENis son de licencia libre / abierta, como lo son también sus dependencias y software asociados.
 
 Para mantener nuestros principios de transparencia, colaboración, seguridad y software libre/abierto compartiremos toda la información relacionada con los reportes de los usuarios, no esconderemos errores y seguiremos publicando GENis con licencia de software libre, sin excepciones.
 
 **Disponible en:** *https://github.com/fundacion-sadosky/genis*
+
+[^1]: El ciclo de desarrollo del sistema GENis estuvo guiado por el “Estándar de bienes públicos digitales” desarrollado por la Alianza de Bienes Públicos Digitales (DPGA) y por los “Principios de desarrollo digital” propuestos por la Alianza de Impacto Digital (DIA).

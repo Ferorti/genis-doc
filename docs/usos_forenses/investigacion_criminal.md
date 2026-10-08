@@ -1,17 +1,12 @@
-# Módulo forense
+# Investigación criminal
 
-El módulo forense de GENis permite contrastar los perfiles genéticos cargados por distintas instituciones para responder dos preguntas investigativas: si dos hechos fueron cometidos por la misma persona y si esa persona ya es conocida.
+En investigación criminal, GENis permite contrastar los perfiles genéticos cargados por distintas instituciones para responder dos preguntas investigativas: si dos hechos fueron cometidos por la misma persona y si esa persona ya es conocida.
 
 ![](../images/sec22/modulo_forense_f01.png)
 
 ## Tipos de perfiles
 
-El módulo trabaja con dos tipos de perfiles:
-
-| Tipo | Origen | Identidad del aportante |
-|---|---|---|
-| **Referencias** | Muestras de sujetos identificados | Sujeto conocido |
-| **Evidencias** | Material biológico hallado en una escena | N.N. (desconocido) |
+Se trabaja con **referencias**, muestras de sujetos identificados, y **evidencias**, material biológico hallado en una escena cuyo aportante es N.N. (desconocido). Ver [Perfiles de origen conocido y desconocido](index.md#perfiles-de-origen-conocido-y-desconocido).
 
 ## Funcionamiento
 
@@ -39,7 +34,7 @@ Cuando la evidencia de una escena coincide con el perfil de una referencia, el a
 | Evidencia con referencia | Individuo conocido, sujeto reincidente | Orden de captura |
 
 !!! note "Alcance de la coincidencia"
-    Una coincidencia en GENis es un indicio que orienta la investigación y debe ser confirmada y valorada conforme a los protocolos de cada institución. El criterio con que se comparan los perfiles y la valoración estadística asociada se explican en [Genética forense](../genis/genetica_forense.md) y en [Coincidencia de perfiles](../busqueda_de_perfiles/coincidencia_de_perfiles.md).
+    Una coincidencia en GENis es un indicio que orienta la investigación y debe ser confirmada y valorada conforme a los protocolos de cada institución. El criterio con que se comparan los perfiles y la valoración estadística asociada se explican en [Fundamentos de genética forense](../genis/genetica_forense.md#comparacion-directa-motor-de-coincidencias-str) y en [Coincidencia de perfiles](../busqueda_de_perfiles/coincidencia_de_perfiles.md).
 
 ## Referencias cruzadas
 
