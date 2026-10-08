@@ -1,4 +1,4 @@
-GENis was designed from its inception (2014) based on four pillars set by the **International Society for Forensic Genetics (ISFG)**: adoption of international standards, agile development methodologies, open-source technologies, and information security. This page brings together the concrete technical, scientific and security standards that the system follows.
+GENis was designed from its inception (2014) according to the four principles of its [Declaration of principles](declaracion_de_principios.md): transparency, collaboration, security and free/open source software. The recommendations of the **International Society for Forensic Genetics (ISFG)** on transparency, availability and reproducibility guided the transparency principle. This page brings together the concrete technical, scientific and security standards that the system follows.
 
 ---
 
@@ -6,7 +6,7 @@ GENis was designed from its inception (2014) based on four pillars set by the **
 
 | Organization | Application in GENis |
 |---|---|
-| **ISFG** (International Society for Forensic Genetics), DNA Commission | Transparency, availability and reproducibility of forensic biostatistical calculations. Guides the system's four design pillars (see [Declaration of principles](declaracion_de_principios.md)). |
+| **ISFG** (International Society for Forensic Genetics), DNA Commission | Transparency, availability and reproducibility of forensic biostatistical calculations. Guides the transparency principle (see [Declaration of principles](declaracion_de_principios.md)). |
 | **ENFSI** (European Network of Forensic Science Institutes) | Matching algorithms at high, medium and low stringency ("*Guidelines for Best Practice in DNA Analysis*" and "*DNA Database Management*"). |
 | **INTERPOL** | Reference for the design of interoperability between national/regional genetic databases. |
 | **NRC II** (National Research Council, USA) | Recommendations 4.1 and 4.10 for calculating genotype probabilities from population allele frequencies. |

@@ -83,11 +83,11 @@ plugins:
             Búsqueda de personas (MPI): Missing persons search (MPI)
             Identificación de víctimas de desastres (DVI): Disaster victim identification (DVI)
             Instalación: Installation
-            Requerimientos del sistema: System requirements
-            Instalación con Docker: Installation with Docker
-            Instalación manual: Manual installation
-            Instalación de sistema base: Base system installation
-            Instalación de GENis: GENis installation
+            Instalación de contenedores: Container installation
+            Datos iniciales de GENis: GENis initial data
+            Despliegue en producción: Production deployment
+            Resguardo y recuperación: Backup and recovery
+            Utilidades de desarrollo: Development utilities
             Configuración de RAID: RAID configuration
             Hardening de seguridad: Security hardening
             Registro de control de cambios: Change control log

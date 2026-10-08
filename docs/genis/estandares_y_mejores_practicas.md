@@ -1,4 +1,4 @@
-GENis fue diseñado desde su origen (2014) en base a cuatro pilares fijados por la **Sociedad Internacional de Genética Forense (ISFG)**: adopción de estándares internacionales, metodologías ágiles de desarrollo, tecnologías de código abierto y seguridad de la información. Esta página reúne los estándares técnicos, científicos y de seguridad concretos que el sistema sigue.
+GENis fue diseñado desde su origen (2014) según los cuatro principios de su [Declaración de principios](declaracion_de_principios.md): transparencia, colaboración, seguridad y software libre/abierto. Las recomendaciones de la **Sociedad Internacional de Genética Forense (ISFG)** sobre transparencia, disponibilidad y reproducibilidad orientaron el principio de transparencia. Esta página reúne los estándares técnicos, científicos y de seguridad concretos que el sistema sigue.
 
 ---
 
@@ -6,7 +6,7 @@ GENis fue diseñado desde su origen (2014) en base a cuatro pilares fijados por 
 
 | Organismo | Aplicación en GENis |
 |---|---|
-| **ISFG** (International Society for Forensic Genetics), Comisión de ADN | Transparencia, disponibilidad y reproducibilidad de los cálculos bioestadísticos forenses. Guía los cuatro pilares de diseño del sistema (ver [Declaración de principios](declaracion_de_principios.md)). |
+| **ISFG** (International Society for Forensic Genetics), Comisión de ADN | Transparencia, disponibilidad y reproducibilidad de los cálculos bioestadísticos forenses. Orienta el principio de transparencia (ver [Declaración de principios](declaracion_de_principios.md)). |
 | **ENFSI** (European Network of Forensic Science Institutes) | Algoritmos de coincidencia en exigencia alta, media y baja ("*Guidelines for Best Practice in DNA Analysis*" y "*DNA Database Management*"). |
 | **INTERPOL** | Referencia para el diseño de interoperabilidad entre bases de datos genéticas nacionales/regionales. |
 | **NRC II** (National Research Council, EE.UU.) | Recomendaciones 4.1 y 4.10 para el cálculo de probabilidades de genotipo a partir de frecuencias alélicas poblacionales. |
