@@ -2,7 +2,7 @@
 
 In criminal investigation, GENis makes it possible to compare the genetic profiles loaded by different institutions in order to answer two investigative questions: whether two events were committed by the same person, and whether that person is already known.
 
-![](../images/sec22/modulo_forense_f01.png)
+![](../images/sec22/modulo_forense_f01_en.png)
 
 ## Profile types
 

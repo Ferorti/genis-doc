@@ -6,7 +6,7 @@ Missing persons search (MPI, *Missing Person Identification*) is intended for id
 - Human trafficking.
 - Missing persons.
 
-![](../images/sec22/modulo_mpi_f01.png)
+![](../images/sec22/modulo_mpi_f01_en.png)
 
 ## How it works
 

@@ -2,7 +2,7 @@
 
 GENis is a forensic software solution: a **forensic genetic profile management** system that covers the path genetic information follows from the moment it is obtained in the laboratory until it is used in an investigation. This ability to compare profiles from different events, places and times is the foundation of judicial cooperation between institutions and between countries.
 
-![](../images/sec22/cooperacion_f01.png)
+![](../images/sec22/cooperacion_f01_en.png)
 
 ## From biological material to comparison
 
@@ -10,7 +10,7 @@ The workflow is organized in two complementary stages:
 
 | Stage | What happens | Where |
 |---|---|---|
-| **Profile generation** (labeled *secuenciación* in the figure) | From biological material (hair, blood, fluids, bone tissue, among others) the laboratory obtains the genetic profile and translates it into digital data. | Laboratory, outside GENis |
+| **Genotyping** | From biological material (hair, blood, fluids, bone tissue, among others) the laboratory obtains the genetic profile and translates it into digital data. | Laboratory, outside GENis |
 | **Storage and comparison** | The profile is loaded onto a server, stored and automatically compared against the rest of the profiles in the database. | GENis |
 
 GENis does not interpret laboratory signals or analyze the samples: it receives already determined profiles, manages them and matches them.
