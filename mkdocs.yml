@@ -78,6 +78,9 @@ plugins:
             Genética Forense: Forensic genetics
             Estándares y mejores prácticas: Standards and best practices
             Declaración de principios: Declaration of principles
+            Usos forenses: Forensic uses
+            Módulo forense: Forensic module
+            Módulo de búsqueda de personas (MPI): Missing persons search module (MPI)
             Instalación: Installation
             Requerimientos del sistema: System requirements
             Instalación con Docker: Installation with Docker
@@ -177,12 +180,16 @@ nav:
       - Genética Forense: genis/genetica_forense.md
       - Estándares y mejores prácticas: genis/estandares_y_mejores_practicas.md
       - Declaración de principios: genis/declaracion_de_principios.md
+      - Usos forenses:
+          - Usos forenses: usos_forenses/index.md
+          - Módulo forense: usos_forenses/modulo_forense.md
+          - Módulo de búsqueda de personas (MPI): usos_forenses/modulo_mpi.md
   - Instalación:
-      - Requerimientos del sistema: instalacion/requerimientos_del_sistema.md
-      - Instalación con Docker: instalacion/instalacion_con_docker.md
-      - Instalación manual:
-          - Instalación de sistema base: instalacion/instalacion_de_sistema_base.md
-          - Instalación de GENis: instalacion/instalacion_de_genis.md
+      - Instalación de contenedores: instalacion/instalacion_de_contenedores.md
+      - Datos iniciales de GENis: instalacion/datos_iniciales.md
+      - Despliegue en producción: instalacion/despliegue_en_produccion.md
+      - Resguardo y recuperación: instalacion/resguardo_y_recuperacion.md
+      - Utilidades de desarrollo: instalacion/utilidades_de_desarrollo.md
       - Configuración de RAID: instalacion/configuracion_de_raid.md
       - Hardening de seguridad: instalacion/hardening_de_seguridad.md
       - Registro de control de cambios: instalacion/registro_de_control_de_cambios.md

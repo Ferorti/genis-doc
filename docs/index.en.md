@@ -1,4 +1,8 @@
-# GENis 5.1.15
+![GENis logo](images/assets/logo_blanco.svg#only-light){ .genis-logo .off-glb }
+![GENis logo](images/assets/logo_negro.svg#only-dark){ .genis-logo .off-glb }
+
+# GENis { .sr-only }
+
 
 GENis software is a computer tool developed by the [Fundación Dr. Manuel Sadosky](https://www.fundacionsadosky.org.ar) that allows comparing genetic profiles obtained from biological samples collected at different crime or disaster scenes, thereby linking events that occurred at different times and places, increasing the chances of identifying offenders, missing persons, or victims of disasters.
 

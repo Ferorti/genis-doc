@@ -61,6 +61,15 @@
   background-color: hsla(var(--md-hue), 15%, 9%, 1);
 }
 
+/* In light mode the header/tabs bar uses a softer pink than the brand
+   primary (#D061B4). Only these backgrounds are overridden, so buttons,
+   links and other primary-colored elements keep the brand color. */
+[data-md-color-scheme="default"][data-md-color-primary="custom"] .md-header,
+[data-md-color-scheme="default"][data-md-color-primary="custom"] .md-tabs,
+[data-md-color-scheme="default"][data-md-color-primary="custom"] .md-nav--primary .md-nav__title[for="__drawer"] {
+  background-color: #b66c9f;
+}
+
 /* "Inicio" / "Home" hint injected by nav-fix.js, pinned right next to the
    back-arrow icon (which sits at left:12px/top:12px/24x24 in this title).
    Positioned absolutely so it never shares a line, wraps, or competes with
@@ -75,4 +84,39 @@
   color: var(--md-default-fg-color--light);
   font-weight: normal;
   white-space: nowrap;
+}
+
+/* On desktop the active tab already names the section, so the sidebar
+   heading repeating it ("Instalación" above the Instalación pages) is
+   redundant. Hidden only where the tabs bar is visible; the mobile drawer
+   keeps its section title because there it is the only context shown. */
+@media screen and (min-width: 76.25em) {
+  .md-nav--primary > .md-nav__list > .md-nav__item--section > label.md-nav__link[for^="__nav_"] {
+    display: none;
+  }
+}
+
+/* Home page logo: fills the content column (so it scales down on phones).
+   Two variants are shipped; Material shows the one matching the color
+   scheme via the #only-light / #only-dark URL fragments, which relies on
+   Material's own display:none rule, so no display value is set here. */
+.md-typeset img.genis-logo {
+  width: 100%;
+  height: auto;
+  margin: 0 0 1rem;
+  vertical-align: bottom;
+}
+
+/* Visually hidden but still exposed to screen readers and search engines.
+   Used for the home page <h1>, whose text is already shown by the logo. */
+.md-typeset .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
