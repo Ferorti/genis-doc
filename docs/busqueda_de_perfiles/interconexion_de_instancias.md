@@ -4,6 +4,8 @@ La interconexión de instancias constituye uno de los pilares centrales del ecos
 
 Este esquema replica, en escala nacional, los principios de redes internacionales como **Prüm** en la Unión Europea, **NDIS/CODIS** en EE. UU. y los lineamientos de **ISFG** y **ENFSI** para intercambio transinstitucional. Al igual que en esos sistemas, la interconexión en GENis requiere que exista una armonización mínima entre las instancias para que los perfiles puedan interpretarse correctamente y las coincidencias tengan sentido científico.
 
+El Tratado de Prüm, firmado en 2005 y hoy vigente entre 14 países europeos, es el antecedente más conocido: habilita el intercambio automatizado de ADN forense, huellas dactilares y patentes vehiculares entre bases de datos nacionales. La razón de fondo es que el crimen organizado es cada vez más transnacional, lo que vuelve necesarios registros regionales de datos genéticos forenses. GENis procura ser un bien público digital disponible para todas las regiones.
+
 ## Funcionamiento general del intercambio
 
 Cuando un laboratorio necesita compartir un perfil genético con otra instancia —por ejemplo, enviar un perfil provincial a la instancia nacional— GENis genera un paquete que contiene:

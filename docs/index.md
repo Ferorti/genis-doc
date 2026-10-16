@@ -10,7 +10,7 @@ El sistema integra herramientas de genética forense y bioinformática con el ob
 
 ## Origen
 
-El desarrollo de GENis se inscribe en un proceso institucional de articulación entre organismos judiciales, la comunidad científica y el sector tecnológico de América Latina, orientado a dotar a los países de una herramienta propia para la gestión de bases de datos genéticos forenses. Desde su concepción, el sistema fue diseñado a partir de requerimientos operativos reales de laboratorios forenses y organismos judiciales, y tomando como referencia estándares y recomendaciones internacionales vigentes en la materia.
+El desarrollo de GENis se inscribe en un proceso institucional de articulación entre organismos judiciales, la comunidad científica y el sector tecnológico de América Latina, orientado a dotar a los países de una herramienta propia para la gestión de bases de datos genéticos forenses. Desde su concepción, el sistema fue diseñado a partir de requerimientos operativos reales de laboratorios forenses y organismos judiciales, y tomando como referencia estándares y recomendaciones internacionales vigentes en la materia. El requerimiento surgió en 2014 de los ministerios públicos del país; hoy el sistema está desplegado en 20 de las 24 jurisdicciones argentinas y en instituciones de otros países de América Latina. El recorrido, las validaciones y las publicaciones científicas se resumen en [Trayectoria y validación](genis/trayectoria_y_validacion.md).
 
 En particular, la arquitectura y el funcionamiento de GENis se encuentran alineados con las recomendaciones de la **Sociedad Internacional de Genética Forense (ISFG)**, la **European Network of Forensic Science Institutes (ENFSI)** e **INTERPOL**, entre otros organismos de referencia. Estos lineamientos se reflejan tanto en los criterios de admisibilidad y búsqueda de coincidencias como en la transparencia de los modelos de cálculo, la auditabilidad del sistema y la protección de la información genética almacenada.
 
@@ -30,7 +30,7 @@ Este manual describe el funcionamiento de GENis, abordando tanto los aspectos co
 
 | Solapa | Contenido |
 |---|---|
-| **GENis** | Qué es el sistema, para qué se usa ([Usos forenses](usos_forenses/index.md)), qué funciones ofrece ([Funcionalidades del sistema](genis/funcionalidades_del_sistema.md)), en qué se basan sus cálculos ([Fundamentos de genética forense](genis/genetica_forense.md)) y bajo qué principios y estándares fue diseñado. |
+| **GENis** | Qué es el sistema, para qué se usa ([Usos forenses](usos_forenses/index.md)), qué funciones ofrece ([Funcionalidades del sistema](genis/funcionalidades_del_sistema.md)), en qué se basan sus cálculos ([Fundamentos de genética forense](genis/genetica_forense.md)) bajo qué principios y estándares fue diseñado, y cómo se validó y se desplegó ([Trayectoria y validación](genis/trayectoria_y_validacion.md)). |
 | **Instalación** | Puesta en marcha de los servicios con contenedores, despliegue en producción, resguardo y endurecimiento del servidor. Comienza en [Instalación de contenedores](instalacion/instalacion_de_contenedores.md). |
 | **Administración** | Configuración institucional y de catálogos: cuentas, roles, laboratorios, categorías, kits, marcadores y frecuencias. Comienza en [Solicitar una cuenta](administracion/solicitar_una_cuenta.md). |
 | **Búsqueda de perfiles** | Operación diaria: alta y baja de perfiles, coincidencias, búsqueda de personas e interconexión de instancias. Comienza en [Alta de perfiles](busqueda_de_perfiles/alta_de_perfiles.md). |

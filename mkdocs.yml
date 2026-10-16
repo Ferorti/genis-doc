@@ -77,6 +77,7 @@ plugins:
             Funcionalidades del sistema: System functionalities
             Fundamentos de genética forense: Forensic genetics foundations
             Estándares y mejores prácticas: Standards and best practices
+            Trayectoria y validación: Track record and validation
             Declaración de principios: Declaration of principles
             Usos forenses: Forensic uses
             Investigación criminal: Criminal investigation
@@ -184,6 +185,7 @@ nav:
           - Identificación de víctimas de desastres (DVI): usos_forenses/identificacion_de_victimas_dvi.md
       - Funcionalidades del sistema: genis/funcionalidades_del_sistema.md
       - Fundamentos de genética forense: genis/genetica_forense.md
+      - Trayectoria y validación: genis/trayectoria_y_validacion.md
       - Declaración de principios: genis/declaracion_de_principios.md
       - Estándares y mejores prácticas: genis/estandares_y_mejores_practicas.md
   - Instalación:

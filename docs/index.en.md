@@ -10,7 +10,7 @@ The system integrates forensic genetics and bioinformatics tools, with the aim o
 
 ## Origin
 
-The development of GENis is part of an institutional process of coordination among judicial bodies, the scientific community and the technology sector of Latin America, aimed at providing countries with their own tool for managing forensic genetic databases. Since its conception, the system was designed based on the real operational requirements of forensic laboratories and judicial bodies, and taking as a reference current international standards and recommendations in the field.
+The development of GENis is part of an institutional process of coordination among judicial bodies, the scientific community and the technology sector of Latin America, aimed at providing countries with their own tool for managing forensic genetic databases. Since its conception, the system was designed based on the real operational requirements of forensic laboratories and judicial bodies, and taking as a reference current international standards and recommendations in the field. The requirement arose in 2014 from the country's public prosecution offices; today the system is deployed in 20 of the 24 Argentine jurisdictions and at institutions in other Latin American countries. Its history, validations and scientific publications are summarized in [Track record and validation](genis/trayectoria_y_validacion.md).
 
 In particular, the architecture and operation of GENis are aligned with the recommendations of the **International Society for Forensic Genetics (ISFG)**, the **European Network of Forensic Science Institutes (ENFSI)** and **INTERPOL**, among other reference bodies. These guidelines are reflected both in the admissibility and match-search criteria and in the transparency of the calculation models, the system's auditability and the protection of the stored genetic information.
 
@@ -30,7 +30,7 @@ This manual describes how GENis works, addressing both the conceptual and the op
 
 | Tab | Content |
 |---|---|
-| **GENis** | What the system is, what it is used for ([Forensic uses](usos_forenses/index.md)), which functions it offers ([System functionalities](genis/funcionalidades_del_sistema.md)), what its calculations are based on ([Forensic genetics foundations](genis/genetica_forense.md)) and the principles and standards it was designed under. |
+| **GENis** | What the system is, what it is used for ([Forensic uses](usos_forenses/index.md)), which functions it offers ([System functionalities](genis/funcionalidades_del_sistema.md)), what its calculations are based on ([Forensic genetics foundations](genis/genetica_forense.md)) the principles and standards it was designed under, and how it was validated and deployed ([Track record and validation](genis/trayectoria_y_validacion.md)). |
 | **Installation** | Setting up the services with containers, production deployment, backup and server hardening. Starts at [Container installation](instalacion/instalacion_de_contenedores.md). |
 | **Administration** | Institutional and catalog configuration: accounts, roles, laboratories, categories, kits, markers and frequencies. Starts at [Requesting an account](administracion/solicitar_una_cuenta.md). |
 | **Profile search** | Daily operation: profile registration and deactivation, matches, missing persons search and instance interconnection. Starts at [Profile registration](busqueda_de_perfiles/alta_de_perfiles.md). |

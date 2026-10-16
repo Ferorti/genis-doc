@@ -4,6 +4,8 @@ Instance interconnection is one of the central pillars of the GENis ecosystem, s
 
 This scheme replicates, on a national scale, the principles of international networks such as **Prüm** in the European Union, **NDIS/CODIS** in the US, and the guidelines of **ISFG** and **ENFSI** for cross-institutional exchange. As in those systems, interconnection in GENis requires a minimum level of harmonization between instances so that profiles can be correctly interpreted and matches make scientific sense.
 
+The Prüm Treaty, signed in 2005 and now in force among 14 European countries, is the best-known precedent: it enables automated exchange of forensic DNA, fingerprints and vehicle registration data between national databases. The underlying reason is that organized crime is increasingly transnational, which makes regional forensic genetic databases necessary. GENis aims to be a digital public good available to all regions.
+
 ## General operation of the exchange
 
 When a laboratory needs to share a genetic profile with another instance —for example, sending a provincial profile to the national instance— GENis generates a package that contains:
