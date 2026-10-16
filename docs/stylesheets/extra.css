@@ -128,3 +128,31 @@
   white-space: nowrap;
   border: 0;
 }
+
+/* Declaration of principles: one card per principle, with the brand pink
+   as the accent bar. Colors come from Material variables so the cards
+   follow the light/dark scheme without extra rules. */
+.md-typeset .principle {
+  margin: 1.2rem 0;
+  padding: .1rem 1.2rem .6rem;
+  border: .05rem solid var(--md-default-fg-color--lightest);
+  border-left: .2rem solid var(--md-primary-fg-color);
+  border-radius: .2rem;
+  background-color: var(--md-code-bg-color);
+}
+
+.md-typeset .principle h2 {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: .9rem 0 .6rem;
+}
+
+.md-typeset .principle h2 .twemoji {
+  color: var(--md-primary-fg-color);
+}
+
+.md-typeset .principle h2 .twemoji svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
