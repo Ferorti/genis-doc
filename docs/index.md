@@ -24,9 +24,9 @@ Su eje central es un **motor de búsqueda de coincidencias** que da soporte a tr
 
 Complementariamente, GENis incorpora mecanismos de seguridad, control de accesos, auditoría y trazabilidad, que registran de manera detallada todas las acciones realizadas sobre perfiles, análisis, coincidencias y escenarios. Estas características resultan fundamentales para el cumplimiento de los requisitos de calidad, integridad y control exigidos por las normas y recomendaciones internacionales aplicables a bases de datos genéticas forenses.
 
-## Cómo está organizado este manual
+## Estructura de la documentación
 
-Este manual describe el funcionamiento de GENis, abordando tanto los aspectos conceptuales como los operativos necesarios para su correcta utilización. Está dirigido a genetistas forenses, operadores técnicos, responsables de bases de datos, legisladores, comunidad académica y ONGs.
+Esta documentación describe el funcionamiento de GENis, abordando tanto los aspectos conceptuales como los operativos necesarios para su correcta utilización. Está dirigido a genetistas forenses, operadores técnicos, responsables de bases de datos, legisladores, comunidad académica y ONGs.
 
 | Solapa | Contenido |
 |---|---|

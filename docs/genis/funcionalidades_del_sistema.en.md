@@ -1,4 +1,4 @@
-This section describes the main functionalities of GENis, organized by operational modules. Each module lists the manual pages where its operation is detailed.
+This section describes the main functionalities of GENis, organized by operational modules. Each module lists the documentation pages where its operation is detailed.
 
 
 ## User management and access control

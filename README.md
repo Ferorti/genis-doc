@@ -39,7 +39,7 @@ GENis está desarrollado sobre una arquitectura de software multicapa, utilizand
   - Registro y auditoría de operaciones.
 - **Criptografía y mecanismos de protección de datos**, según lo especificado en la documentación técnica.
 
-Estas tecnologías y componentes se describen en detalle en la documentación técnica y en los manuales del sistema.
+Estas tecnologías y componentes se describen en detalle en la documentación técnica del proyecto.
 
 
 
@@ -62,7 +62,7 @@ La descripción completa del sistema, su arquitectura, funcionamiento, validacio
 
 - Visión general y objetivos.
 - Arquitectura del software.
-- Manual de usuario.
+- Guía de uso del sistema.
 - Procedimiento de instalación.
 - Estándares, validaciones y lineamientos de seguridad.
 - Modelos de soporte y gobernanza.

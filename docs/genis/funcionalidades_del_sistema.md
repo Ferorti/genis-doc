@@ -1,4 +1,4 @@
-Esta sección describe las funcionalidades principales de GENis, organizadas por módulos operativos. Cada módulo indica las páginas del manual donde se detalla su operación.
+Esta sección describe las funcionalidades principales de GENis, organizadas por módulos operativos. Cada módulo indica las páginas de la documentación donde se detalla su operación.
 
 
 ## Gestión de usuarios y control de acceso

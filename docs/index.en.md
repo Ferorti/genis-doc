@@ -24,9 +24,9 @@ Its core is a **matching engine** that supports three forensic uses: criminal in
 
 In addition, GENis incorporates security, access control, audit and traceability mechanisms that record in detail all actions performed on profiles, analyses, matches and scenarios. These features are essential for meeting the quality, integrity and control requirements demanded by the international standards and recommendations applicable to forensic genetic databases.
 
-## How this manual is organized
+## Documentation structure
 
-This manual describes how GENis works, addressing both the conceptual and the operational aspects necessary for its correct use. It is aimed at forensic geneticists, technical operators, database managers, legislators, the academic community and NGOs.
+This documentation describes how GENis works, addressing both the conceptual and the operational aspects necessary for its correct use. It is aimed at forensic geneticists, technical operators, database managers, legislators, the academic community and NGOs.
 
 | Tab | Content |
 |---|---|
