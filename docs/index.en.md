@@ -34,7 +34,7 @@ This documentation describes how GENis works, addressing both the conceptual and
 
 | Tab | Content |
 |---|---|
-| **Overview** | What the system is, what it is used for ([Fields of application](usos_forenses/index.md)), which functions it offers ([System functionalities](genis/funcionalidades_del_sistema.md)), what its calculations are based on the principles and standards it was designed under, and how it was validated and deployed ([Track record and validation](genis/trayectoria_y_validacion.md)). |
+| **GENis** | What the system is, what it is used for ([Fields of application](usos_forenses/index.md)), which functions it offers ([System functionalities](genis/funcionalidades_del_sistema.md)), what its calculations are based on the principles and standards it was designed under, and how it was validated and deployed ([Track record and validation](genis/trayectoria_y_validacion.md)). |
 | **Installation** | Setting up the services with containers, production deployment, backup and server hardening. Starts at [Container installation](instalacion/instalacion_de_contenedores.md). |
 | **Administration** | Institutional and catalog configuration: accounts, roles, laboratories, categories, kits, markers and frequencies. Starts at [Requesting an account](administracion/solicitar_una_cuenta.md). |
 | **Operation** | Daily operation: profile registration and deactivation, matches, missing persons search and instance interconnection. Starts at [Profile registration](busqueda_de_perfiles/alta_de_perfiles.md). |

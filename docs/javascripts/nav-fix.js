@@ -52,3 +52,28 @@ new MutationObserver(addHomeHints).observe(document.body, {
   childList: true,
   subtree: true,
 });
+
+// The GENis tab is named "GENis", but Material labels the tab's index page
+// (the home page) in the sidebar with the section title, so it would read
+// "GENis" again. Relabel that link as "Visión general" / "Overview" in the
+// sidebar only; the tab itself keeps its name.
+function relabelHomeEntry() {
+  var isEnglish = document.documentElement.lang.indexOf("en") === 0;
+  var text = isEnglish ? "Overview" : "Visión general";
+  var links = document.querySelectorAll(
+    ".md-sidebar--primary .md-nav__item--section > .md-nav__container > a.md-nav__link:not([data-relabeled])"
+  );
+  links.forEach(function (link) {
+    var label = link.querySelector(".md-ellipsis");
+    if (label) {
+      label.textContent = text;
+    }
+    link.setAttribute("data-relabeled", "true");
+  });
+}
+
+relabelHomeEntry();
+new MutationObserver(relabelHomeEntry).observe(document.body, {
+  childList: true,
+  subtree: true,
+});

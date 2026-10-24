@@ -175,8 +175,8 @@ copyright: >
   <a href="https://www.fundacionsadosky.org.ar" target="_blank" rel="noopener">Fundación Sadosky</a>
 
 nav:
-  - Visión general:
-      - GENis: index.md
+  - GENis:
+      - Visión general: index.md
       - Ámbitos de aplicación: usos_forenses/index.md
       - Funcionalidades del sistema: genis/funcionalidades_del_sistema.md
       - Trayectoria y validación: genis/trayectoria_y_validacion.md

@@ -34,7 +34,7 @@ Esta documentación describe el funcionamiento de GENis, abordando tanto los asp
 
 | Solapa | Contenido |
 |---|---|
-| **Visión general** | Qué es el sistema, para qué se usa ([Ámbitos de aplicación](usos_forenses/index.md)), qué funciones ofrece ([Funcionalidades del sistema](genis/funcionalidades_del_sistema.md)), en qué se basan sus cálculos bajo qué principios y estándares fue diseñado, y cómo se validó y se desplegó ([Trayectoria y validación](genis/trayectoria_y_validacion.md)). |
+| **GENis** | Qué es el sistema, para qué se usa ([Ámbitos de aplicación](usos_forenses/index.md)), qué funciones ofrece ([Funcionalidades del sistema](genis/funcionalidades_del_sistema.md)), en qué se basan sus cálculos bajo qué principios y estándares fue diseñado, y cómo se validó y se desplegó ([Trayectoria y validación](genis/trayectoria_y_validacion.md)). |
 | **Instalación** | Puesta en marcha de los servicios con contenedores, despliegue en producción, resguardo y endurecimiento del servidor. Comienza en [Instalación de contenedores](instalacion/instalacion_de_contenedores.md). |
 | **Administración** | Configuración institucional y de catálogos: cuentas, roles, laboratorios, categorías, kits, marcadores y frecuencias. Comienza en [Solicitar una cuenta](administracion/solicitar_una_cuenta.md). |
 | **Operación** | Operación diaria: alta y baja de perfiles, coincidencias, búsqueda de personas e interconexión de instancias. Comienza en [Alta de perfiles](busqueda_de_perfiles/alta_de_perfiles.md). |
