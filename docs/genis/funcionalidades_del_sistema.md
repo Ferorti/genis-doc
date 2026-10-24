@@ -84,7 +84,7 @@ Ver: [Gestor de coincidencias y cálculos forense](../busqueda_de_perfiles/gesto
 
 ## Búsqueda de personas e identificación de víctimas (MPI y DVI)
 
-Permite gestionar los casos de [búsqueda de personas (MPI)](../usos_forenses/busqueda_de_personas_mpi.md) y de [identificación de víctimas de desastres (DVI)](../usos_forenses/identificacion_de_victimas_dvi.md), basados en la comparación por parentesco.
+Permite gestionar los casos de [búsqueda de personas (MPI)](../usos_forenses/index.md#busqueda-de-personas-desaparecidas) y de [identificación de víctimas de desastres (DVI)](../usos_forenses/index.md#identificacion-de-victimas-de-desastres), basados en la comparación por parentesco.
 
 - Creación y seguimiento de casos.
 - Asociación de perfiles de referencia y, en DVI, de perfiles post mortem.

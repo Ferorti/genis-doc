@@ -4,9 +4,13 @@
 # GENis { .sr-only }
 
 
-GENis is an open computer system, developed by the [Fundación Dr. Manuel Sadosky](https://www.fundacionsadosky.org.ar), for the storage, exchange and comparison of genetic profiles for forensic purposes. It allows comparing profiles obtained from biological samples collected at different crime or disaster scenes, linking events that occurred at different times and places and increasing the chances of identifying offenders, missing persons or victims of disasters.
+GENis is an open computer system, developed by the [Fundación Dr. Manuel Sadosky](https://www.fundacionsadosky.org.ar), for the storage, exchange and comparison of genetic profiles for forensic purposes. It is a forensic genetic profile management software that covers the path of genetic information, from the moment it is obtained in the laboratory until it is used in an investigation.
+
+It allows comparing profiles obtained from biological samples collected at different crime or disaster scenes, linking events that occurred at different times and places. This ability to compare is the foundation of judicial cooperation between institutions and between countries, and increases the chances of identifying offenders, missing persons or victims of disasters.
 
 The system integrates forensic genetics and bioinformatics tools, with the aim of facilitating the systematic comparison of genetic profiles, ensuring the traceability of information and strengthening the technical and evidentiary quality of the results obtained.
+
+![](images/sec22/cooperacion_f01_en.png)
 
 ## Origin
 
@@ -20,7 +24,7 @@ In particular, the architecture and operation of GENis are aligned with the reco
 
 GENis allows the entry and management of autosomal STR, Y-chromosome, X-chromosome and mitochondrial DNA genetic profiles. The system is highly configurable, making it possible to define profile categories, admission rules, search parameters and comparison criteria in accordance with the regulations and policies of each jurisdiction or laboratory.
 
-Its core is a **matching engine** that supports three forensic uses: criminal investigation, missing persons search (MPI) and disaster victim identification (DVI). They are described in [Forensic uses](usos_forenses/index.md).
+Its core is a **matching engine** that supports its main uses: forensic analysis, missing persons search (MPI), missing minors search and disaster victim identification (DVI). They are described in [Fields of application](usos_forenses/index.md).
 
 In addition, GENis incorporates security, access control, audit and traceability mechanisms that record in detail all actions performed on profiles, analyses, matches and scenarios. These features are essential for meeting the quality, integrity and control requirements demanded by the international standards and recommendations applicable to forensic genetic databases.
 
@@ -30,8 +34,9 @@ This documentation describes how GENis works, addressing both the conceptual and
 
 | Tab | Content |
 |---|---|
-| **GENis** | What the system is, what it is used for ([Forensic uses](usos_forenses/index.md)), which functions it offers ([System functionalities](genis/funcionalidades_del_sistema.md)), what its calculations are based on ([Forensic genetics foundations](genis/genetica_forense.md)) the principles and standards it was designed under, and how it was validated and deployed ([Track record and validation](genis/trayectoria_y_validacion.md)). |
+| **Overview** | What the system is, what it is used for ([Fields of application](usos_forenses/index.md)), which functions it offers ([System functionalities](genis/funcionalidades_del_sistema.md)), what its calculations are based on the principles and standards it was designed under, and how it was validated and deployed ([Track record and validation](genis/trayectoria_y_validacion.md)). |
 | **Installation** | Setting up the services with containers, production deployment, backup and server hardening. Starts at [Container installation](instalacion/instalacion_de_contenedores.md). |
 | **Administration** | Institutional and catalog configuration: accounts, roles, laboratories, categories, kits, markers and frequencies. Starts at [Requesting an account](administracion/solicitar_una_cuenta.md). |
-| **Profile search** | Daily operation: profile registration and deactivation, matches, missing persons search and instance interconnection. Starts at [Profile registration](busqueda_de_perfiles/alta_de_perfiles.md). |
+| **Operation** | Daily operation: profile registration and deactivation, matches, missing persons search and instance interconnection. Starts at [Profile registration](busqueda_de_perfiles/alta_de_perfiles.md). |
+| **Forensic Genetics Concepts** | What the GENis calculations are based on: profile description and classification, direct and kinship-based comparison, and assessment of results. Starts at [Forensic Genetics Concepts](genis/genetica_forense.md). |
 | **Technical annexes** | Formal development of the algorithms and statistical models, error dictionary and security framework. Starts at [Annex I](anexos/anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md). |

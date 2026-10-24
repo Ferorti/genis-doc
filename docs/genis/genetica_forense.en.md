@@ -1,6 +1,6 @@
 This page summarizes the scientific foundations GENis uses to compare profiles and assess matches. It follows the path of a profile: how it is described, how it is classified, what it is compared against and how the result is assessed.
 
-The three [forensic uses](../usos_forenses/index.md) share the description and classification of the profile, and differ in the type of comparison: **direct** (profile against profile) in criminal investigation and **kinship-based** (pedigree against profile) in MPI and DVI. The formal development of each topic is in the Technical annexes.
+The [main uses of GENis](../usos_forenses/index.md) share the description and classification of the profile, and differ in the type of comparison: **direct** (profile against profile) in forensic analysis and **kinship-based** (pedigree against profile) in MPI and DVI. The formal development of each topic is in the Technical annexes.
 
 ## The genetic profile
 
@@ -94,7 +94,7 @@ GENis models each family as a **Bayesian network**, which integrates the pedigre
 
 The same underlying method was independently validated in the R package **`fbnet`**, comparing its LRs against the reference packages *Familias* and *forrel* over 24 real pedigrees from the Argentine National Genetic Data Bank, with mean errors below 0.2% in most cases. A later work proposes information-theory metrics (Kullback-Leibler divergence, entropy) to quantify how much an available relative contributes to identifying the sought person, implemented in the R package **`forensIT`**; this makes it possible, for example, to prioritize which relative should be genotyped when several options have equal exclusionary power.
 
-Details: [Annex I](../anexos/anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md) and [Missing persons search](../busqueda_de_perfiles/busqueda_de_personas.md). Uses: [MPI](../usos_forenses/busqueda_de_personas_mpi.md) and [DVI](../usos_forenses/identificacion_de_victimas_dvi.md).
+Details: [Annex I](../anexos/anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md) and [Missing persons search](../busqueda_de_perfiles/busqueda_de_personas.md). Uses: [MPI](../usos_forenses/index.md#missing-persons-search) and [DVI](../usos_forenses/index.md#disaster-victim-identification).
 
 ## References
 

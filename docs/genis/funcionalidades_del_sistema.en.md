@@ -84,7 +84,7 @@ See: [Match manager and forensic calculations](../busqueda_de_perfiles/gestor_de
 
 ## Missing persons search and victim identification (MPI and DVI)
 
-Allows managing [missing persons search (MPI)](../usos_forenses/busqueda_de_personas_mpi.md) and [disaster victim identification (DVI)](../usos_forenses/identificacion_de_victimas_dvi.md) cases, based on kinship comparison.
+Allows managing [missing persons search (MPI)](../usos_forenses/index.md#missing-persons-search) and [disaster victim identification (DVI)](../usos_forenses/index.md#disaster-victim-identification) cases, based on kinship comparison.
 
 - Case creation and follow-up.
 - Association of reference profiles and, in DVI, post mortem profiles.

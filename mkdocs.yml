@@ -74,15 +74,13 @@ plugins:
           build: true
           nav_translations:
             GENis: GENis
+            Visión general: Overview
             Funcionalidades del sistema: System functionalities
-            Fundamentos de genética forense: Forensic genetics foundations
+            Conceptos de Genética Forense: Forensic Genetics Concepts
             Estándares y mejores prácticas: Standards and best practices
             Trayectoria y validación: Track record and validation
             Declaración de principios: Declaration of principles
-            Usos forenses: Forensic uses
-            Investigación criminal: Criminal investigation
-            Búsqueda de personas (MPI): Missing persons search (MPI)
-            Identificación de víctimas de desastres (DVI): Disaster victim identification (DVI)
+            Ámbitos de aplicación: Fields of application
             Instalación: Installation
             Instalación de contenedores: Container installation
             Datos iniciales de GENis: GENis initial data
@@ -107,7 +105,7 @@ plugins:
             Notificaciones: Notifications
             Tipificación de motivos: Reason coding
             Reportes: Reports
-            Búsqueda de perfiles: Profile search
+            Operación: Operation
             Alta de perfiles: Profile registration
             Baja de perfiles: Profile deactivation
             Comparador de perfiles: Profile comparator
@@ -176,15 +174,10 @@ copyright: >
   <a href="https://www.fundacionsadosky.org.ar" target="_blank" rel="noopener">Fundación Sadosky</a>
 
 nav:
-  - GENis:
+  - Visión general:
       - GENis: index.md
-      - Usos forenses:
-          - Usos forenses: usos_forenses/index.md
-          - Investigación criminal: usos_forenses/investigacion_criminal.md
-          - Búsqueda de personas (MPI): usos_forenses/busqueda_de_personas_mpi.md
-          - Identificación de víctimas de desastres (DVI): usos_forenses/identificacion_de_victimas_dvi.md
+      - Ámbitos de aplicación: usos_forenses/index.md
       - Funcionalidades del sistema: genis/funcionalidades_del_sistema.md
-      - Fundamentos de genética forense: genis/genetica_forense.md
       - Trayectoria y validación: genis/trayectoria_y_validacion.md
       - Declaración de principios: genis/declaracion_de_principios.md
       - Estándares y mejores prácticas: genis/estandares_y_mejores_practicas.md
@@ -212,7 +205,7 @@ nav:
       - Notificaciones: administracion/notificaciones.md
       - Tipificación de motivos: administracion/tipificacion_de_motivos.md
       - Reportes: administracion/reportes.md
-  - Búsqueda de perfiles:
+  - Operación:
       - Alta de perfiles: busqueda_de_perfiles/alta_de_perfiles.md
       - Baja de perfiles: busqueda_de_perfiles/baja_de_perfiles.md
       - Comparador de perfiles: busqueda_de_perfiles/comparador_de_perfiles.md
@@ -221,6 +214,7 @@ nav:
       - Coincidencia de perfiles: busqueda_de_perfiles/coincidencia_de_perfiles.md
       - Búsqueda de personas: busqueda_de_perfiles/busqueda_de_personas.md
       - Interconexión de instancias: busqueda_de_perfiles/interconexion_de_instancias.md
+  - Conceptos de Genética Forense: genis/genetica_forense.md
   - Anexos técnicos:
       - Anexo I - Algoritmo de búsqueda de coincidencias de STR: anexos/anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md
       - Anexo II - Gestor de coincidencias y cálculos estadísticos por default: anexos/anexo_ii_gestor_de_coincidencias_y_calculos_estadisticos_por_default.md

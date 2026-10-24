@@ -1,6 +1,6 @@
 Esta página resume los fundamentos científicos con los que GENis compara perfiles y valora coincidencias. Sigue el recorrido de un perfil: cómo se describe, cómo se clasifica, contra qué se compara y cómo se valora el resultado.
 
-Los tres [usos forenses](../usos_forenses/index.md) comparten la descripción y la clasificación del perfil, y se diferencian en el tipo de comparación: **directa** (perfil contra perfil) en investigación criminal y **por parentesco** (pedigrí contra perfil) en MPI y DVI. El desarrollo formal de cada tema se encuentra en los Anexos técnicos.
+Los [usos principales de GENis](../usos_forenses/index.md) comparten la descripción y la clasificación del perfil, y se diferencian en el tipo de comparación: **directa** (perfil contra perfil) en análisis forense y **por parentesco** (pedigrí contra perfil) en MPI y DVI. El desarrollo formal de cada tema se encuentra en los Anexos técnicos.
 
 ## El perfil genético
 
@@ -94,7 +94,7 @@ GENis modela cada familia como una **red bayesiana**, que integra la estructura 
 
 El mismo fundamento fue validado de forma independiente en el paquete R **`fbnet`**, contrastando sus LR contra los paquetes de referencia *Familias* y *forrel* sobre 24 pedigríes reales del Banco Nacional de Datos Genéticos argentino, con errores medios por debajo del 0,2% en la mayoría de los casos. Un trabajo posterior propone métricas de teoría de la información (divergencia de Kullback-Leibler, entropía) para cuantificar cuánto aporta un pariente disponible a la identificación de la persona buscada, implementadas en el paquete R **`forensIT`**; esto permite, por ejemplo, priorizar a qué pariente conviene genotipar cuando hay varias opciones con igual poder de exclusión.
 
-Detalle: [Anexo I](../anexos/anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md) y [Búsqueda de personas](../busqueda_de_perfiles/busqueda_de_personas.md). Usos: [MPI](../usos_forenses/busqueda_de_personas_mpi.md) y [DVI](../usos_forenses/identificacion_de_victimas_dvi.md).
+Detalle: [Anexo I](../anexos/anexo_i_algoritmo_de_busqueda_de_coincidencias_de_str.md) y [Búsqueda de personas](../busqueda_de_perfiles/busqueda_de_personas.md). Usos: [MPI](../usos_forenses/index.md#busqueda-de-personas-desaparecidas) y [DVI](../usos_forenses/index.md#identificacion-de-victimas-de-desastres).
 
 ## Referencias
 
